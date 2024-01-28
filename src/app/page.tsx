@@ -1,10 +1,14 @@
-import { css } from "../../styled-system/css";
-
-import styles from "./page.module.css";
+import { css } from "@/styled-system/css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main
+      className={css({
+        fontSize: "2xl",
+        fontWeight: "bold",
+        textAlign: "center",
+      })}
+    >
       <h1>Hello World</h1>
     </main>
   );
