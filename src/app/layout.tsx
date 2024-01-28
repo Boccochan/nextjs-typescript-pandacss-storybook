@@ -1,3 +1,4 @@
+import { Theme } from "@/components/Theme";
 import "./globals.css";
 
 import type { Metadata } from "next";
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Theme>{children}</Theme>
+      </body>
     </html>
   );
 }

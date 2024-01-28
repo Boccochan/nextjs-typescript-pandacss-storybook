@@ -1,3 +1,6 @@
+"use client";
+import { css } from "../../../styled-system/css";
+
 export const Button = () => {
-  return <button>hello world</button>;
+  return <button className={css({ bg: "btn.primary" })}>hello world</button>;
 };
