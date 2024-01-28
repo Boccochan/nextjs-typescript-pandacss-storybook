@@ -1,3 +1,5 @@
+import { css } from "../../styled-system/css";
+
 import styles from "./page.module.css";
 
 export default function Home() {
