@@ -1,6 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs";
-
-const config: StorybookConfig = {
+const config = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
@@ -15,6 +13,11 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  webpack: (config, options) => {
+    //Workaround for 'Error: EBUSY: resource busy or locked, open ...'
+    options.cache.set = () => Promise.resolve();
+    return config;
   },
 };
 export default config;
