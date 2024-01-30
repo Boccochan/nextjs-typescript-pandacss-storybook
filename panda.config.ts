@@ -25,9 +25,31 @@ export default defineConfig({
         colors: {
           btn: {
             primary: {
-              value: {
-                base: "red",
-                _dark: "blue",
+              bg: {
+                value: {
+                  base: "red",
+                  _dark: "blue",
+                },
+              },
+              text: {
+                value: {
+                  base: "blue",
+                  _dark: "red",
+                },
+              },
+            },
+            danger: {
+              bg: {
+                value: {
+                  base: "yellow",
+                  _dark: "black",
+                },
+              },
+              text: {
+                value: {
+                  base: "black",
+                  _dark: "yellow",
+                },
               },
             },
           },
