@@ -10,7 +10,6 @@ export default function Home() {
         textAlign: "center",
       })}
     >
-      <h1>Hello World</h1>
       <Button></Button>
     </main>
   );
