@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button/Button";
-import { css } from "@/styled-system/css";
+import { css } from "#/styled-system/css";
 
 export default function Home() {
   return (
