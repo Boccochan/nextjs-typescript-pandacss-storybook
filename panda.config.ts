@@ -27,28 +27,28 @@ export default defineConfig({
             primary: {
               bg: {
                 value: {
-                  base: "red",
-                  _dark: "blue",
+                  base: "{colors.blue.500}",
+                  _dark: "{colors.blue.600}",
                 },
               },
               text: {
                 value: {
-                  base: "blue",
-                  _dark: "red",
+                  base: "white",
+                  _dark: "{colors.blue.100}",
                 },
               },
             },
             danger: {
               bg: {
                 value: {
-                  base: "yellow",
-                  _dark: "black",
+                  base: "{colors.red.500}",
+                  _dark: "{colors.red.600}",
                 },
               },
               text: {
                 value: {
-                  base: "black",
-                  _dark: "yellow",
+                  base: "white",
+                  _dark: "{colors.red.100}",
                 },
               },
             },
