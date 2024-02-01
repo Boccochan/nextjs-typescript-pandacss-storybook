@@ -16,7 +16,7 @@ pnpm dev
 bun dev
 ```
 
+- [ ] cvaではなくdefineRecipeを使用する
 - [ ] cvaの繰り返しをしなくてよい方法がないか調査
-- [ ] TypeCvaだとわかりにくいのでTypeCvaVariablesに修正
 - [ ] darkモードの時とそれ以外の時でbtnのbg/textのcolorsをまとめる
 - [ ] active/disabled/hoverのcolors実装
