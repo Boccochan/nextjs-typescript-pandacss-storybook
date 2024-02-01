@@ -16,6 +16,8 @@ pnpm dev
 bun dev
 ```
 
-- [ ] pandacssのosDarkの定義を上書きして、開発時はprefers-color-schemeとStorybookで手動で切り替えれるようにする
+- [ ] カラーのみsemanticTokensに定義して、コンポーネントでそれらを組み合わせる(すべての組み合わせをsemanticTokenに記述するのは無理があるため)
+- [ ] semanticTokensを外に出せないか調査
+- [ ] TypeCvaだとわかりにくいのでTypeCvaVariablesに修正
 - [ ] darkモードの時とそれ以外の時でbtnのbg/textのcolorsをまとめる
 - [ ] active/disabled/hoverのcolors実装

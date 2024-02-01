@@ -24,65 +24,62 @@ export default defineConfig({
     extend: {
       semanticTokens: {
         colors: {
-          btn: {
-            primary: {
-              bg: {
-                DEFAULT: {
-                  value: {
-                    base: "{colors.blue.500}",
-                    _disabled: "{colors.blue.300}",
-                  },
-                },
-                dark: {
-                  value: {
-                    base: "{colors.blue.600}",
-                    _disabled: "{colors.blue.400}",
-                  },
-                },
-              },
-              text: {
-                DEFAULT: {
-                  value: {
-                    base: "white",
-                    _disabled: "{colors.blue.200}",
-                  },
-                },
-                dark: {
-                  value: {
-                    base: "{colors.blue.100}",
-                    _disabled: "white",
-                  },
-                },
+          primary: {
+            DEFAULT: {
+              value: {
+                base: "{colors.blue.400}",
+                _osDark: "{colors.blue.600}",
               },
             },
-            danger: {
-              bg: {
-                DEFAULT: {
-                  value: {
-                    base: "{colors.red.500}",
-                    _disabled: "{colors.red.300}",
-                  },
-                },
-                dark: {
-                  value: {
-                    base: "{colors.red.600}",
-                    _disabled: "{colors.red.400}",
-                  },
-                },
+            disabled: {
+              value: {
+                base: "{colors.blue.200}",
+                _osDark: "{colors.blue.300}",
               },
-              text: {
-                DEFAULT: {
-                  value: {
-                    base: "white",
-                    _disabled: "{colors.red.200}",
-                  },
-                },
-                dark: {
-                  value: {
-                    base: "{colors.red.100}",
-                    _disabled: "white",
-                  },
-                },
+            },
+            hover: {
+              value: {
+                base: "{colors.blue.500}",
+                _osDark: "{colors.blue.700}",
+              },
+            },
+            active: {
+              value: {
+                base: "{colors.blue.400}",
+                _osDark: "{colors.blue.600}",
+              },
+            },
+          },
+          danger: {
+            DEFAULT: {
+              value: {
+                base: "{colors.red.400}",
+                _osDark: "{colors.red.600}",
+              },
+            },
+            disabled: {
+              value: {
+                base: "{colors.red.200}",
+                _osDark: "{colors.red.300}",
+              },
+            },
+            hover: {
+              value: {
+                base: "{colors.red.500}",
+                _osDark: "{colors.red.700}",
+              },
+            },
+            active: {
+              value: {
+                base: "{colors.red.400}",
+                _osDark: "{colors.red.600}",
+              },
+            },
+          },
+          light: {
+            DEFAULT: {
+              value: {
+                base: "white",
               },
             },
           },

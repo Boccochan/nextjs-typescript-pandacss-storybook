@@ -24,9 +24,9 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const Danger: Story = {
   args: {
-    color: "secondary",
+    color: "danger",
     label: "hello",
   },
 };

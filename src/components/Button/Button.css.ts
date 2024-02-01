@@ -4,19 +4,29 @@ export const button = cva({
   variants: {
     color: {
       primary: {
-        bg: "btn.primary.bg",
-        color: "btn.primary.text",
-        _osDark: {
-          bg: "btn.primary.bg.dark",
-          color: "btn.primary.text.dark",
+        bg: "primary",
+        color: "light",
+        _hover: {
+          bg: "primary.hover",
+        },
+        _disabled: {
+          bg: "primary.disabled",
+        },
+        _active: {
+          bg: "primary.active",
         },
       },
-      secondary: {
-        bg: "btn.danger.bg",
-        color: "btn.danger.text",
-        _osDark: {
-          bg: "btn.danger.bg.dark",
-          color: "btn.danger.text.dark",
+      danger: {
+        bg: "danger",
+        color: "light",
+        _hover: {
+          bg: "danger.hover",
+        },
+        _disabled: {
+          bg: "danger.disabled",
+        },
+        _active: {
+          bg: "danger.active",
         },
       },
     },
