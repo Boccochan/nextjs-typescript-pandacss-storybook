@@ -1,3 +1,3 @@
-export type TypeCva<T extends (...args: any[]) => any> = NonNullable<
+export type TypeCvaVariables<T extends (...args: any[]) => any> = NonNullable<
   Parameters<T>[number]
 >;

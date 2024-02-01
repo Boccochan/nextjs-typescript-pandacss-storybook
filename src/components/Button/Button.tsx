@@ -1,13 +1,15 @@
-import React from "react";
+import React, { JSX } from "react";
 
-import { TypeCva } from "@/types";
+import { TypeCvaVariables } from "@/types";
 
 import { button } from "./Button.css";
 
-type ButtonProps = React.JSX.IntrinsicElements["button"] &
-  TypeCva<typeof button> & {
-    label: string;
-  };
+type BaseProps = JSX.IntrinsicElements["button"] &
+  TypeCvaVariables<typeof button>;
+
+type ButtonProps = BaseProps & {
+  label: string;
+};
 
 export const Button = (props: ButtonProps) => {
   return (
