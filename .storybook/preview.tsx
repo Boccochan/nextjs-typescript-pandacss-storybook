@@ -5,8 +5,6 @@ import { useDarkMode } from "storybook-dark-mode";
 const Theme = (Story) => {
   const dark = useDarkMode();
 
-  console.log(dark, process.env.STORYBOOK_DARK);
-
   return (
     <div data-theme={dark ? "dark" : "light"}>
       <Story />
