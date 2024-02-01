@@ -16,8 +16,8 @@ pnpm dev
 bun dev
 ```
 
-- [ ] カラーのみsemanticTokensに定義して、コンポーネントでそれらを組み合わせる(すべての組み合わせをsemanticTokenに記述するのは無理があるため)
-- [ ] semanticTokensを外に出せないか調査
+- [ ] semanticTokensのcolorsの繰り返しの記述を単純化できないか調査
+- [ ] cvaの繰り返しをしなくてよい方法がないか調査
 - [ ] TypeCvaだとわかりにくいのでTypeCvaVariablesに修正
 - [ ] darkモードの時とそれ以外の時でbtnのbg/textのcolorsをまとめる
 - [ ] active/disabled/hoverのcolors実装
