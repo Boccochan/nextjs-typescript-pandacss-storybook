@@ -1,6 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
 
-import { colors } from "@/styles";
+import { semanticTokens } from "@/styles";
 
 export default defineConfig({
   // Whether to use css reset
@@ -24,9 +24,7 @@ export default defineConfig({
   // Useful for theme customization
   theme: {
     extend: {
-      semanticTokens: {
-        colors,
-      },
+      semanticTokens,
     },
   },
 
