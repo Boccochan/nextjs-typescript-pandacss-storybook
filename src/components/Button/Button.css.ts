@@ -4,12 +4,20 @@ export const button = cva({
   variants: {
     color: {
       primary: {
-        backgroundColor: "btn.primary.bg",
+        bg: "btn.primary.bg",
         color: "btn.primary.text",
+        _osDark: {
+          bg: "btn.primary.bg.dark",
+          color: "btn.primary.text.dark",
+        },
       },
       secondary: {
-        backgroundColor: "btn.danger.bg",
+        bg: "btn.danger.bg",
         color: "btn.danger.text",
+        _osDark: {
+          bg: "btn.danger.bg.dark",
+          color: "btn.danger.text.dark",
+        },
       },
     },
   },

@@ -14,8 +14,9 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
   conditions: {
-    light: "[data-color-mode=light] &",
-    dark: "[data-color-mode=dark] &",
+    osDark: process.env.STORYBOOK_DARK_MODE
+      ? "[data-theme='dark']  &"
+      : "@media (prefers-color-scheme: dark)",
   },
 
   // Useful for theme customization
@@ -26,29 +27,61 @@ export default defineConfig({
           btn: {
             primary: {
               bg: {
-                value: {
-                  base: "{colors.blue.500}",
-                  _dark: "{colors.blue.600}",
+                DEFAULT: {
+                  value: {
+                    base: "{colors.blue.500}",
+                    _disabled: "{colors.blue.300}",
+                  },
+                },
+                dark: {
+                  value: {
+                    base: "{colors.blue.600}",
+                    _disabled: "{colors.blue.400}",
+                  },
                 },
               },
               text: {
-                value: {
-                  base: "white",
-                  _dark: "{colors.blue.100}",
+                DEFAULT: {
+                  value: {
+                    base: "white",
+                    _disabled: "{colors.blue.200}",
+                  },
+                },
+                dark: {
+                  value: {
+                    base: "{colors.blue.100}",
+                    _disabled: "white",
+                  },
                 },
               },
             },
             danger: {
               bg: {
-                value: {
-                  base: "{colors.red.500}",
-                  _dark: "{colors.red.600}",
+                DEFAULT: {
+                  value: {
+                    base: "{colors.red.500}",
+                    _disabled: "{colors.red.300}",
+                  },
+                },
+                dark: {
+                  value: {
+                    base: "{colors.red.600}",
+                    _disabled: "{colors.red.400}",
+                  },
                 },
               },
               text: {
-                value: {
-                  base: "white",
-                  _dark: "{colors.red.100}",
+                DEFAULT: {
+                  value: {
+                    base: "white",
+                    _disabled: "{colors.red.200}",
+                  },
+                },
+                dark: {
+                  value: {
+                    base: "{colors.red.100}",
+                    _disabled: "white",
+                  },
                 },
               },
             },
