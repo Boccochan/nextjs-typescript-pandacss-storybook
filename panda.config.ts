@@ -1,6 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
 
-import { semanticTokens } from "@/styles";
+import { recipes, semanticTokens } from "@/styles";
 
 export default defineConfig({
   preflight: true,
@@ -21,6 +21,7 @@ export default defineConfig({
   theme: {
     extend: {
       semanticTokens,
+      recipes,
     },
   },
 

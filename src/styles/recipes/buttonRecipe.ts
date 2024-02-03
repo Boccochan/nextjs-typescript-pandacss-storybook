@@ -1,6 +1,7 @@
-import { cva } from "#/styled-system/css";
+import { defineRecipe } from "@pandacss/dev";
 
-export const button = cva({
+export const buttonRecipe = defineRecipe({
+  className: "button",
   variants: {
     color: {
       primary: {
@@ -31,4 +32,5 @@ export const button = cva({
       },
     },
   },
+  jsx: ["Button"],
 });

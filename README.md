@@ -17,6 +17,7 @@ bun dev
 ```
 
 - [ ] cvaではなくdefineRecipeを使用する
+- [ ] buttonの型が変なので直す
 - [ ] cvaの繰り返しをしなくてよい方法がないか調査
 - [ ] darkモードの時とそれ以外の時でbtnのbg/textのcolorsをまとめる
 - [ ] active/disabled/hoverのcolors実装

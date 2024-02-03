@@ -1,6 +1,15 @@
 import React from "react";
 import "../src/app/globals.css";
+import { css } from "../styled-system/css";
 import { useDarkMode } from "storybook-dark-mode";
+
+const Pandacss = (Story) => {
+  return (
+    <div className={css()}>
+      <Story />
+    </div>
+  );
+};
 
 const Theme = (Story) => {
   const dark = useDarkMode();
@@ -22,7 +31,7 @@ const preview = {
       },
     },
   },
-  decorators: [Theme],
+  decorators: [Theme, Pandacss],
 };
 
 export default preview;

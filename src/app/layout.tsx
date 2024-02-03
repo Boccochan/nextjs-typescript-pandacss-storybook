@@ -4,10 +4,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 
-const Layout = dynamic(
-  () => import("../components/Layout").then((module) => module.Layout),
-  { ssr: false },
-);
+import { Layout } from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
