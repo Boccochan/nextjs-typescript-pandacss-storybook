@@ -10,7 +10,7 @@ export default function Home() {
         textAlign: "center",
       })}
     >
-      <Button color={"danger"} size="lg"></Button>
+      <Button color={"danger"} size="lg" label="hello" />
     </main>
   );
 }
