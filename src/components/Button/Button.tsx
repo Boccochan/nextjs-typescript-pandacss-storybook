@@ -1,14 +1,15 @@
 import React, { JSX } from "react";
 
-import { button } from "#/styled-system/recipes";
+import { button, type ButtonVariants } from "./Button.styles";
 
-type ButtonProps = JSX.IntrinsicElements["button"] & {
-  color: "primary" | "danger";
-  label: string;
-};
+type Props = ButtonVariants;
 
-export const Button = (props: ButtonProps) => {
+export const Button = (props: Props) => {
+  const { color, size } = props;
+
   return (
-    <button className={button({ color: "primary" })}>{props.label}</button>
+    <button {...props} className={button({ color, size })}>
+      AAAA
+    </button>
   );
 };

@@ -1,8 +1,11 @@
-import { defineRecipe } from "@pandacss/dev";
+import { cva, type RecipeVariantProps } from "#/styled-system/css";
 
-export const buttonRecipe = defineRecipe({
-  className: "button",
+export const button = cva({
   variants: {
+    size: {
+      sm: { padding: "4", fontSize: "12px" },
+      lg: { padding: "8", fontSize: "40px" },
+    },
     color: {
       primary: {
         bg: "primary",
@@ -32,5 +35,10 @@ export const buttonRecipe = defineRecipe({
       },
     },
   },
-  jsx: ["Button"],
+  defaultVariants: {
+    color: "primary",
+    size: "sm",
+  },
 });
+
+export type ButtonVariants = NonNullable<RecipeVariantProps<typeof button>>;
