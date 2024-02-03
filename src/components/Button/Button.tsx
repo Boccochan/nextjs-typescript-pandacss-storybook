@@ -1,6 +1,7 @@
 import React from "react";
 
-import { button, type ButtonVariants } from "./Button.styles";
+import type { ButtonVariants } from "./Button.styles";
+import { button } from "./Button.styles";
 
 type Props = ButtonVariants & React.JSX.IntrinsicElements["button"];
 
