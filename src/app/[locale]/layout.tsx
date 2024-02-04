@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -14,11 +14,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
-    <html lang="en">
+    <html lang={params.locale}>
       <body className={inter.className}>
         <Layout>{children}</Layout>
       </body>

@@ -1,15 +1,7 @@
 import React from "react";
 import "../src/app/globals.css";
-import { css } from "../styled-system/css";
-import { useDarkMode } from "storybook-dark-mode";
 
-const Pandacss = (Story) => {
-  return (
-    <div className={css()}>
-      <Story />
-    </div>
-  );
-};
+import { useDarkMode } from "storybook-dark-mode";
 
 const Theme = (Story) => {
   //Javascript can not change prefers-color-scheme. So,
@@ -34,7 +26,7 @@ const preview = {
       },
     },
   },
-  decorators: [Theme, Pandacss],
+  decorators: [Theme],
 };
 
 export default preview;
