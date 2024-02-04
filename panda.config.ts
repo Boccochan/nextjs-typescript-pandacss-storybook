@@ -13,6 +13,9 @@ export default defineConfig({
 
   exclude: [],
   conditions: {
+    //storybook-dark-mode can not change prefers-color-scheme.
+    //So, we have to change data-theme by the other way. See
+    //Theme decorator in .storybook/preview.tsx
     osDark: process.env.STORYBOOK_DARK_MODE
       ? "[data-theme='dark']  &"
       : "@media (prefers-color-scheme: dark)",

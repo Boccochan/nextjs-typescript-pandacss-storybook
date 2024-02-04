@@ -12,6 +12,9 @@ const Pandacss = (Story) => {
 };
 
 const Theme = (Story) => {
+  //Javascript can not change prefers-color-scheme. So,
+  //we have to change dark by the different way. See
+  //panda.config.ts osDark conditions.
   const dark = useDarkMode();
 
   return (
