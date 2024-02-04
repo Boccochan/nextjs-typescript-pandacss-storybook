@@ -15,6 +15,9 @@ const colors = (color: string) => ({
 });
 
 export const button = cva({
+  base: {
+    cursor: "pointer",
+  },
   variants: {
     size: {
       sm: { padding: "4", fontSize: "12px" },

@@ -19,9 +19,3 @@ bun dev
 ## Nextjs with pandacss tips
 
 ### Use 'use client' if you want to use defineRecipe
-
-Since defineRecipe nature,
-
-- [ ] cvaの繰り返しをしなくてよい方法がないか調査
-- [ ] darkモードの時とそれ以外の時でbtnのbg/textのcolorsをまとめる
-- [ ] active/disabled/hoverのcolors実装
