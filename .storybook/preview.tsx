@@ -2,6 +2,39 @@ import React from "react";
 import "../src/app/globals.css";
 
 import { useDarkMode } from "storybook-dark-mode";
+import { NextIntlClientProvider } from "next-intl";
+import messageEn from "../messages/en.json";
+import messageJa from "../messages/ja.json";
+
+export const globalTypes = {
+  locale: {
+    name: "Locale",
+    description: "Internationalization locale",
+    toolbar: {
+      icon: "globe",
+      items: [
+        { value: "en", title: "English" },
+        { value: "ja", title: "日本語" },
+      ],
+      showName: true,
+    },
+  },
+};
+
+const Intl = (Story, context) => {
+  const locale = context.globals.locale ?? "en";
+
+  const messages = {
+    en: messageEn,
+    ja: messageJa,
+  };
+
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+      <Story />
+    </NextIntlClientProvider>
+  );
+};
 
 const Theme = (Story) => {
   //Javascript can not change prefers-color-scheme. So,
@@ -26,7 +59,7 @@ const preview = {
       },
     },
   },
-  decorators: [Theme],
+  decorators: [Intl, Theme],
 };
 
 export default preview;

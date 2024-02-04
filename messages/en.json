@@ -1,5 +1,6 @@
 {
   "products": {
     "cart": "Add to Cart"
-  }
+  },
+  "hello": "Hello World!"
 }
