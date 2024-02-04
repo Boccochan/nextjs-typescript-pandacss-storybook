@@ -10,6 +10,8 @@ import { Noto_Sans_JP } from "next/font/google";
 const notoSansJp = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
 
 const GoogleFontsDecorator = (Story) => {
+  // I put google font here. But there might be the better way
+  // to set font-family.
   return (
     <main className={notoSansJp.className}>
       <Story />
