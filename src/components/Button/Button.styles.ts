@@ -17,6 +17,7 @@ const colors = (color: string) => ({
 export const button = cva({
   base: {
     cursor: "pointer",
+    whiteSpace: "nowrap",
   },
   variants: {
     size: {

@@ -21,7 +21,7 @@ export const Primary: Story = {
   args: {
     color: "primary",
     size: "sm",
-    label: "Hello",
+    label: "Hello world!!",
   },
 };
 
@@ -29,6 +29,6 @@ export const Danger: Story = {
   args: {
     color: "danger",
     size: "sm",
-    label: "Hello",
+    label: "Hello world!!",
   },
 };
