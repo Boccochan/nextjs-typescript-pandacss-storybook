@@ -6,6 +6,17 @@ import { NextIntlClientProvider } from "next-intl";
 import messageEn from "../messages/en.json";
 import messageJa from "../messages/ja.json";
 
+import { Noto_Sans_JP } from "next/font/google";
+const notoSansJp = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
+
+const GoogleFontsDecorator = (Story) => {
+  return (
+    <main className={notoSansJp.className}>
+      <Story />
+    </main>
+  );
+};
+
 export const globalTypes = {
   locale: {
     name: "Locale",
@@ -59,7 +70,7 @@ const preview = {
       },
     },
   },
-  decorators: [Intl, Theme],
+  decorators: [GoogleFontsDecorator, Intl, Theme],
 };
 
 export default preview;
