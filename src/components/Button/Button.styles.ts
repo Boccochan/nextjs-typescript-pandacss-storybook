@@ -1,23 +1,18 @@
 import { cva, type RecipeVariantProps } from "#/styled-system/css";
 
 const colors = (color: string) => ({
-  bg: color,
+  bg: { base: color, _hover: `${color}.hover`, _active: `${color}.active` },
   color: "light",
-  _hover: {
-    bg: `${color}.hover`,
-  },
-  _disabled: {
-    bg: `${color}.disabled`,
-  },
-  _active: {
-    bg: `${color}.active`,
-  },
 });
 
 export const button = cva({
   base: {
     cursor: "pointer",
     whiteSpace: "nowrap",
+    _disabled: {
+      opacity: 0.5,
+      pointerEvents: "none",
+    },
   },
   variants: {
     size: {

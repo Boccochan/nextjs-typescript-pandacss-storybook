@@ -22,6 +22,7 @@ export const Primary: Story = {
     color: "primary",
     size: "sm",
     label: "Hello world!!",
+    disabled: false,
   },
 };
 
@@ -30,5 +31,6 @@ export const Danger: Story = {
     color: "danger",
     size: "sm",
     label: "Hello world!!",
+    disabled: false,
   },
 };
