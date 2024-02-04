@@ -1,11 +1,11 @@
 import "@/app/globals.css";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 
 import { Layout } from "@/components/Layout";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={params.locale}>
-      <body className={inter.className}>
+      <body className={notoSansJp.className}>
         <Layout>{children}</Layout>
       </body>
     </html>
