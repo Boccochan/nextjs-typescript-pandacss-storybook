@@ -4,9 +4,10 @@ import { recipes, semanticTokens } from "@/styles";
 
 const globalCss = defineGlobalStyles({
   html: {
-    // TODO: Add default color
     lineHeight: "1.5rem",
     fontSize: "md",
+    color: "body.text",
+    bg: "body.bg",
   },
 });
 

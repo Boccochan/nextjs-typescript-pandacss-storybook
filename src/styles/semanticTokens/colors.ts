@@ -30,10 +30,24 @@ const createColor = (colorName: string) => ({
 export const colors = defineSemanticTokens.colors({
   primary: createColor("blue"),
   danger: createColor("red"),
+  body: {
+    text: {
+      value: {
+        base: `{colors.gray.900}`,
+        _osDark: `white`,
+      },
+    },
+    bg: {
+      value: {
+        base: `white`,
+        _osDark: `{colors.gray.900}`,
+      },
+    },
+  },
   light: {
     DEFAULT: {
       value: {
-        base: "white",
+        base: `white`,
       },
     },
   },
