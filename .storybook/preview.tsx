@@ -7,7 +7,7 @@ import messageEn from "../messages/en.json";
 import messageJa from "../messages/ja.json";
 
 import { Noto_Sans_JP } from "next/font/google";
-const notoSansJp = Noto_Sans_JP({ weight: "400", subsets: ["latin"] });
+const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
 
 const GoogleFontsDecorator = (Story) => {
   // I put google font here. But there might be the better way
