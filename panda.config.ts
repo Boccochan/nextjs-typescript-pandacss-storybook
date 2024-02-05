@@ -1,6 +1,14 @@
-import { defineConfig } from "@pandacss/dev";
+import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 import { recipes, semanticTokens } from "@/styles";
+
+const globalCss = defineGlobalStyles({
+  html: {
+    // TODO: Add default color
+    lineHeight: "1.5rem",
+    fontSize: "md",
+  },
+});
 
 export default defineConfig({
   preflight: true,
@@ -20,6 +28,8 @@ export default defineConfig({
       ? "[data-theme='dark']  &"
       : "@media (prefers-color-scheme: dark)",
   },
+
+  globalCss,
 
   theme: {
     extend: {

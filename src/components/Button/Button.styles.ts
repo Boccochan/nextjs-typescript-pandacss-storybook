@@ -16,8 +16,8 @@ export const button = cva({
   },
   variants: {
     size: {
-      sm: { padding: "4", fontSize: "12px" },
-      lg: { padding: "8", fontSize: "40px" },
+      sm: { padding: "2" },
+      lg: { padding: "2", fontSize: "lg" },
     },
     color: {
       primary: colors("primary"),
