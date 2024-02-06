@@ -28,7 +28,7 @@ type Story = StoryObj<typeof ButtonWithIntl>;
 export const Primary: Story = {
   args: {
     color: "primary",
-    size: "sm",
+    size: "md",
     label: "hello",
     disabled: false,
   },
@@ -37,7 +37,7 @@ export const Primary: Story = {
 export const Danger: Story = {
   args: {
     color: "danger",
-    size: "sm",
+    size: "md",
     label: "hello",
     disabled: false,
   },
