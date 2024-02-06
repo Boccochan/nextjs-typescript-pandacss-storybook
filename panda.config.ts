@@ -1,4 +1,8 @@
-import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
+import {
+  defineConfig,
+  defineGlobalStyles,
+  defineKeyframes,
+} from "@pandacss/dev";
 
 import { recipes, semanticTokens } from "@/styles";
 
@@ -8,6 +12,16 @@ const globalCss = defineGlobalStyles({
     fontSize: "md",
     color: "body.text",
     bg: "body.bg",
+  },
+});
+
+// For some reasons, defineKeyframes does not work
+// in the other file. So, I had to put it here.
+// Something wrong...
+const keyframes = defineKeyframes({
+  spinner: {
+    "0%": { transform: "rotate(0deg)" },
+    "100%": { transform: "rotate(360deg)" },
   },
 });
 
@@ -36,6 +50,7 @@ export default defineConfig({
     extend: {
       semanticTokens,
       recipes,
+      keyframes,
     },
   },
 

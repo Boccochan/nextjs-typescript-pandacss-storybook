@@ -5,6 +5,7 @@ import type { ComponentProps } from "react";
 import { Button } from "./Button";
 type ButtonProps = ComponentProps<typeof Button>;
 
+// TODO: Move into decorator
 const ButtonWithIntl = ({ color, size, label, ...rest }: ButtonProps) => {
   const t = useTranslations();
   return <Button color={color} size={size} label={t(label)} {...rest} />;
