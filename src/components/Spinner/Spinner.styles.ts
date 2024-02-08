@@ -1,9 +1,8 @@
 import { cva, type RecipeVariantProps } from "#/styled-system/css";
 
-// TODO: defineRecipeでもよいかも。
 export const spinner = cva({
   base: {
-    fontSize: "6px",
+    fontSize: "6.8px",
     position: "relative",
     borderTop: "0.8em solid rgba(255, 255, 255, 0.2)",
     borderRight: "0.8em solid rgba(255, 255, 255, 0.2)",

@@ -32,6 +32,7 @@ export const Primary: Story = {
     size: "md",
     label: "hello",
     disabled: false,
+    loading: false,
   },
 };
 

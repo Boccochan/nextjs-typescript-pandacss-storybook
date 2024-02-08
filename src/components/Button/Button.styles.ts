@@ -5,14 +5,17 @@ const colors = (color: string) => ({
   color: "light",
 });
 
+// TODO: change to sva or other way.
+
 export const button = cva({
   base: {
     cursor: "pointer",
     whiteSpace: "nowrap",
     _disabled: {
-      opacity: 0.5,
+      opacity: 0.7,
       pointerEvents: "none",
     },
+    position: "relative",
   },
   variants: {
     size: {
@@ -27,6 +30,16 @@ export const button = cva({
   defaultVariants: {
     color: "primary",
     size: "md",
+  },
+});
+
+export const labelCva = cva({
+  variants: {
+    loading: {
+      true: {
+        visibility: "hidden",
+      },
+    },
   },
 });
 
