@@ -1,7 +1,12 @@
 import { css, cva, type RecipeVariantProps } from "#/styled-system/css";
 
 const colors = (color: string) => ({
-  bg: { base: color, _hover: `${color}.hover`, _active: `${color}.active` },
+  bg: {
+    base: color,
+    _hover: `${color}.hover`,
+    _active: `${color}.active`,
+    _focusVisible: `${color}.hover`,
+  },
   color: "light",
 });
 
