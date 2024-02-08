@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Spinner } from "@/components/Spinner";
-import { css } from "#/styled-system/css";
 
 import type { ButtonVariants } from "./Button.styles";
-import { button, labelCva } from "./Button.styles";
+import { styles } from "./Button.styles";
+
 type Props = ButtonVariants & React.JSX.IntrinsicElements["button"];
 
 type ButtonProps = Props & {
@@ -18,25 +18,14 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ref={ref}
       disabled={loading || disabled}
       {...rest}
-      className={button({ color, size })}
+      className={styles.button({ color, size })}
     >
       {loading && (
-        <div
-          className={css({
-            position: "absolute",
-            inset: "0",
-            margin: "auto",
-            width: "fit-content",
-            height: "full",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          })}
-        >
+        <div className={styles.spinner}>
           <Spinner />
         </div>
       )}
-      <span className={labelCva({ loading })}>{label}</span>
+      <span className={styles.label({ loading })}>{label}</span>
     </button>
   ),
 );
