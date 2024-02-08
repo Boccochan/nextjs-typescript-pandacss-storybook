@@ -16,6 +16,8 @@ type ButtonProps = Props & {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ color, size, label, disabled, loading, onSubmit, ...rest }, ref) => {
+    const isDisabled = loading || disabled;
+
     // TODO: Check if it works when you use react-hook-forms.
     const keydownHandler = (e: React.KeyboardEvent<HTMLButtonElement>) => {
       if (e.key === "Enter" && onSubmit) {
@@ -28,7 +30,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        disabled={loading || disabled}
+        disabled={isDisabled}
+        aria-disabled={isDisabled}
         {...rest}
         className={styles.button({ color, size })}
         onKeyDown={keydownHandler}
