@@ -1,3 +1,4 @@
+import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
@@ -32,6 +33,7 @@ export const Primary: Story = {
     label: "hello",
     disabled: false,
     loading: false,
+    onClick: action("clicked"),
   },
 };
 
@@ -42,5 +44,6 @@ export const Danger: Story = {
     label: "hello",
     disabled: false,
     loading: false,
+    onClick: action("clicked"),
   },
 };
