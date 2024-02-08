@@ -17,9 +17,9 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   argTypes: {
-    color: { control: "color" },
+    color: { control: "select", options: ["primary", "danger"] },
+    size: { control: "select", options: ["md", "lg"] },
   },
 } satisfies Meta<typeof ButtonWithIntl>;
 
@@ -42,5 +42,6 @@ export const Danger: Story = {
     size: "md",
     label: "hello",
     disabled: false,
+    loading: false,
   },
 };
