@@ -33,7 +33,7 @@ export const Primary: Story = {
     label: "hello",
     disabled: false,
     loading: false,
-    onClick: action("clicked"),
+    onSubmit: action("clicked"),
   },
 };
 
@@ -44,6 +44,6 @@ export const Danger: Story = {
     label: "hello",
     disabled: false,
     loading: false,
-    onClick: action("clicked"),
+    onSubmit: action("clicked"),
   },
 };
