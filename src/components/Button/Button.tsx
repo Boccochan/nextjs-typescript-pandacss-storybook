@@ -16,6 +16,7 @@ type ButtonProps = Props & {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ color, size, label, disabled, loading, onSubmit, ...rest }, ref) => {
+    // TODO: Check if it works when you use react-hook-forms.
     const keydownHandler = (e: React.KeyboardEvent<HTMLButtonElement>) => {
       if (e.key === "Enter" && onSubmit) {
         onSubmit();
