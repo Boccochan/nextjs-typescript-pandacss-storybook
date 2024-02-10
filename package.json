@@ -13,6 +13,7 @@
     "build-panda": "panda",
     "watch-panda": "panda --watch",
     "test": "jest",
+    "test:snapshot": "jest --updateSnapshot",
     "test:watch": "jest --watch"
   },
   "dependencies": {

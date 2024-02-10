@@ -1,0 +1,675 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot button Danger 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_danger hover:bg_danger.hover active:bg_danger.active focusVisible:bg_danger.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_danger hover:bg_danger.hover active:bg_danger.active focusVisible:bg_danger.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        aria-disabled="true"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+        disabled=""
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-disabled="true"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+      disabled=""
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Loading 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        aria-disabled="true"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+        disabled=""
+      >
+        <div
+          class="pos_absolute inset_0 m_auto w_fit-content h_full d_flex justify_center items_center"
+        >
+          <div
+            aria-label="loading"
+            class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+            role="alert"
+          />
+        </div>
+        <span
+          class="vis_hidden"
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      aria-disabled="true"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+      disabled=""
+    >
+      <div
+        class="pos_absolute inset_0 m_auto w_fit-content h_full d_flex justify_center items_center"
+      >
+        <div
+          aria-label="loading"
+          class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+          role="alert"
+        />
+      </div>
+      <span
+        class="vis_hidden"
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Primary 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Size=lg 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_10rem h_2.8rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_10rem h_2.8rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Size=md 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_4 rounded_md fs_md min-w_8rem h_2.4rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Size=sm 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_6rem h_2rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_6rem h_2rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot button Size=xl 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_12rem h_3.2rem"
+      >
+        <span
+          class=""
+        >
+          hello
+        </span>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_12rem h_3.2rem"
+    >
+      <span
+        class=""
+      >
+        hello
+      </span>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
