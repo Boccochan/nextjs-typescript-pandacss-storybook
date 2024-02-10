@@ -10,6 +10,9 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    size: { control: "select", options: ["md", "lg"] },
+  },
   decorators: [
     (Story) => (
       <div

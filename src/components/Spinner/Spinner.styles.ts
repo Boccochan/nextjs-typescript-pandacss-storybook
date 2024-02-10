@@ -1,6 +1,6 @@
-import { css } from "#/styled-system/css";
+import { cva, type RecipeVariantProps } from "#/styled-system/css";
 
-export const spinner = css({
+export const spinner = cva({
   base: {
     fontSize: "6.8px",
     position: "relative",
@@ -14,4 +14,15 @@ export const spinner = css({
     width: "3em",
     height: "3em",
   },
+  variants: {
+    size: {
+      md: { fontSize: "6.8px" },
+      lg: { fontSize: "10px" },
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
 });
+
+export type SpinnerVariants = NonNullable<RecipeVariantProps<typeof spinner>>;

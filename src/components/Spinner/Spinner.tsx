@@ -1,5 +1,5 @@
-import { spinner } from "./Spinner.styles";
+import { spinner, type SpinnerVariants } from "./Spinner.styles";
 
-export const Spinner = () => (
-  <div className={spinner} role="alert" aria-label="loading" />
+export const Spinner = ({ size }: SpinnerVariants) => (
+  <div className={spinner({ size })} role="alert" aria-label="loading" />
 );
