@@ -10,17 +10,16 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <div
         className={css({
           padding: "4",
-          bg: "{colors.blue.400}",
-          opacity: "0.5",
+          bg: "{colors.blue.500}",
+          opacity: "0.7",
         })}
       >
-        <Story></Story>
+        <Story />
       </div>
     ),
   ],

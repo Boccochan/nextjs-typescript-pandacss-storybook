@@ -23,7 +23,7 @@ const button = cva({
   variants: {
     size: {
       md: { py: "2", px: "3", rounded: "sm" },
-      lg: { p: "2", px: "3", rounded: "md", fontSize: "lg" },
+      lg: { p: "4", px: "3", rounded: "md", fontSize: "lg" },
     },
     color: {
       primary: colors("primary"),

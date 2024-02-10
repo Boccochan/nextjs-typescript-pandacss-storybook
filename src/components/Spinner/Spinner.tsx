@@ -1,3 +1,3 @@
 import { spinner } from "./Spinner.styles";
 
-export const Spinner = () => <div className={spinner()} />;
+export const Spinner = () => <div className={spinner} />;
