@@ -22,8 +22,34 @@ const button = cva({
   },
   variants: {
     size: {
-      md: { py: "2", px: "3", rounded: "sm" },
-      lg: { p: "4", px: "3", rounded: "md", fontSize: "lg" },
+      sm: {
+        px: "3",
+        rounded: "sm",
+        fontSize: "sm",
+        minWidth: "6rem",
+        height: "2rem",
+      },
+      md: {
+        px: "4",
+        rounded: "md",
+        fontSize: "md",
+        minWidth: "8rem",
+        height: "2.4rem",
+      },
+      lg: {
+        px: "5",
+        rounded: "lg",
+        fontSize: "lg",
+        minWidth: "10rem",
+        height: "2.8rem",
+      },
+      xl: {
+        px: "6",
+        rounded: "xl",
+        fontSize: "xl",
+        minWidth: "12rem",
+        height: "3.2rem",
+      },
     },
     color: {
       primary: colors("primary"),

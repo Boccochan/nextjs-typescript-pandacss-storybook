@@ -19,7 +19,7 @@ const meta = {
   },
   argTypes: {
     color: { control: "select", options: ["primary", "danger"] },
-    size: { control: "select", options: ["md", "lg"] },
+    size: { control: "select", options: ["sm", "md", "lg", "xl"] },
   },
 } satisfies Meta<typeof ButtonWithIntl>;
 
