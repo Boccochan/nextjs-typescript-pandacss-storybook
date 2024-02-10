@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-import { Button } from "@/components/Button/Button";
+import { Button } from "@/components/Button";
 import { css } from "#/styled-system/css";
 
 export default function Home() {
