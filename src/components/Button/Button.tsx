@@ -6,7 +6,7 @@ import type { ButtonVariants } from "./Button.styles";
 import { styles } from "./Button.styles";
 
 type Props = ButtonVariants &
-  Omit<React.JSX.IntrinsicElements["button"], "onClick">;
+  Omit<React.JSX.IntrinsicElements["button"], "onClick" | keyof ButtonVariants>;
 
 type ButtonProps = Props & {
   label: string;
