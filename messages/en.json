@@ -2,5 +2,8 @@
   "products": {
     "cart": "Add to Cart"
   },
-  "hello": "Hello World!"
+  "hello": "Hello World!",
+  "Send": "Send",
+  "Copy": "Copy",
+  "Delete": "Delete"
 }
