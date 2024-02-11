@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import { MdEmail } from "react-icons/md";
 
 import { Button } from "./Button";
 
@@ -48,6 +49,12 @@ describe("Snapshot button", () => {
 
   it("Disabled", async () => {
     const button = render(<Button label="hello" disabled={true} />);
+
+    expect(button).toMatchSnapshot();
+  });
+
+  it("With Md icon", async () => {
+    const button = render(<Button label="hello" size="md" Icon={MdEmail} />);
 
     expect(button).toMatchSnapshot();
   });
