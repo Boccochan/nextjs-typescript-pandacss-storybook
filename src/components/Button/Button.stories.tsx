@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
-import { MdEmail } from "react-icons/md";
+import { MdContentCopy, MdDelete, MdEmail } from "react-icons/md";
 
 import { Button } from "./Button";
 type ButtonProps = ComponentProps<typeof Button>;
@@ -49,7 +49,7 @@ export const Danger: Story = {
   },
 };
 
-export const PrimaryWithMdIcon: Story = {
+export const PrimaryWithMdMailIcon: Story = {
   args: {
     color: "primary",
     size: "md",
@@ -58,5 +58,29 @@ export const PrimaryWithMdIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdEmail,
+  },
+};
+
+export const PrimaryWithMdContentCopyIcon: Story = {
+  args: {
+    color: "primary",
+    size: "md",
+    label: "Copy",
+    disabled: false,
+    loading: false,
+    onClick: action("clicked"),
+    Icon: MdContentCopy,
+  },
+};
+
+export const PrimaryWithMdDeleteIcon: Story = {
+  args: {
+    color: "primary",
+    size: "md",
+    label: "Delete",
+    disabled: false,
+    loading: false,
+    onClick: action("clicked"),
+    Icon: MdDelete,
   },
 };
