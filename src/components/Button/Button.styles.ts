@@ -62,7 +62,13 @@ const button = cva({
   },
 });
 
-const label = cva({
+const labelWrapper = cva({
+  base: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "2",
+  },
   variants: {
     loading: {
       true: {
@@ -70,6 +76,10 @@ const label = cva({
       },
     },
   },
+});
+
+const labelIcon = css({
+  marginTop: "0.1rem", // React-icons are slightly shifted upwards
 });
 
 const spinner = css({
@@ -85,8 +95,9 @@ const spinner = css({
 
 export const styles = {
   button,
-  label,
+  labelWrapper,
   spinner,
+  labelIcon,
 };
 
 export type ButtonVariants = NonNullable<RecipeVariantProps<typeof button>>;

@@ -2,6 +2,7 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
+import { MdEmail } from "react-icons/md";
 
 import { Button } from "./Button";
 type ButtonProps = ComponentProps<typeof Button>;
@@ -45,5 +46,17 @@ export const Danger: Story = {
     disabled: false,
     loading: false,
     onClick: action("clicked"),
+  },
+};
+
+export const PrimaryWithMdIcon: Story = {
+  args: {
+    color: "primary",
+    size: "md",
+    label: "Send",
+    disabled: false,
+    loading: false,
+    onClick: action("clicked"),
+    Icon: MdEmail,
   },
 };
