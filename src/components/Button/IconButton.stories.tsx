@@ -1,22 +1,33 @@
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
+import { useTranslations } from "next-intl";
+import type { ComponentProps } from "react";
 import { MdOutlineThumbUpAlt, MdPerson } from "react-icons/md";
 
 import { IconButton } from "./IconButton";
 
+type ButtonProps = ComponentProps<typeof IconButton>;
+
+const IconButtonWithIntl = ({ color, size, title, ...rest }: ButtonProps) => {
+  const t = useTranslations();
+  return (
+    <IconButton color={color} size={size} title={t(title ?? "")} {...rest} />
+  );
+};
+
 const meta = {
   title: "components/IconButton",
-  component: IconButton,
+  component: IconButtonWithIntl,
   parameters: {
     layout: "centered",
   },
   argTypes: {
     size: { control: "select", options: ["sm", "md", "lg", "xl"] },
   },
-} satisfies Meta<typeof IconButton>;
+} satisfies Meta<typeof IconButtonWithIntl>;
 
 export default meta;
-type Story = StoryObj<typeof IconButton>;
+type Story = StoryObj<typeof IconButtonWithIntl>;
 
 export const MdUserIcon: Story = {
   args: {
@@ -25,6 +36,7 @@ export const MdUserIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdPerson,
+    title: "Personal",
   },
 };
 
@@ -35,5 +47,6 @@ export const MdOutlineThumbUpAltIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdOutlineThumbUpAlt,
+    title: "Good button",
   },
 };

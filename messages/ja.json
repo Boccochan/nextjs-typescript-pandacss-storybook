@@ -5,5 +5,7 @@
   "hello": "こんにちわ!!",
   "Send": "送信",
   "Copy": "コピー",
-  "Delete": "削除"
+  "Delete": "削除",
+  "Personal": "個人設定を開く",
+  "Good button": "いいねをクリック"
 }
