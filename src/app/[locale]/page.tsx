@@ -18,7 +18,7 @@ export default function Home() {
     >
       {t("products.cart")}
       <Button color={"danger"} size="lg" label="こんにちわ" Icon={MdEmail} />
-      <IconButton Icon={MdOutlineThumbUpAlt} title={t("Good button")} />
+      <IconButton Icon={MdOutlineThumbUpAlt} aria-label={t("Good button")} />
     </main>
   );
 }

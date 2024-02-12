@@ -36,7 +36,7 @@ export const MdUserIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdPerson,
-    title: "Personal",
+    "aria-label": "Personal",
   },
 };
 
@@ -47,6 +47,6 @@ export const MdOutlineThumbUpAltIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdOutlineThumbUpAlt,
-    title: "Good button",
+    "aria-label": "Good button",
   },
 };
