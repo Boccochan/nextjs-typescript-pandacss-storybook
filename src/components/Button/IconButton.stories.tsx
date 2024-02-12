@@ -2,8 +2,6 @@ import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { MdOutlineThumbUpAlt, MdPerson } from "react-icons/md";
 
-import { css } from "#/styled-system/css";
-
 import { IconButton } from "./IconButton";
 
 const meta = {
@@ -15,21 +13,6 @@ const meta = {
   argTypes: {
     size: { control: "select", options: ["sm", "md", "lg", "xl"] },
   },
-  decorators: [
-    (Story) => (
-      <div
-        className={css({
-          padding: "4",
-          bg: {
-            _osDark: "black",
-          },
-          opacity: "0.7",
-        })}
-      >
-        <Story />
-      </div>
-    ),
-  ],
 } satisfies Meta<typeof IconButton>;
 
 export default meta;

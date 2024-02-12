@@ -1,7 +1,6 @@
 import React from "react";
 import "../src/app/globals.css";
 
-import { useDarkMode } from "storybook-dark-mode";
 import { NextIntlClientProvider } from "next-intl";
 import messageEn from "../messages/en.json";
 import messageJa from "../messages/ja.json";
@@ -49,14 +48,20 @@ const Intl = (Story, context) => {
   );
 };
 
-const Theme = (Story) => {
+const Background = (Story, context) => {
   //Javascript can not change prefers-color-scheme. So,
   //we have to change dark by the different way. See
   //panda.config.ts osDark conditions.
-  const dark = useDarkMode();
+  const [theme, setTheme] = React.useState("light");
+
+  React.useEffect(() => {
+    setTheme(
+      context.globals.backgrounds?.value === "#FFFFFF" ? "light" : "dark",
+    );
+  }, [context.globals.backgrounds]);
 
   return (
-    <div data-theme={dark ? "dark" : "light"}>
+    <div data-theme={theme}>
       <Story />
     </div>
   );
@@ -71,8 +76,17 @@ const preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: "light",
+      values: [
+        { name: "light", value: "#FFFFFF" },
+        // Dark mode should be the same as body.bg._osDark
+        // See styles/semanticTokens
+        { name: "dark", value: "#111827" },
+      ],
+    },
   },
-  decorators: [GoogleFontsDecorator, Intl, Theme],
+  decorators: [GoogleFontsDecorator, Intl, Background],
 };
 
 export default preview;
