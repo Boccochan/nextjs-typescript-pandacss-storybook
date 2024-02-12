@@ -55,9 +55,11 @@ const Background = (Story, context) => {
   const [theme, setTheme] = React.useState("light");
 
   React.useEffect(() => {
-    setTheme(
-      context.globals.backgrounds?.value === "#FFFFFF" ? "light" : "dark",
-    );
+    if (context.globals.backgrounds) {
+      setTheme(
+        context.globals.backgrounds.value === "#FFFFFF" ? "light" : "dark",
+      );
+    }
   }, [context.globals.backgrounds]);
 
   return (
