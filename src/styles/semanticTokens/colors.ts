@@ -45,4 +45,17 @@ export const colors = defineSemanticTokens.colors({
       },
     },
   },
+  icon: {
+    DEFAULT: {
+      value: {
+        base: `black`,
+        _osDark: `white`,
+      },
+    },
+    hover: {
+      value: {
+        base: "{colors.blue.400}",
+      },
+    },
+  },
 });

@@ -3,6 +3,7 @@
     "rvest.vs-code-prettier-eslint",
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag"
   ]
 }
