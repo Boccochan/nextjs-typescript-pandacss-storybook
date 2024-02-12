@@ -8,10 +8,23 @@ import { IconButton } from "./IconButton";
 
 type ButtonProps = ComponentProps<typeof IconButton>;
 
-const IconButtonWithIntl = ({ color, size, title, ...rest }: ButtonProps) => {
+const IconButtonWithIntl = ({
+  color,
+  size,
+  Icon,
+  onClick,
+  ...rest
+}: ButtonProps) => {
   const t = useTranslations();
+
   return (
-    <IconButton color={color} size={size} title={t(title ?? "")} {...rest} />
+    <IconButton
+      color={color}
+      size={size}
+      aria-label={t(rest["aria-label"] ?? "")}
+      Icon={Icon}
+      onClick={onClick}
+    />
   );
 };
 
