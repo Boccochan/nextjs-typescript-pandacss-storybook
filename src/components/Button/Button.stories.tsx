@@ -12,21 +12,35 @@ const ButtonWithIntl = ({ color, size, label, ...rest }: ButtonProps) => {
   return <Button color={color} size={size} label={t(label)} {...rest} />;
 };
 
-const meta = {
+const meta: Meta<typeof Button> = {
   title: "components/Button",
-  component: ButtonWithIntl,
+  component: Button,
   tags: ["autodocs"],
   parameters: {
+    componentSubtitle:
+      "Button allows users to take an action with a single click.",
     layout: "centered",
+    docs: {
+      controls: { exclude: ["disabled", "onClick"] },
+    },
   },
   argTypes: {
-    color: { control: "select", options: ["primary", "danger"] },
-    size: { control: "select", options: ["sm", "md", "lg", "xl"] },
+    // TODO: Move the description to source code
+    color: {
+      control: "select",
+      options: ["primary", "danger"],
+      description: "The color of the component.",
+    },
+    size: {
+      control: "select",
+      options: ["sm", "md", "lg", "xl"],
+      description: "The size of the component.",
+    },
   },
-} satisfies Meta<typeof ButtonWithIntl>;
+};
 
 export default meta;
-type Story = StoryObj<typeof ButtonWithIntl>;
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
@@ -37,6 +51,7 @@ export const Primary: Story = {
     loading: false,
     onClick: action("clicked"),
   },
+  render: ButtonWithIntl,
 };
 
 export const Danger: Story = {
@@ -48,6 +63,7 @@ export const Danger: Story = {
     loading: false,
     onClick: action("clicked"),
   },
+  render: ButtonWithIntl,
 };
 
 export const PrimaryWithMdMailIcon: Story = {
@@ -60,6 +76,7 @@ export const PrimaryWithMdMailIcon: Story = {
     onClick: action("clicked"),
     Icon: MdEmail,
   },
+  render: ButtonWithIntl,
 };
 
 export const PrimaryWithMdContentCopyIcon: Story = {
@@ -72,6 +89,7 @@ export const PrimaryWithMdContentCopyIcon: Story = {
     onClick: action("clicked"),
     Icon: MdContentCopy,
   },
+  render: ButtonWithIntl,
 };
 
 export const PrimaryWithMdDeleteIcon: Story = {
@@ -84,4 +102,5 @@ export const PrimaryWithMdDeleteIcon: Story = {
     onClick: action("clicked"),
     Icon: MdDelete,
   },
+  render: ButtonWithIntl,
 };

@@ -7,18 +7,33 @@ import { styles } from "./IconButton.styles";
 type Props = ButtonVariants &
   Omit<
     React.JSX.IntrinsicElements["button"],
-    // The title attribute is discourage by HTML spec.
-    // https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute
-    keyof ButtonVariants | "aria-label" | "title"
+    keyof ButtonVariants | "aria-label"
   >;
 
 type IconButtonProps = Props & {
+  /**
+   * If true, the component is disabled.
+   */
   loading?: boolean;
+
+  /**
+   * The component of react-icons.
+   */
   Icon: IconType;
-  // The aria-lable must be set for screen readers.
+
+  /**
+   * This label is for screen reader's users. The aria-label will be read by screen reader.
+   */
   "aria-label": string;
 };
 
+/**
+ * - Support all button tag's props.
+ * - IconButton does not support tooltip because of accessibility.
+ * Smartphone, table and screen readers users will not notice the
+ * tooltips. If you think IconButton needs tooltips, you should use
+ * basic button or other component.
+ */
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ Icon, size, disabled, loading, ...rest }, ref) => (
     <button

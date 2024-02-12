@@ -10,11 +10,25 @@ type Props = ButtonVariants &
   Omit<React.JSX.IntrinsicElements["button"], keyof ButtonVariants>;
 
 type ButtonProps = Props & {
+  /**
+   * The label of the button.
+   */
   label: string;
+
+  /**
+   * If true, the component is disabled.
+   */
   loading?: boolean;
+
+  /**
+   * The component of react-icons.
+   */
   Icon?: IconType;
 };
 
+/**
+ * - Support all button tag's props.
+ */
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ color, size, label, disabled, loading, Icon, ...rest }, ref) => (
     <button

@@ -1,5 +1,4 @@
 import { action } from "@storybook/addon-actions";
-// import { useArgs } from "@storybook/preview-api";
 import type { Meta, StoryObj } from "@storybook/react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
@@ -36,18 +35,18 @@ const meta: Meta<typeof IconButton> = {
   tags: ["autodocs"],
   parameters: {
     componentSubtitle:
-      "Icon button. Use this button only when the user can predict the behavior from the icon. For accessibility reasons, this button does not provide a tooltip. The reason why tooltips are not used is because users using screen readers will not notice them. Smartphone and tablet users will not notice the tooltip as well.",
+      "IconButton allows users to take an action with a single click.",
     layout: "centered",
     docs: {
       controls: { exclude: ["disabled", "onClick"] },
     },
   },
   argTypes: {
+    // TODO: Move the description to source code
     size: {
       control: "select",
       options: ["sm", "md", "lg", "xl"],
-      description: "Specify the size of the icon",
-      defaultValue: "md",
+      description: "The size of the component.",
     },
   },
 };
