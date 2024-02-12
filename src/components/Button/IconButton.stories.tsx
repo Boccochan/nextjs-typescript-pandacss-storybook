@@ -1,6 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
-import { MdPerson } from "react-icons/md";
+import { MdOutlineThumbUpAlt, MdPerson } from "react-icons/md";
 
 import { css } from "#/styled-system/css";
 
@@ -42,5 +42,15 @@ export const MdUserIcon: Story = {
     loading: false,
     onClick: action("clicked"),
     Icon: MdPerson,
+  },
+};
+
+export const MdOutlineThumbUpAltIcon: Story = {
+  args: {
+    size: "md",
+    disabled: false,
+    loading: false,
+    onClick: action("clicked"),
+    Icon: MdOutlineThumbUpAlt,
   },
 };
