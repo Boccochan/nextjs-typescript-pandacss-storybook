@@ -15,6 +15,7 @@ const ButtonWithIntl = ({ color, size, label, ...rest }: ButtonProps) => {
 const meta = {
   title: "components/Button",
   component: ButtonWithIntl,
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },

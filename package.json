@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint && eslint src",
     "storybook": "cross-env STORYBOOK_DARK_MODE=true storybook dev -p 6006",
-    "build-storybook": "cross-env STORYBOOK_DARK_MODE=true storybook build -o ./public/storybook",
+    "build-storybook": "cross-env STORYBOOK_DARK_MODE=true storybook build",
     "build-panda": "panda",
     "watch-panda": "panda --watch",
     "test": "jest",
