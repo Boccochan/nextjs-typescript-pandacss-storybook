@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot button Danger 1`] = `
+exports[`Snapshot Button Danger 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -85,7 +85,7 @@ exports[`Snapshot button Danger 1`] = `
 }
 `;
 
-exports[`Snapshot button Disabled 1`] = `
+exports[`Snapshot Button Disabled 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -174,7 +174,7 @@ exports[`Snapshot button Disabled 1`] = `
 }
 `;
 
-exports[`Snapshot button Loading 1`] = `
+exports[`Snapshot Button Loading 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -281,7 +281,7 @@ exports[`Snapshot button Loading 1`] = `
 }
 `;
 
-exports[`Snapshot button Primary 1`] = `
+exports[`Snapshot Button Primary 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -366,7 +366,7 @@ exports[`Snapshot button Primary 1`] = `
 }
 `;
 
-exports[`Snapshot button Size=lg 1`] = `
+exports[`Snapshot Button Size=lg 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -451,7 +451,7 @@ exports[`Snapshot button Size=lg 1`] = `
 }
 `;
 
-exports[`Snapshot button Size=md 1`] = `
+exports[`Snapshot Button Size=md 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -536,7 +536,7 @@ exports[`Snapshot button Size=md 1`] = `
 }
 `;
 
-exports[`Snapshot button Size=sm 1`] = `
+exports[`Snapshot Button Size=sm 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -621,7 +621,7 @@ exports[`Snapshot button Size=sm 1`] = `
 }
 `;
 
-exports[`Snapshot button Size=xl 1`] = `
+exports[`Snapshot Button Size=xl 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -706,7 +706,7 @@ exports[`Snapshot button Size=xl 1`] = `
 }
 `;
 
-exports[`Snapshot button With Md icon 1`] = `
+exports[`Snapshot Button With Md icon 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

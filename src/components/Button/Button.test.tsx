@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 
 import { Button } from "./Button";
 
-describe("Snapshot button", () => {
+describe("Snapshot Button", () => {
   it("Primary", async () => {
     const button = render(<Button label="hello" />);
 
