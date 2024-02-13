@@ -5,6 +5,8 @@ type SelectProps = React.JSX.IntrinsicElements["select"] & {
   options: string[];
 };
 
+// TODO: Set style to allow button.
+// TODO: Check if options should be options.
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ options, ...rest }, ref) => (
     <select ref={ref} {...rest} className={styles.select()}>
