@@ -21,6 +21,10 @@ const createColor = (colorName: string) => ({
   },
 });
 
+/**
+ * Colors should meet the contrast of WCAG AA as much as possible.
+ * Check - https://webaim.org/resources/contrastchecker/
+ */
 export const colors = defineSemanticTokens.colors({
   primary: createColor("blue"),
   danger: createColor("red"),
@@ -35,6 +39,12 @@ export const colors = defineSemanticTokens.colors({
       value: {
         base: `white`,
         _osDark: `{colors.gray.900}`,
+      },
+    },
+    border: {
+      value: {
+        base: "{colors.gray.500}",
+        _osDark: "{colors.gray.100}",
       },
     },
   },
