@@ -4,7 +4,14 @@ import type { IconType } from "react-icons";
 import type { ButtonVariants } from "./IconButton.styles";
 import { styles } from "./IconButton.styles";
 
-type IconButtonProps = React.JSX.IntrinsicElements["button"] & {
+type Props = Omit<
+  React.JSX.IntrinsicElements["button"],
+  // The aria-label is optional, but I wanted it to be required
+  // since the attribute will be used by screen reader.
+  "aria-label"
+>;
+
+type IconButtonProps = Props & {
   /**
    * The size of the component.
    */
