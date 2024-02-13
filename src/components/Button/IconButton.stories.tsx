@@ -42,11 +42,9 @@ const meta: Meta<typeof IconButton> = {
     },
   },
   argTypes: {
-    // TODO: Move the description to source code
     size: {
       control: "select",
       options: ["sm", "md", "lg", "xl"],
-      description: "The size of the component.",
     },
   },
 };

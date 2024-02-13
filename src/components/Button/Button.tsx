@@ -6,10 +6,19 @@ import { Spinner } from "@/components/Spinner";
 import type { ButtonVariants } from "./Button.styles";
 import { styles } from "./Button.styles";
 
-type Props = ButtonVariants &
-  Omit<React.JSX.IntrinsicElements["button"], keyof ButtonVariants>;
+type Props = Omit<React.JSX.IntrinsicElements["button"], keyof ButtonVariants>;
 
 type ButtonProps = Props & {
+  /**
+   * The color of the component.
+   */
+  color?: Required<ButtonVariants["color"]>; // For storybook
+
+  /**
+   * The size of the component.
+   */
+  size?: Required<ButtonVariants["size"]>; // For storybook
+
   /**
    * The label of the button.
    */

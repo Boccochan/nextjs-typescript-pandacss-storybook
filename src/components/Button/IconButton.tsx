@@ -4,13 +4,17 @@ import type { IconType } from "react-icons";
 import type { ButtonVariants } from "./IconButton.styles";
 import { styles } from "./IconButton.styles";
 
-type Props = ButtonVariants &
-  Omit<
-    React.JSX.IntrinsicElements["button"],
-    keyof ButtonVariants | "aria-label"
-  >;
+type Props = Omit<
+  React.JSX.IntrinsicElements["button"],
+  keyof ButtonVariants | "aria-label"
+>;
 
 type IconButtonProps = Props & {
+  /**
+   * The size of the component.
+   */
+  size?: Required<ButtonVariants["size"]>; // For storybook
+
   /**
    * If true, the component is disabled.
    */

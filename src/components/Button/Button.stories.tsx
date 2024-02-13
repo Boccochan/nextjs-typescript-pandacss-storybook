@@ -25,16 +25,13 @@ const meta: Meta<typeof Button> = {
     },
   },
   argTypes: {
-    // TODO: Move the description to source code
     color: {
       control: "select",
       options: ["primary", "danger"],
-      description: "The color of the component.",
     },
     size: {
       control: "select",
       options: ["sm", "md", "lg", "xl"],
-      description: "The size of the component.",
     },
   },
 };
