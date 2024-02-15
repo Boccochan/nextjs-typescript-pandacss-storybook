@@ -6,12 +6,17 @@ const wrapper = css({
   _after: {
     position: "absolute",
     content: '""',
-    width: "10px",
-    height: "10px",
     top: "50%",
     right: "10px",
     transform: "translateY(-50%)",
-    bg: "blue",
+    width: "0",
+    height: "0",
+    borderLeft: "6px solid transparent",
+    borderRight: "6px solid transparent",
+    borderTopColor: "icon",
+    borderTopWidth: "8px",
+    borderTopStyle: "solid",
+    pointerEvents: "none",
   },
 });
 
