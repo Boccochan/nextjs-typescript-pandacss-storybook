@@ -1,10 +1,29 @@
-import { cva } from "#/styled-system/css";
+import { css, cva } from "#/styled-system/css";
+
+const wrapper = css({
+  position: "relative",
+  width: "fit-content",
+  _after: {
+    position: "absolute",
+    content: '""',
+    width: "10px",
+    height: "10px",
+    top: "50%",
+    right: "10px",
+    transform: "translateY(-50%)",
+    bg: "blue",
+  },
+});
 
 const select = cva({
   base: {
     borderColor: "body.border",
     borderWidth: "1px",
     borderRadius: "md",
+    bg: "body.bg",
+    color: "body.text",
+    appearance: "none",
+    padding: "1px 2rem",
   },
   variants: {
     size: {
@@ -45,4 +64,5 @@ const select = cva({
 
 export const styles = {
   select,
+  wrapper,
 };

@@ -3,6 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { MdOutlineThumbUpAlt } from "react-icons/md";
 
 import { Button, IconButton } from "@/components/Button";
+import { Select } from "@/components/Select";
 import { css } from "#/styled-system/css";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       {t("products.cart")}
       <Button color={"danger"} size="lg" label="こんにちわ" Icon={MdEmail} />
       <IconButton Icon={MdOutlineThumbUpAlt} aria-label={t("Good button")} />
+      <Select options={["Apple", "Microsoft"]} />
     </main>
   );
 }
