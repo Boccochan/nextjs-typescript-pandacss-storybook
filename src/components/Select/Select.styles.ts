@@ -1,3 +1,4 @@
+import type { RecipeVariantProps } from "#/styled-system/css";
 import { cva } from "#/styled-system/css";
 
 const wrapper = cva({
@@ -26,6 +27,14 @@ const wrapper = cva({
         opacity: "0.4",
       },
     },
+    isFullWidth: {
+      true: {
+        width: "100%",
+      },
+    },
+  },
+  defaultVariants: {
+    isFullWidth: false,
   },
 });
 
@@ -37,7 +46,7 @@ const select = cva({
     bg: "body.bg",
     color: "body.text",
     appearance: "none",
-    padding: "1px 2rem",
+    padding: "1px 2rem 1px 1rem",
     _disabled: {
       opacity: "0.7",
       pointerEvents: "none",
@@ -49,34 +58,40 @@ const select = cva({
         px: "3",
         rounded: "sm",
         fontSize: "sm",
-        minWidth: "3rem",
+        width: "12rem",
         height: "2rem",
       },
       md: {
         px: "4",
         rounded: "md",
         fontSize: "md",
-        minWidth: "4rem",
+        width: "14rem",
         height: "2.4rem",
       },
       lg: {
         px: "5",
         rounded: "lg",
         fontSize: "lg",
-        minWidth: "5rem",
+        width: "16rem",
         height: "2.8rem",
       },
       xl: {
         px: "6",
         rounded: "xl",
         fontSize: "xl",
-        minWidth: "6rem",
+        width: "16rem",
         height: "3.2rem",
+      },
+    },
+    isFullWidth: {
+      true: {
+        width: "100%",
       },
     },
   },
   defaultVariants: {
     size: "md",
+    isFullWidth: false,
   },
 });
 
@@ -84,3 +99,5 @@ export const styles = {
   select,
   wrapper,
 };
+
+export type SelectVariants = NonNullable<RecipeVariantProps<typeof select>>;
