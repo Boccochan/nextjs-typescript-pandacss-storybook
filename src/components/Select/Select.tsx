@@ -44,7 +44,6 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   options: Option[];
 };
 
-// TODO: Options padding when not fullWidth
 // TODO: Loading state
 // TODO: Support fixed width
 // TODO: Readonly
