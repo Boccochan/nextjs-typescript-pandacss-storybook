@@ -20,7 +20,12 @@ export default function Home() {
       {t("products.cart")}
       <Button color={"danger"} size="lg" label="こんにちわ" Icon={MdEmail} />
       <IconButton Icon={MdOutlineThumbUpAlt} aria-label={t("Good button")} />
-      <Select options={["Apple", "Microsoft"]} />
+      <Select
+        options={[
+          { id: "Apple", value: "Apple" },
+          { id: "Apple", value: "Microsoft" },
+        ]}
+      />
     </main>
   );
 }

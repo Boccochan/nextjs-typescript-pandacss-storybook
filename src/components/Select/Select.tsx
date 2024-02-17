@@ -4,6 +4,7 @@ import { styles } from "./Select.styles";
 
 type Option = {
   hidden?: boolean;
+  id: string;
   value: string;
 };
 
@@ -20,8 +21,8 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         className={styles.select()}
         disabled={disabled}
       >
-        {options.map((option, index) => (
-          <option key={index} hidden={option.hidden}>
+        {options.map((option) => (
+          <option key={option.id} hidden={option.hidden} value={option.value}>
             {option.value}
           </option>
         ))}

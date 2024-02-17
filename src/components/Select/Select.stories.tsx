@@ -33,12 +33,12 @@ export const Normal: Story = {
   args: {
     disabled: false,
     options: [
-      { hidden: true, value: "Select" },
-      { value: "Apple" },
-      { value: "Microsoft" },
-      { value: "Amazon" },
-      { value: "Meta" },
-      { value: "Google" },
+      { hidden: true, id: "Select", value: "Select" },
+      { id: "Apple", value: "Apple" },
+      { id: "Microsoft", value: "Microsoft" },
+      { id: "Amazon", value: "Amazon" },
+      { id: "Meta", value: "Meta" },
+      { id: "Google", value: "Google" },
     ],
   },
 };
