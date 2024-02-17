@@ -1,22 +1,31 @@
-import { css, cva } from "#/styled-system/css";
+import { cva } from "#/styled-system/css";
 
-const wrapper = css({
-  position: "relative",
-  width: "fit-content",
-  _after: {
-    position: "absolute",
-    content: '""',
-    top: "50%",
-    right: "10px",
-    transform: "translateY(-50%)",
-    width: "0",
-    height: "0",
-    borderLeft: "6px solid transparent",
-    borderRight: "6px solid transparent",
-    borderTopColor: "icon",
-    borderTopWidth: "8px",
-    borderTopStyle: "solid",
-    pointerEvents: "none",
+const wrapper = cva({
+  base: {
+    position: "relative",
+    width: "fit-content",
+    _after: {
+      position: "absolute",
+      content: '""',
+      top: "50%",
+      right: "10px",
+      transform: "translateY(-50%)",
+      width: "0",
+      height: "0",
+      borderLeft: "6px solid transparent",
+      borderRight: "6px solid transparent",
+      borderTopColor: "icon",
+      borderTopWidth: "8px",
+      borderTopStyle: "solid",
+      pointerEvents: "none",
+    },
+  },
+  variants: {
+    disabled: {
+      true: {
+        opacity: "0.4",
+      },
+    },
   },
 });
 
@@ -29,6 +38,10 @@ const select = cva({
     color: "body.text",
     appearance: "none",
     padding: "1px 2rem",
+    _disabled: {
+      opacity: "0.7",
+      pointerEvents: "none",
+    },
   },
   variants: {
     size: {

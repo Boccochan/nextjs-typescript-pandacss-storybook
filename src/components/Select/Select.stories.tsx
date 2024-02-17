@@ -29,20 +29,16 @@ const meta: Meta<typeof Select> = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
-export const Enabled: Story = {
+export const Normal: Story = {
   args: {
-    options: ["Apple", "Microsoft", "Amazon", "Meta", "Google"],
+    disabled: false,
+    options: [
+      { hidden: true, value: "Select" },
+      { value: "Apple" },
+      { value: "Microsoft" },
+      { value: "Amazon" },
+      { value: "Meta" },
+      { value: "Google" },
+    ],
   },
 };
-
-// export const MdOutlineThumbUpAltIcon: Story = {
-//   args: {
-//     size: "md",
-//     disabled: false,
-//     loading: false,
-//     onClick: action("clicked"),
-//     Icon: MdOutlineThumbUpAlt,
-//     "aria-label": "Good button",
-//   },
-//   render: IconButtonWithIntl,
-// };

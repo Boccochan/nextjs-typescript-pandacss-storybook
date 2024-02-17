@@ -2,18 +2,28 @@ import React from "react";
 
 import { styles } from "./Select.styles";
 
-type SelectProps = React.JSX.IntrinsicElements["select"] & {
-  options: string[];
+type Option = {
+  hidden?: boolean;
+  value: string;
 };
 
-// TODO: Set style to allow button.
-// TODO: Check if options should be options.
+type SelectProps = React.JSX.IntrinsicElements["select"] & {
+  options: Option[];
+};
+
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, ...rest }, ref) => (
-    <div className={styles.wrapper}>
-      <select ref={ref} {...rest} className={styles.select()}>
+  ({ options, disabled, ...rest }, ref) => (
+    <div className={styles.wrapper({ disabled })}>
+      <select
+        ref={ref}
+        {...rest}
+        className={styles.select()}
+        disabled={disabled}
+      >
         {options.map((option, index) => (
-          <option key={index}>{option}</option>
+          <option key={index} hidden={option.hidden}>
+            {option.value}
+          </option>
         ))}
       </select>
     </div>
