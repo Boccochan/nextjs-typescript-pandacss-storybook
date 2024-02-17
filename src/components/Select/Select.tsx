@@ -1,5 +1,7 @@
 import React from "react";
 
+import { css } from "#/styled-system/css";
+
 import type { SelectVariants } from "./Select.styles";
 import { styles } from "./Select.styles";
 
@@ -27,6 +29,11 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   size?: SelectVariants["size"];
 
   /**
+   * The width is the same as width of css. This width takes precedence over the size.
+   */
+  width?: string;
+
+  /**
    * If true, the select width will be 100%.
    */
   isFullWidth?: SelectVariants["isFullWidth"];
@@ -37,10 +44,9 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   options: Option[];
 };
 
-// TODO: Sotrybook fullWidth
+// TODO: Options padding when not fullWidth
 // TODO: Loading state
 // TODO: Support fixed width
-// TODO: Options padding when not fullWidth
 // TODO: Readonly
 
 /**
@@ -48,27 +54,40 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
  * - If you need a richer menu, implement it in another component.
  */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, disabled, size, isFullWidth, ...rest }, ref) => (
-    <div
-      className={styles.wrapper({
-        disabled: disabled || options.length === 0,
+  ({ options, disabled, size, width, isFullWidth, ...rest }, ref) => {
+    const isDisabled = disabled || options.length === 0;
+
+    // Can we use css for wrapper??
+    const wrapperStyle = css(
+      styles.wrapper.raw({
+        disabled: isDisabled,
         isFullWidth,
-      })}
-    >
-      <select
-        ref={ref}
-        {...rest}
-        className={styles.select({ size, isFullWidth })}
-        disabled={disabled || options.length === 0}
-      >
-        {options.map((option) => (
-          <option key={option.id} hidden={option.hidden} value={option.value}>
-            {option.value}
-          </option>
-        ))}
-      </select>
-    </div>
-  ),
+      }),
+      css.raw({ width }),
+    );
+
+    const selectStyle = css(
+      styles.select.raw({ size, isFullWidth }),
+      css.raw({ width }),
+    );
+
+    return (
+      <div className={wrapperStyle}>
+        <select
+          ref={ref}
+          {...rest}
+          className={selectStyle}
+          disabled={isDisabled}
+        >
+          {options.map((option) => (
+            <option key={option.id} hidden={option.hidden} value={option.value}>
+              {option.value}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  },
 );
 
 Select.displayName = "Select";

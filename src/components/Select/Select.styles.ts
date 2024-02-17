@@ -1,5 +1,5 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
-import { cva } from "#/styled-system/css";
+import { css, cva } from "#/styled-system/css";
 
 const wrapper = cva({
   base: {
@@ -95,9 +95,15 @@ const select = cva({
   },
 });
 
+export const option = css({
+  padding: "3rem",
+  color: "red",
+});
+
 export const styles = {
   select,
   wrapper,
+  option,
 };
 
 export type SelectVariants = NonNullable<RecipeVariantProps<typeof select>>;

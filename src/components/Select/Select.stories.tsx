@@ -53,6 +53,9 @@ const meta: Meta<typeof Select> = {
       control: "select",
       options: ["sm", "md", "lg", "xl"],
     },
+    width: {
+      control: false,
+    },
   },
 };
 
