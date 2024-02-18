@@ -25,7 +25,7 @@ export default function Home() {
           { id: "Apple", value: "Apple" },
           { id: "Apple", value: "Microsoft" },
         ]}
-        width="500px"
+        width="auto"
       />
     </main>
   );

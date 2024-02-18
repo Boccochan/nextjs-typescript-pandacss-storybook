@@ -40,6 +40,7 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 
 // TODO: Loading state
 // TODO: Readonly
+// TODO: Selected
 
 /**
  * - The Select component uses pure HTML select tags to avoid complex Javascript implementations.
