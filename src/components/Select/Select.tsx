@@ -1,7 +1,6 @@
 import React from "react";
 
-import { css } from "#/styled-system/css";
-
+// import { css } from "#/styled-system/css";
 import type { SelectVariants } from "./Select.styles";
 import { styles } from "./Select.styles";
 
@@ -29,14 +28,9 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   size?: SelectVariants["size"];
 
   /**
-   * The width is the same as width of css. This width takes precedence over the size.
+   * The width of select box. The width of the Select component can be fixed.
    */
-  width?: string;
-
-  /**
-   * If true, the select width will be 100%.
-   */
-  isFullWidth?: SelectVariants["isFullWidth"];
+  width?: SelectVariants["width"];
 
   /**
    * The options of the select.
@@ -50,32 +44,24 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 
 /**
  * - The Select component uses pure HTML select tags to avoid complex Javascript implementations.
- * - If you need a richer menu, implement it in another component.
+ * - There is a limit to the width of options.
+ * - If you need a richer menu, consider to implement another component.
  */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, disabled, size, width, isFullWidth, ...rest }, ref) => {
+  ({ options, disabled, size, width, ...rest }, ref) => {
     const isDisabled = disabled || options.length === 0;
 
-    // Can we use css for wrapper??
-    const wrapperStyle = css(
-      styles.wrapper.raw({
-        disabled: isDisabled,
-        isFullWidth,
-      }),
-      css.raw({ width }),
-    );
-
-    const selectStyle = css(
-      styles.select.raw({ size, isFullWidth }),
-      css.raw({ width }),
-    );
-
     return (
-      <div className={wrapperStyle}>
+      <div
+        className={styles.wrapper({
+          disabled: isDisabled,
+          width,
+        })}
+      >
         <select
           ref={ref}
           {...rest}
-          className={selectStyle}
+          className={styles.select({ size, width })}
           disabled={isDisabled}
         >
           {options.map((option) => (

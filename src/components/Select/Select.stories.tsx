@@ -54,7 +54,8 @@ const meta: Meta<typeof Select> = {
       options: ["sm", "md", "lg", "xl"],
     },
     width: {
-      control: false,
+      control: "select",
+      options: ["sm", "md", "lg", "xl", "full", "auto"],
     },
   },
 };
@@ -65,8 +66,8 @@ type Story = StoryObj<typeof Select>;
 export const Normal: Story = {
   args: {
     disabled: false,
-    isFullWidth: false,
     size: "md",
+    width: "auto",
     options: [
       { hidden: true, id: "Select", value: "Select" },
       { id: "Apple", value: "Apple" },
@@ -85,8 +86,8 @@ export const Normal: Story = {
 export const Empty: Story = {
   args: {
     size: "md",
+    width: "auto",
     options: [],
-    isFullWidth: false,
   },
   render: DisplayBox,
 };

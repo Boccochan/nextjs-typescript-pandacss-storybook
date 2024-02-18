@@ -1,6 +1,8 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
 import { css, cva } from "#/styled-system/css";
 
+//svaへの置き換えを検討
+
 const wrapper = cva({
   base: {
     position: "relative",
@@ -27,14 +29,17 @@ const wrapper = cva({
         opacity: "0.4",
       },
     },
-    isFullWidth: {
-      true: {
-        width: "100%",
-      },
+    width: {
+      sm: { width: "12rem" },
+      md: { width: "14rem" },
+      lg: { width: "16rem" },
+      xl: { width: "18rem" },
+      full: { width: "100%" },
+      auto: { width: "auto" },
     },
   },
   defaultVariants: {
-    isFullWidth: false,
+    width: "auto",
   },
 });
 
@@ -58,40 +63,43 @@ const select = cva({
         px: "3",
         rounded: "sm",
         fontSize: "sm",
-        width: "12rem",
+        minWidth: "12rem",
         height: "2rem",
       },
       md: {
         px: "4",
         rounded: "md",
         fontSize: "md",
-        width: "14rem",
+        minWidth: "14rem",
         height: "2.4rem",
       },
       lg: {
         px: "5",
         rounded: "lg",
         fontSize: "lg",
-        width: "16rem",
+        minWidth: "16rem",
         height: "2.8rem",
       },
       xl: {
         px: "6",
         rounded: "xl",
         fontSize: "xl",
-        width: "16rem",
+        minWidth: "16rem",
         height: "3.2rem",
       },
     },
-    isFullWidth: {
-      true: {
-        width: "100%",
-      },
+    width: {
+      sm: { width: "12rem" },
+      md: { width: "14rem" },
+      lg: { width: "16rem" },
+      xl: { width: "18rem" },
+      full: { width: "100%" },
+      auto: { width: "auto" },
     },
   },
   defaultVariants: {
     size: "md",
-    isFullWidth: false,
+    width: "auto",
   },
 });
 
