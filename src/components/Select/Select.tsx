@@ -39,7 +39,6 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 };
 
 // TODO: Loading state
-// TODO: Support fixed width
 // TODO: Readonly
 
 /**
