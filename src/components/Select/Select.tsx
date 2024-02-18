@@ -11,6 +11,11 @@ type Option = {
   hidden?: boolean;
 
   /**
+   * The selected attribute.
+   */
+  isSelected?: boolean;
+
+  /**
    * The id is set as 'key' of option tag.
    */
   id: string;
@@ -40,7 +45,6 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 
 // TODO: Loading state
 // TODO: Readonly
-// TODO: Selected
 
 /**
  * - The Select component uses pure HTML select tags to avoid complex Javascript implementations.
@@ -65,7 +69,12 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           disabled={isDisabled}
         >
           {options.map((option) => (
-            <option key={option.id} hidden={option.hidden} value={option.value}>
+            <option
+              key={option.id}
+              hidden={option.hidden}
+              value={option.value}
+              selected={option.isSelected}
+            >
               {option.value}
             </option>
           ))}

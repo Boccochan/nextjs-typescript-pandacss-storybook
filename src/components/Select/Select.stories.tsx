@@ -87,7 +87,28 @@ export const Empty: Story = {
   args: {
     size: "md",
     width: "auto",
+    disabled: false,
     options: [],
+  },
+  render: DisplayBox,
+};
+
+export const Selected: Story = {
+  args: {
+    size: "md",
+    width: "auto",
+    disabled: false,
+    options: [
+      { hidden: true, id: "Select", value: "Select" },
+      { id: "Apple", value: "Apple" },
+      {
+        id: "International Consolidated Airlines Group SA",
+        value: "International Consolidated Airlines Group SA",
+      },
+      { id: "Amazon", value: "Amazon", isSelected: true },
+      { id: "Meta", value: "Meta" },
+      { id: "Google", value: "Google" },
+    ],
   },
   render: DisplayBox,
 };
