@@ -112,3 +112,24 @@ export const Selected: Story = {
   },
   render: DisplayBox,
 };
+
+export const Loading: Story = {
+  args: {
+    size: "md",
+    width: "auto",
+    disabled: false,
+    loading: true,
+    options: [
+      { hidden: true, id: "Select", value: "Select" },
+      { id: "Apple", value: "Apple" },
+      {
+        id: "International Consolidated Airlines Group SA",
+        value: "International Consolidated Airlines Group SA",
+      },
+      { id: "Amazon", value: "Amazon", isSelected: true },
+      { id: "Meta", value: "Meta" },
+      { id: "Google", value: "Google" },
+    ],
+  },
+  render: DisplayBox,
+};

@@ -1,10 +1,10 @@
 import React from "react";
 
-// import { css } from "#/styled-system/css";
+import { Options } from "./Options";
 import type { SelectVariants } from "./Select.styles";
 import { styles } from "./Select.styles";
 
-type Option = {
+type OptionProps = {
   /**
    * Hidden this option on dropdown menu.
    */
@@ -40,11 +40,13 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   /**
    * The options of the select.
    */
-  options: Option[];
-};
+  options: OptionProps[];
 
-// TODO: Loading state
-// TODO: Readonly
+  /**
+   * If true, the component is disabled and show 'Loading..'.
+   */
+  loading?: boolean;
+};
 
 /**
  * - The Select component uses pure HTML select tags to avoid complex Javascript implementations.
@@ -52,14 +54,13 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
  * - If you need a richer menu, consider to implement another component.
  */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, disabled, size, width, ...rest }, ref) => {
-    const isDisabled = disabled || options.length === 0;
+  ({ options, disabled, size, width, loading, ...rest }, ref) => {
+    const isDisabled = disabled || options.length === 0 || loading;
 
     return (
       <div
         className={styles.wrapper({
           disabled: isDisabled,
-          width,
         })}
       >
         <select
@@ -68,16 +69,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           className={styles.select({ size, width })}
           disabled={isDisabled}
         >
-          {options.map((option) => (
-            <option
-              key={option.id}
-              hidden={option.hidden}
-              value={option.value}
-              selected={option.isSelected}
-            >
-              {option.value}
-            </option>
-          ))}
+          <Options loading={loading} options={options} />
         </select>
       </div>
     );

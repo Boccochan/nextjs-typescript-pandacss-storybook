@@ -1,7 +1,7 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
 import { css, cva } from "#/styled-system/css";
 
-//svaへの置き換えを検討
+// TODO: svaへの置き換えを検討
 
 const wrapper = cva({
   base: {
@@ -29,17 +29,6 @@ const wrapper = cva({
         opacity: "0.4",
       },
     },
-    width: {
-      sm: { width: "12rem" },
-      md: { width: "14rem" },
-      lg: { width: "16rem" },
-      xl: { width: "18rem" },
-      full: { width: "100%" },
-      auto: { width: "auto" },
-    },
-  },
-  defaultVariants: {
-    width: "auto",
   },
 });
 

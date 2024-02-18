@@ -23,9 +23,9 @@ export default function Home() {
       <Select
         options={[
           { id: "Apple", value: "Apple" },
-          { id: "Apple", value: "Microsoft" },
+          { id: "Microsoft", value: "Microsoft" },
         ]}
-        width="auto"
+        // width="auto"
       />
     </main>
   );

@@ -23,7 +23,7 @@ type ButtonProps = React.JSX.IntrinsicElements["button"] & {
   label: string;
 
   /**
-   * If true, the component is disabled.
+   * If true, the component is disabled and show a spinner.
    */
   loading?: boolean;
 
