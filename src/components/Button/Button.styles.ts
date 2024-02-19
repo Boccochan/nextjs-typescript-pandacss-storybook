@@ -22,6 +22,13 @@ const button = cva({
   },
   variants: {
     size: {
+      xs: {
+        px: "2",
+        rounded: "xs",
+        fontSize: "xs",
+        minWidth: "2rem",
+        height: "1.6rem",
+      },
       sm: {
         px: "3",
         rounded: "sm",

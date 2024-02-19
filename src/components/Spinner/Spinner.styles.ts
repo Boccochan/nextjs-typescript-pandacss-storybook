@@ -16,6 +16,7 @@ export const spinner = cva({
   },
   variants: {
     size: {
+      xs: { fontSize: "2.8px" },
       sm: { fontSize: "4.8px" },
       md: { fontSize: "6.8px" },
       lg: { fontSize: "8.8px" },

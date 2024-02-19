@@ -11,7 +11,7 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    size: { control: "select", options: ["sm", "md", "lg", "xl"] },
+    size: { control: "select", options: ["xs", "sm", "md", "lg", "xl"] },
   },
   decorators: [
     (Story) => (
