@@ -1,8 +1,6 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
 import { cva } from "#/styled-system/css";
 
-// TODO: svaへの置き換えを検討
-
 const wrapper = cva({
   base: {
     position: "relative",
