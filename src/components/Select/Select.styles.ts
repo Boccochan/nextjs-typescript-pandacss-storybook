@@ -1,5 +1,5 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
-import { css, cva } from "#/styled-system/css";
+import { cva } from "#/styled-system/css";
 
 // TODO: svaへの置き換えを検討
 
@@ -48,6 +48,13 @@ const select = cva({
   },
   variants: {
     size: {
+      xs: {
+        px: "2",
+        rounded: "xs",
+        fontSize: "xs",
+        minWidth: "10rem",
+        height: "1.6rem",
+      },
       sm: {
         px: "3",
         rounded: "sm",
@@ -78,6 +85,7 @@ const select = cva({
       },
     },
     width: {
+      xs: { width: "10rem" },
       sm: { width: "12rem" },
       md: { width: "14rem" },
       lg: { width: "16rem" },
@@ -92,15 +100,9 @@ const select = cva({
   },
 });
 
-export const option = css({
-  padding: "3rem",
-  color: "red",
-});
-
 export const styles = {
   select,
   wrapper,
-  option,
 };
 
 export type SelectVariants = NonNullable<RecipeVariantProps<typeof select>>;

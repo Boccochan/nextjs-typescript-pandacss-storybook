@@ -51,11 +51,11 @@ const meta: Meta<typeof Select> = {
   argTypes: {
     size: {
       control: "select",
-      options: ["sm", "md", "lg", "xl"],
+      options: ["xs", "sm", "md", "lg", "xl"],
     },
     width: {
       control: "select",
-      options: ["sm", "md", "lg", "xl", "full", "auto"],
+      options: ["xs", "sm", "md", "lg", "xl", "full", "auto"],
     },
   },
 };
