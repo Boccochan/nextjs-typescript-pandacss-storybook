@@ -706,6 +706,91 @@ exports[`Snapshot Button Size=xl 1`] = `
 }
 `;
 
+exports[`Snapshot Button Size=xs 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
+      >
+        <div
+          class="d_flex justify_center items_center gap_2"
+        >
+          <span>
+            hello
+          </span>
+        </div>
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none pos_relative bg_primary hover:bg_primary.hover active:bg_primary.active focusVisible:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
+    >
+      <div
+        class="d_flex justify_center items_center gap_2"
+      >
+        <span>
+          hello
+        </span>
+      </div>
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Snapshot Button With Md icon 1`] = `
 {
   "asFragment": [Function],

@@ -17,6 +17,12 @@ describe("Snapshot Button", () => {
     expect(button).toMatchSnapshot();
   });
 
+  it("Size=xs", async () => {
+    const button = render(<Button label="hello" size="xs" />);
+
+    expect(button).toMatchSnapshot();
+  });
+
   it("Size=sm", async () => {
     const button = render(<Button label="hello" size="sm" />);
 

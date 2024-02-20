@@ -5,6 +5,14 @@ import { MdEmail } from "react-icons/md";
 import { IconButton } from "./IconButton";
 
 describe("Snapshot IconButton", () => {
+  it("With Md icon, size=xs", async () => {
+    const button = render(
+      <IconButton size="xs" Icon={MdEmail} aria-label="Send email" />,
+    );
+
+    expect(button).toMatchSnapshot();
+  });
+
   it("With Md icon, size=sm", async () => {
     const button = render(
       <IconButton size="sm" Icon={MdEmail} aria-label="Send email" />,
