@@ -44,7 +44,7 @@ const meta: Meta<typeof IconButton> = {
   argTypes: {
     size: {
       control: "select",
-      options: ["sm", "md", "lg", "xl"],
+      options: ["xs", "sm", "md", "lg", "xl"],
     },
   },
 };

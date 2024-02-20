@@ -18,6 +18,12 @@ const button = cva({
   },
   variants: {
     size: {
+      xs: {
+        rounded: "xs",
+        fontSize: "1.6rem",
+        width: "1.6rem",
+        height: "1.6rem",
+      },
       sm: {
         rounded: "sm",
         fontSize: "2rem",
