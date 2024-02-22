@@ -1,6 +1,7 @@
 import React from "react";
 
-import { render } from "../../testlib";
+import { render } from "@/testlib";
+
 import { Select } from "./Select";
 
 describe("Snapshot Select", () => {
