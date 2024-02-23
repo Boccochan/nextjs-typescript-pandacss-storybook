@@ -13,6 +13,9 @@ const button = cva({
     justifyContent: "center",
     color: {
       base: "icon",
+    },
+    bg: {
+      base: "body.bg",
       _hover: "icon.hover",
     },
   },
