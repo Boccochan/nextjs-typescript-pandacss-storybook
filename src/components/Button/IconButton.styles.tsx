@@ -17,37 +17,38 @@ const button = cva({
     bg: {
       base: "body.bg",
       _hover: "icon.hover",
+      _active: "icon.active",
     },
   },
   variants: {
     size: {
       xs: {
         rounded: "xs",
-        fontSize: "1.6rem",
+        fontSize: "1rem",
         width: "1.6rem",
         height: "1.6rem",
       },
       sm: {
         rounded: "sm",
-        fontSize: "2rem",
+        fontSize: "1.4rem",
         width: "2rem",
         height: "2rem",
       },
       md: {
         rounded: "md",
-        fontSize: "2.4rem",
+        fontSize: "1.8rem",
         width: "2.4rem",
         height: "2.4rem",
       },
       lg: {
         rounded: "lg",
-        fontSize: "2.8rem",
+        fontSize: "2.2rem",
         width: "2.8rem",
         height: "2.8rem",
       },
       xl: {
         rounded: "xl",
-        fontSize: "3.2rem",
+        fontSize: "2.4rem",
         width: "3.2rem",
         height: "3.2rem",
       },
