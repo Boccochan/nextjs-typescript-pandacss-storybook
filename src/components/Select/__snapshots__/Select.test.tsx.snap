@@ -1,5 +1,897 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot Select With loading 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+          disabled=""
+        >
+          <option>
+            Loading..
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        disabled=""
+      >
+        <option>
+          Loading..
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With options=['Apple', 'Microsoft'] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        >
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+      >
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With options=['Apple', 'Microsoft'] disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+          disabled=""
+        >
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        disabled=""
+      >
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With options=['Apple', 'Microsoft'] selected Microsoft 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        >
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+      >
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With options=['Select', 'Apple', 'Microsoft'] select option 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With options=[] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+          disabled=""
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        disabled=""
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With size=lg, options=[] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_lg bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_5 fs_lg min-w_16rem h_2.8rem w_auto"
+          disabled=""
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_lg bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_5 fs_lg min-w_16rem h_2.8rem w_auto"
+        disabled=""
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With size=md, options=[] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+          disabled=""
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        disabled=""
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With size=sm, options=[] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_sm bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_3 fs_sm min-w_12rem h_2rem w_auto"
+          disabled=""
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_sm bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_3 fs_sm min-w_12rem h_2rem w_auto"
+        disabled=""
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With size=xl, options=[] 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_xl bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_6 fs_xl min-w_16rem h_3.2rem w_auto"
+          disabled=""
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none opacity_0.4"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_xl bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_6 fs_xl min-w_16rem h_3.2rem w_auto"
+        disabled=""
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Snapshot Select With size=xs, options=[] 1`] = `
 {
   "asFragment": [Function],
@@ -23,6 +915,783 @@ exports[`Snapshot Select With size=xs, options=[] 1`] = `
         class="border_body.border border-w_1px rounded_xs bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_2 fs_xs min-w_10rem h_1.6rem w_auto"
         disabled=""
       />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='auto' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='full' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_100%"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_100%"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='lg' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_16rem"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_16rem"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='md' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_14rem"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_14rem"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='sm' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_12rem"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_12rem"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='xl' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_18rem"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_18rem"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Snapshot Select With width='xs' options=['Select', 'Apple', 'Microsoft']  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+      >
+        <select
+          class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_10rem"
+        >
+          <option
+            hidden=""
+            value="Select"
+          >
+            Select
+          </option>
+          <option
+            value="Apple"
+          >
+            Apple
+          </option>
+          <option
+            value="Microsoft"
+          >
+            Microsoft
+          </option>
+        </select>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="pos_relative w_fit-content after:pos_absolute after:content_"" after:top_50% after:right_10px after:transform_translateY(-50%) after:w_0 after:h_0 after:border-l_6px_solid_transparent after:border-r_6px_solid_transparent after:border-t_icon after:border-tw_8px after:border-top-style_solid after:pointer-events_none"
+    >
+      <select
+        class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_10rem"
+      >
+        <option
+          hidden=""
+          value="Select"
+        >
+          Select
+        </option>
+        <option
+          value="Apple"
+        >
+          Apple
+        </option>
+        <option
+          value="Microsoft"
+        >
+          Microsoft
+        </option>
+      </select>
     </div>
   </div>,
   "debug": [Function],
