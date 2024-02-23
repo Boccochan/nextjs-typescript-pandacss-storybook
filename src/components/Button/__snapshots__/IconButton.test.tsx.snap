@@ -7,7 +7,7 @@ exports[`Snapshot IconButton With Md icon, size=lg 1`] = `
     <div>
       <button
         aria-label="Send email"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_lg fs_2.8rem w_2.8rem h_2.8rem"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_lg fs_2.2rem w_2.8rem h_2.8rem"
       >
         <svg
           fill="currentColor"
@@ -32,7 +32,7 @@ exports[`Snapshot IconButton With Md icon, size=lg 1`] = `
   "container": <div>
     <button
       aria-label="Send email"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_lg fs_2.8rem w_2.8rem h_2.8rem"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_lg fs_2.2rem w_2.8rem h_2.8rem"
     >
       <svg
         fill="currentColor"
@@ -114,7 +114,7 @@ exports[`Snapshot IconButton With Md icon, size=md 1`] = `
     <div>
       <button
         aria-label="Send email"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_md fs_2.4rem w_2.4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_md fs_1.8rem w_2.4rem h_2.4rem"
       >
         <svg
           fill="currentColor"
@@ -139,7 +139,7 @@ exports[`Snapshot IconButton With Md icon, size=md 1`] = `
   "container": <div>
     <button
       aria-label="Send email"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_md fs_2.4rem w_2.4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_md fs_1.8rem w_2.4rem h_2.4rem"
     >
       <svg
         fill="currentColor"
@@ -221,7 +221,7 @@ exports[`Snapshot IconButton With Md icon, size=sm 1`] = `
     <div>
       <button
         aria-label="Send email"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_sm fs_2rem w_2rem h_2rem"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_sm fs_1.4rem w_2rem h_2rem"
       >
         <svg
           fill="currentColor"
@@ -246,7 +246,7 @@ exports[`Snapshot IconButton With Md icon, size=sm 1`] = `
   "container": <div>
     <button
       aria-label="Send email"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_sm fs_2rem w_2rem h_2rem"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_sm fs_1.4rem w_2rem h_2rem"
     >
       <svg
         fill="currentColor"
@@ -328,7 +328,7 @@ exports[`Snapshot IconButton With Md icon, size=xl 1`] = `
     <div>
       <button
         aria-label="Send email"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_xl fs_3.2rem w_3.2rem h_3.2rem"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_xl fs_2.4rem w_3.2rem h_3.2rem"
       >
         <svg
           fill="currentColor"
@@ -353,7 +353,7 @@ exports[`Snapshot IconButton With Md icon, size=xl 1`] = `
   "container": <div>
     <button
       aria-label="Send email"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_xl fs_3.2rem w_3.2rem h_3.2rem"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_xl fs_2.4rem w_3.2rem h_3.2rem"
     >
       <svg
         fill="currentColor"
@@ -435,7 +435,7 @@ exports[`Snapshot IconButton With Md icon, size=xs 1`] = `
     <div>
       <button
         aria-label="Send email"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_xs fs_1.6rem w_1.6rem h_1.6rem"
+        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_xs fs_1rem w_1.6rem h_1.6rem"
       >
         <svg
           fill="currentColor"
@@ -460,7 +460,7 @@ exports[`Snapshot IconButton With Md icon, size=xs 1`] = `
   "container": <div>
     <button
       aria-label="Send email"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover rounded_xs fs_1.6rem w_1.6rem h_1.6rem"
+      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none d_flex items_center justify_center text_icon bg_body.bg hover:bg_icon.hover active:bg_icon.active rounded_xs fs_1rem w_1.6rem h_1.6rem"
     >
       <svg
         fill="currentColor"
