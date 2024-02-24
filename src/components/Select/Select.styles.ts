@@ -1,5 +1,5 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
-import { cva } from "#/styled-system/css";
+import { css, cva } from "#/styled-system/css";
 
 const wrapper = cva({
   base: {
@@ -28,6 +28,13 @@ const wrapper = cva({
       },
     },
   },
+});
+
+const spinner = css({
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translateX(-50%) translateY(-50%)",
 });
 
 const select = cva({
@@ -101,6 +108,7 @@ const select = cva({
 export const styles = {
   select,
   wrapper,
+  spinner,
 };
 
 export type SelectVariants = NonNullable<RecipeVariantProps<typeof select>>;

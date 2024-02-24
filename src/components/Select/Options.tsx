@@ -1,5 +1,3 @@
-// import { useTranslations } from "next-intl";
-
 type OptionProps = {
   /**
    * Hidden this option on dropdown menu.
@@ -35,12 +33,6 @@ type OptionsProps = {
 };
 
 export const Options = (props: OptionsProps) => {
-  // const t = useTranslations();
-
-  if (props.loading) {
-    return <option>Loading</option>;
-  }
-
   return props.options.map((option) => (
     <option
       key={option.id}

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Spinner } from "../Spinner";
 import { Options } from "./Options";
 import type { SelectVariants } from "./Select.styles";
 import { styles } from "./Select.styles";
@@ -43,7 +44,9 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   options: OptionProps[];
 
   /**
-   * If true, the component is disabled and show 'Loading..'.
+   * If true, the component is disabled and show a spinner.
+   * Enable the loading flag while fetching option data from the backend.
+   * When using the loading flag, specify a width other than auto.
    */
   loading?: boolean;
 };
@@ -71,6 +74,12 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
         >
           <Options loading={loading} options={options} />
         </select>
+
+        {loading && (
+          <div className={styles.spinner}>
+            <Spinner size={size} />
+          </div>
+        )}
       </div>
     );
   },

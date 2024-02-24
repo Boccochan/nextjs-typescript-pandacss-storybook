@@ -116,20 +116,10 @@ export const Selected: Story = {
 export const Loading: Story = {
   args: {
     size: "md",
-    width: "auto",
+    width: "md",
     disabled: false,
     loading: true,
-    options: [
-      { hidden: true, id: "Select", value: "Select" },
-      { id: "Apple", value: "Apple" },
-      {
-        id: "International Consolidated Airlines Group SA",
-        value: "International Consolidated Airlines Group SA",
-      },
-      { id: "Amazon", value: "Amazon", isSelected: true },
-      { id: "Meta", value: "Meta" },
-      { id: "Google", value: "Google" },
-    ],
+    options: [],
   },
   render: DisplayBox,
 };
