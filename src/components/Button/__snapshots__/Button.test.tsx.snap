@@ -189,7 +189,7 @@ exports[`Snapshot Button Loading 1`] = `
         >
           <div
             aria-label="loading"
-            class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+            class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.light} border-r_0.3em_solid_{colors.light} border-b_0.3em_solid_{colors.light} border-l_0.3em_solid_rgba(255,_255,_255,_0)"
             role="alert"
           />
         </div>
@@ -214,7 +214,7 @@ exports[`Snapshot Button Loading 1`] = `
       >
         <div
           aria-label="loading"
-          class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+          class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.light} border-r_0.3em_solid_{colors.light} border-b_0.3em_solid_{colors.light} border-l_0.3em_solid_rgba(255,_255,_255,_0)"
           role="alert"
         />
       </div>

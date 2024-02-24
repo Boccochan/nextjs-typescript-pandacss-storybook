@@ -7,7 +7,7 @@ exports[`Snapshot spinner Size=lg 1`] = `
     <div>
       <div
         aria-label="loading"
-        class="fs_8.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+        class="fs_8.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
         role="alert"
       />
     </div>
@@ -15,7 +15,7 @@ exports[`Snapshot spinner Size=lg 1`] = `
   "container": <div>
     <div
       aria-label="loading"
-      class="fs_8.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+      class="fs_8.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
       role="alert"
     />
   </div>,
@@ -80,7 +80,7 @@ exports[`Snapshot spinner Size=md 1`] = `
     <div>
       <div
         aria-label="loading"
-        class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+        class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
         role="alert"
       />
     </div>
@@ -88,7 +88,7 @@ exports[`Snapshot spinner Size=md 1`] = `
   "container": <div>
     <div
       aria-label="loading"
-      class="fs_6.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+      class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
       role="alert"
     />
   </div>,
@@ -153,7 +153,7 @@ exports[`Snapshot spinner Size=sm 1`] = `
     <div>
       <div
         aria-label="loading"
-        class="fs_4.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+        class="fs_4.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
         role="alert"
       />
     </div>
@@ -161,7 +161,7 @@ exports[`Snapshot spinner Size=sm 1`] = `
   "container": <div>
     <div
       aria-label="loading"
-      class="fs_4.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+      class="fs_4.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
       role="alert"
     />
   </div>,
@@ -226,7 +226,7 @@ exports[`Snapshot spinner Size=xl 1`] = `
     <div>
       <div
         aria-label="loading"
-        class="fs_10.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+        class="fs_10.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
         role="alert"
       />
     </div>
@@ -234,7 +234,7 @@ exports[`Snapshot spinner Size=xl 1`] = `
   "container": <div>
     <div
       aria-label="loading"
-      class="fs_10.8px pos_relative border-t_0.8em_solid_rgba(255,_255,_255,_0.2) border-r_0.8em_solid_rgba(255,_255,_255,_0.2) border-b_0.8em_solid_rgba(255,_255,_255,_0.2) border-l_0.8em_solid_white transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em"
+      class="fs_10.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
       role="alert"
     />
   </div>,

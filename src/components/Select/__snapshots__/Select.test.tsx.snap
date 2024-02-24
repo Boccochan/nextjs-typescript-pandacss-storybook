@@ -11,11 +11,16 @@ exports[`Snapshot Select With loading 1`] = `
         <select
           class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
           disabled=""
+        />
+        <div
+          class="pos_absolute top_50% left_50% transform_translateX(-50%)_translateY(-50%)"
         >
-          <option>
-            Loading..
-          </option>
-        </select>
+          <div
+            aria-label="loading"
+            class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
+            role="alert"
+          />
+        </div>
       </div>
     </div>
   </body>,
@@ -26,11 +31,16 @@ exports[`Snapshot Select With loading 1`] = `
       <select
         class="border_body.border border-w_1px rounded_md bg_body.bg text_body.text appearance_none p_1px_2rem_1px_1rem disabled:opacity_0.7 disabled:pointer-events_none px_4 fs_md min-w_14rem h_2.4rem w_auto"
         disabled=""
+      />
+      <div
+        class="pos_absolute top_50% left_50% transform_translateX(-50%)_translateY(-50%)"
       >
-        <option>
-          Loading..
-        </option>
-      </select>
+        <div
+          aria-label="loading"
+          class="fs_6.8px pos_relative transform_translateZ(0) animation_spinner_1.1s_infinite_linear rounded_50% w_3em h_3em border-t_0.3em_solid_{colors.body.border} border-r_0.3em_solid_{colors.body.border} border-b_0.3em_solid_{colors.body.border} border-l_0.3em_solid_{colors.body.bg}"
+          role="alert"
+        />
+      </div>
     </div>
   </div>,
   "debug": [Function],
