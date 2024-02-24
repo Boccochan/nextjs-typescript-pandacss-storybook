@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 
 type OptionProps = {
   /**
@@ -35,10 +35,10 @@ type OptionsProps = {
 };
 
 export const Options = (props: OptionsProps) => {
-  const t = useTranslations();
+  // const t = useTranslations();
 
   if (props.loading) {
-    return <option>{t("Loading")}</option>;
+    return <option>Loading</option>;
   }
 
   return props.options.map((option) => (

@@ -1,14 +1,7 @@
-import { useTranslations } from "next-intl";
-import { MdEmail } from "react-icons/md";
-import { MdOutlineThumbUpAlt } from "react-icons/md";
-
-import { Button, IconButton } from "@/components/Button";
-import { Select } from "@/components/Select";
+import { Form } from "@/features/Form";
 import { css } from "#/styled-system/css";
 
 export default function Home() {
-  const t = useTranslations();
-
   return (
     <main
       className={css({
@@ -17,16 +10,7 @@ export default function Home() {
         textAlign: "center",
       })}
     >
-      {t("products.cart")}
-      <Button color={"danger"} size="lg" label="こんにちわ" Icon={MdEmail} />
-      <IconButton Icon={MdOutlineThumbUpAlt} aria-label={t("Good button")} />
-      <Select
-        options={[
-          { id: "Apple", value: "Apple" },
-          { id: "Microsoft", value: "Microsoft" },
-        ]}
-        // width="auto"
-      />
+      <Form />
     </main>
   );
 }
