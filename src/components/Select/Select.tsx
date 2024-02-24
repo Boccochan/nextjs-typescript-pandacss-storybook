@@ -35,6 +35,7 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 
   /**
    * The width of select box. The width of the Select component can be fixed.
+   * If the option data is fetched from backend, consider the width option.
    */
   width?: SelectVariants["width"];
 

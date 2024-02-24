@@ -39,4 +39,8 @@ export const spinner = cva({
   },
 });
 
+export const styles = {
+  spinner,
+};
+
 export type SpinnerVariants = NonNullable<RecipeVariantProps<typeof spinner>>;

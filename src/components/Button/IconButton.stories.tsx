@@ -5,6 +5,7 @@ import type { ComponentProps } from "react";
 import { MdOutlineThumbUpAlt, MdPerson } from "react-icons/md";
 
 import { IconButton } from "./IconButton";
+import { styles } from "./IconButton.styles";
 
 type IconButtonProps = ComponentProps<typeof IconButton>;
 
@@ -44,7 +45,7 @@ const meta: Meta<typeof IconButton> = {
   argTypes: {
     size: {
       control: "select",
-      options: ["xs", "sm", "md", "lg", "xl"],
+      options: styles.button.variantMap.size,
     },
   },
 };

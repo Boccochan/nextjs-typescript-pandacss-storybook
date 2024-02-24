@@ -4,6 +4,7 @@ import type { ComponentProps } from "react";
 import { css } from "#/styled-system/css";
 
 import { Spinner } from "./Spinner";
+import { styles } from "./Spinner.styles";
 
 const meta = {
   title: "components/Spinner",
@@ -14,7 +15,7 @@ const meta = {
     layout: "centered",
   },
   argTypes: {
-    size: { control: "select", options: ["xs", "sm", "md", "lg", "xl"] },
+    size: { control: "select", options: styles.spinner.variantMap.size },
     color: { control: "select", options: ["light", "plain"] },
   },
 } satisfies Meta<typeof Spinner>;

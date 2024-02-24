@@ -1,4 +1,4 @@
-import { spinner, type SpinnerVariants } from "./Spinner.styles";
+import { type SpinnerVariants, styles } from "./Spinner.styles";
 
 type Spinner = {
   /**
@@ -14,5 +14,9 @@ type Spinner = {
 };
 
 export const Spinner = ({ size, color }: Spinner) => (
-  <div className={spinner({ size, color })} role="alert" aria-label="loading" />
+  <div
+    className={styles.spinner({ size, color })}
+    role="alert"
+    aria-label="loading"
+  />
 );

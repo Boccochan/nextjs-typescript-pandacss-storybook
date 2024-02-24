@@ -4,6 +4,7 @@ import type { ComponentProps } from "react";
 import { css } from "#/styled-system/css";
 
 import { Select } from "./Select";
+import { styles } from "./Select.styles";
 
 type SelectProps = ComponentProps<typeof Select>;
 
@@ -51,11 +52,11 @@ const meta: Meta<typeof Select> = {
   argTypes: {
     size: {
       control: "select",
-      options: ["xs", "sm", "md", "lg", "xl"],
+      options: styles.select.variantMap.size,
     },
     width: {
       control: "select",
-      options: ["xs", "sm", "md", "lg", "xl", "full", "auto"],
+      options: styles.select.variantMap.width,
     },
   },
 };

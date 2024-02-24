@@ -5,6 +5,7 @@ import type { ComponentProps } from "react";
 import { MdContentCopy, MdDelete, MdEmail } from "react-icons/md";
 
 import { Button } from "./Button";
+import { styles } from "./Button.styles";
 type ButtonProps = ComponentProps<typeof Button>;
 
 const ButtonWithIntl = ({ color, size, label, ...rest }: ButtonProps) => {
@@ -27,11 +28,11 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     color: {
       control: "select",
-      options: ["plain", "light"],
+      options: styles.button.variantMap.color,
     },
     size: {
       control: "select",
-      options: ["xs", "sm", "md", "lg", "xl"],
+      options: styles.button.variantMap.size,
     },
   },
 };
