@@ -4,10 +4,6 @@ const button = cva({
   base: {
     cursor: "pointer",
     whiteSpace: "nowrap",
-    _disabled: {
-      opacity: 0.7,
-      pointerEvents: "none",
-    },
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -20,6 +16,10 @@ const button = cva({
     },
     _active: {
       opacity: "0.8",
+    },
+    _disabled: {
+      opacity: 0.7,
+      pointerEvents: "none",
     },
   },
   variants: {
