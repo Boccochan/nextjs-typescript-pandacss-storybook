@@ -17,7 +17,9 @@ const button = cva({
     bg: {
       base: "body.bg",
       _hover: "icon.hover",
-      _active: "icon.active",
+    },
+    _active: {
+      opacity: "0.8",
     },
   },
   variants: {

@@ -56,12 +56,6 @@ export const colors = defineSemanticTokens.colors({
         _osDark: `white`,
       },
     },
-    hover: {
-      value: {
-        base: "{colors.gray.100}",
-        _osDark: "{colors.gray.600}",
-      },
-    },
     active: {
       value: {
         base: "{colors.gray.200}",
