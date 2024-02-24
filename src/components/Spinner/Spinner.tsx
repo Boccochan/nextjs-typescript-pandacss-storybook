@@ -2,8 +2,8 @@ import { spinner, type SpinnerVariants } from "./Spinner.styles";
 
 type Spinner = {
   /**
-   * The 'plain' is changed the color in dark mode. But the other colors, such as 'light',
-   * will not be changed in dark mode. You can use them if the background color is fixed.
+   * The color of 'plain' is changed the color in dark mode. But the other fixed colors, such as 'light',
+   * will not be changed in dark mode. You can use those fixed colors if the background color is fixed.
    */
   color?: SpinnerVariants["color"];
 
