@@ -4,8 +4,6 @@ const colors = (color: string) => ({
   bg: {
     base: color,
     _hover: `${color}.hover`,
-    _active: `${color}.active`,
-    _focusVisible: `${color}.hover`,
   },
   color: "light",
 });
@@ -17,6 +15,9 @@ const button = cva({
     _disabled: {
       opacity: 0.7,
       pointerEvents: "none",
+    },
+    _active: {
+      opacity: 0.9,
     },
     position: "relative",
   },

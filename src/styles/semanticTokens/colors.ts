@@ -3,20 +3,14 @@ import { defineSemanticTokens } from "@pandacss/dev";
 const createColor = (colorName: string) => ({
   DEFAULT: {
     value: {
-      base: `{colors.${colorName}.500}`,
+      base: `{colors.${colorName}.600}`,
       _osDark: `{colors.${colorName}.600}`,
     },
   },
   hover: {
     value: {
-      base: `{colors.${colorName}.600}`,
+      base: `{colors.${colorName}.700}`,
       _osDark: `{colors.${colorName}.700}`,
-    },
-  },
-  active: {
-    value: {
-      base: `{colors.${colorName}.500}`,
-      _osDark: `{colors.${colorName}.600}`,
     },
   },
 });

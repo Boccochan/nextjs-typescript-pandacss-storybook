@@ -13,6 +13,12 @@ const globalCss = defineGlobalStyles({
     color: "body.text",
     bg: "body.bg",
   },
+  "*": {
+    _focusVisible: {
+      outline: "3px solid black",
+      _osDark: "3px solid white",
+    },
+  },
 });
 
 // For some reasons, defineKeyframes does not work
