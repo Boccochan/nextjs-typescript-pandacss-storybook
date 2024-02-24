@@ -47,7 +47,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     >
       {loading && (
         <div className={styles.spinner}>
-          <Spinner size={size} />
+          <Spinner size={size} color="light" />
         </div>
       )}
       <div className={styles.labelWrapper({ loading })}>

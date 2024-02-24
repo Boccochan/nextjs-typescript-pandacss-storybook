@@ -27,7 +27,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     color: {
       control: "select",
-      options: ["primary", "danger"],
+      options: ["plain", "light"],
     },
     size: {
       control: "select",

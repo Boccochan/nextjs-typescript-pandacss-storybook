@@ -4,10 +4,6 @@ export const spinner = cva({
   base: {
     fontSize: "6.8px",
     position: "relative",
-    borderTop: "0.8em solid rgba(255, 255, 255, 0.2)",
-    borderRight: "0.8em solid rgba(255, 255, 255, 0.2)",
-    borderBottom: "0.8em solid rgba(255, 255, 255, 0.2)",
-    borderLeft: "0.8em solid white",
     transform: "translateZ(0)",
     animation: "spinner 1.1s infinite linear",
     borderRadius: "50%",
@@ -22,9 +18,24 @@ export const spinner = cva({
       lg: { fontSize: "8.8px" },
       xl: { fontSize: "10.8px" },
     },
+    color: {
+      plain: {
+        borderTop: "0.3em solid {colors.body.border}",
+        borderRight: "0.3em solid {colors.body.border}",
+        borderBottom: "0.3em solid {colors.body.border}",
+        borderLeft: "0.3em solid {colors.body.bg}",
+      },
+      light: {
+        borderTop: "0.3em solid {colors.light}",
+        borderRight: "0.3em solid {colors.light}",
+        borderBottom: "0.3em solid {colors.light}",
+        borderLeft: "0.3em solid rgba(255, 255, 255, 0)",
+      },
+    },
   },
   defaultVariants: {
     size: "md",
+    color: "plain",
   },
 });
 

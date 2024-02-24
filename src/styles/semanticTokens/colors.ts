@@ -4,13 +4,11 @@ const createColor = (colorName: string) => ({
   DEFAULT: {
     value: {
       base: `{colors.${colorName}.600}`,
-      _osDark: `{colors.${colorName}.600}`,
     },
   },
   hover: {
     value: {
       base: `{colors.${colorName}.700}`,
-      _osDark: `{colors.${colorName}.700}`,
     },
   },
 });
@@ -21,7 +19,15 @@ const createColor = (colorName: string) => ({
  */
 export const colors = defineSemanticTokens.colors({
   primary: createColor("blue"),
+  secondary: createColor("gray"),
   danger: createColor("red"),
+  light: {
+    DEFAULT: {
+      value: {
+        base: `white`,
+      },
+    },
+  },
   body: {
     text: {
       value: {
@@ -42,13 +48,6 @@ export const colors = defineSemanticTokens.colors({
       },
     },
   },
-  light: {
-    DEFAULT: {
-      value: {
-        base: `white`,
-      },
-    },
-  },
   icon: {
     DEFAULT: {
       value: {
@@ -56,10 +55,10 @@ export const colors = defineSemanticTokens.colors({
         _osDark: `white`,
       },
     },
-    active: {
+    hover: {
       value: {
         base: "{colors.gray.200}",
-        _osDark: "{colors.gray.500}",
+        _osDark: "{colors.gray.600}",
       },
     },
   },
