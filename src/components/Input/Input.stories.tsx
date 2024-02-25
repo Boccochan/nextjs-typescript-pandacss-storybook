@@ -44,10 +44,10 @@ const meta: Meta<typeof Input> = {
   tags: ["autodocs"],
   parameters: {
     componentSubtitle:
-      "Button allows users to take an action with a single click.",
+      "Input component is a component that is used to receive input from the user.",
     layout: "centered",
     docs: {
-      controls: { exclude: ["disabled", "onClick"] },
+      controls: { exclude: ["disabled", "onClick", "placeholder"] },
     },
   },
   argTypes: {
@@ -69,7 +69,8 @@ type Story = StoryObj<typeof Input>;
 export const Basic: Story = {
   args: {
     size: "md",
-    type: "text",
+    width: "full",
+    placeholder: "Input some text",
   },
   render: DisplayBox,
 };
