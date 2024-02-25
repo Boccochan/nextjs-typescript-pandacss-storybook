@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "@hookform/resolvers": "^3.3.4",
     "negotiator": "^0.6.3",
     "next": "14.1.0",
     "next-intl": "^3.5.4",
