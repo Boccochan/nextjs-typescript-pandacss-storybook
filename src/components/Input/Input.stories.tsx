@@ -38,6 +38,7 @@ const DisplayBox = (props: Props) => {
     </div>
   );
 };
+
 const meta: Meta<typeof Input> = {
   title: "components/Input",
   component: Input,
@@ -55,7 +56,6 @@ const meta: Meta<typeof Input> = {
       control: "select",
       options: styles.input.variantMap.size,
     },
-
     width: {
       control: "select",
       options: styles.input.variantMap.width,
