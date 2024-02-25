@@ -5,6 +5,14 @@ const input = cva({
     border: "1px solid {colors.body.border}",
     bg: "body.bg",
     color: "body.text",
+    _disabled: {
+      opacity: "0.6",
+    },
+    _readOnly: {
+      pointerEvents: "none",
+      outline: "none",
+      bg: "body.readonly",
+    },
   },
   variants: {
     size: {

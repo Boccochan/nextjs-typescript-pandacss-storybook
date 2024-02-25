@@ -71,6 +71,8 @@ export const Basic: Story = {
     size: "md",
     width: "full",
     placeholder: "Input some text",
+    disabled: false,
+    readOnly: false,
   },
   render: DisplayBox,
 };
