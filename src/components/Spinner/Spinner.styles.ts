@@ -19,7 +19,7 @@ export const spinner = cva({
       xl: { fontSize: "10.8px" },
     },
     color: {
-      plain: {
+      basic: {
         borderTop: "0.3em solid {colors.body.border}",
         borderRight: "0.3em solid {colors.body.border}",
         borderBottom: "0.3em solid {colors.body.border}",
@@ -35,7 +35,7 @@ export const spinner = cva({
   },
   defaultVariants: {
     size: "md",
-    color: "plain",
+    color: "basic",
   },
 });
 

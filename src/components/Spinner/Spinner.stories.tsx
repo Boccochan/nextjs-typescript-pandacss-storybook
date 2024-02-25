@@ -16,17 +16,17 @@ const meta = {
   },
   argTypes: {
     size: { control: "select", options: styles.spinner.variantMap.size },
-    color: { control: "select", options: ["light", "plain"] },
+    color: { control: "select", options: ["light", "basic"] },
   },
 } satisfies Meta<typeof Spinner>;
 
 export default meta;
 type Story = StoryObj<typeof Spinner>;
 
-export const Plain: Story = {
+export const Basic: Story = {
   args: {
     size: "md",
-    color: "plain",
+    color: "basic",
   },
 };
 

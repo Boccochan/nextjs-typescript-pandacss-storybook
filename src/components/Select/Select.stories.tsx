@@ -18,6 +18,7 @@ const DisplayBox = (props: SelectProps) => {
         justifyContent: "center",
         height: "100px",
         borderColor: "body.border",
+        px: "4",
         borderWidth: "1px",
         borderRadius: "md",
         position: "relative",
@@ -64,7 +65,7 @@ const meta: Meta<typeof Select> = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
-export const Normal: Story = {
+export const Basic: Story = {
   args: {
     disabled: false,
     size: "md",

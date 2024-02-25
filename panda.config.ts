@@ -15,8 +15,8 @@ const globalCss = defineGlobalStyles({
   },
   "*": {
     _focusVisible: {
-      outline: "3px solid black",
-      _osDark: "3px solid white",
+      outline: "2px solid black",
+      _osDark: "2px solid white",
     },
   },
 });
