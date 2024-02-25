@@ -3,11 +3,12 @@ import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 
 import { Button } from "@/components/Button";
+import { Input } from "@/components/Input/Input";
 import { Select } from "@/components/Select";
 
 type IFormInput = {
   country: string;
-  prefecture: string;
+  name: string;
 };
 
 export const Form = () => {
@@ -23,6 +24,7 @@ export const Form = () => {
           { id: "USA", value: "USA" },
         ]}
       />
+      <Input {...register("name")} width="md" />
       <Button label="Submit" type="submit" />
     </form>
   );
