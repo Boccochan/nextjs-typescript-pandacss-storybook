@@ -17,7 +17,6 @@ type InputProps = BasicProps & {
   width?: InputVariants["width"];
 };
 
-// TODO: Support disabled
 // TODO: Check react-hook-forms
 // TODO: Support error messages
 // TODO: Word count
