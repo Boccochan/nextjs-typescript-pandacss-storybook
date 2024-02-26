@@ -38,10 +38,12 @@ export const Form = () => {
       <Select
         {...register("country")}
         options={[
+          { id: "", value: "Select", hidden: true },
           { id: "Japan", value: "Japan" },
           { id: "USA", value: "USA" },
         ]}
       />
+      {errors.country?.message}
       <Input {...register("name")} width="md" />
       {errors.name?.message}
       <Button label="Submit" type="submit" />
