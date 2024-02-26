@@ -1,5 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useTranslations } from "next-intl";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -23,6 +24,7 @@ export const basicFormSchema = z.object({
 export type BasicFormSchemaType = z.infer<typeof basicFormSchema>;
 
 export const Form = () => {
+  const t = useTranslations();
   const {
     register,
     handleSubmit,

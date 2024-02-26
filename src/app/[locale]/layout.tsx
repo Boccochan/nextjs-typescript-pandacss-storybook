@@ -2,6 +2,7 @@ import "@/app/globals.css";
 
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import { Layout } from "@/components/Layout";
 
@@ -19,10 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  const messages = useMessages();
+
   return (
     <html lang={params.locale}>
       <body className={notoSansJp.className}>
-        <Layout>{children}</Layout>
+        <NextIntlClientProvider locale={params.locale} messages={messages}>
+          <Layout>{children}</Layout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
