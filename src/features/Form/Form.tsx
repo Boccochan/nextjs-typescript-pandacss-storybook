@@ -9,30 +9,32 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/Input/Input";
 import { Select } from "@/components/Select";
 
-export const basicFormSchema = z.object({
-  name: z.string().min(1, { message: "名前を入力してください" }),
-  country: z.string(),
-  // password: z
-  //   .string()
-  //   .min(8, { message: "8桁以上のパスワードを入力してください" })
-  //   .regex(/^[a-zA-Z0-9]+$/, {
-  //     message: "英大文字、英小文字、数字で入力してください",
-  //   }),
-});
+export const basicFormSchema = (t: (arg: string) => string) =>
+  z.object({
+    name: z.string().min(1, { message: t("hello") }),
+    country: z.string(),
+    // password: z
+    //   .string()
+    //   .min(8, { message: "8桁以上のパスワードを入力してください" })
+    //   .regex(/^[a-zA-Z0-9]+$/, {
+    //     message: "英大文字、英小文字、数字で入力してください",
+    //   }),
+  });
 
 //https://stackoverflow.com/questions/77367244/a-solution-to-translating-zod-error-messages-using-next-intl
-export type BasicFormSchemaType = z.infer<typeof basicFormSchema>;
+// export type BasicFormSchemaType = z.infer<typeof basicFormSchema>;
 
 export const Form = () => {
   const t = useTranslations();
+  const schema = basicFormSchema(t);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<BasicFormSchemaType>({
-    resolver: zodResolver(basicFormSchema),
+  } = useForm<z.infer<typeof schema>>({
+    resolver: zodResolver(schema),
   });
-  const onSubmit: SubmitHandler<BasicFormSchemaType> = (data) =>
+  const onSubmit: SubmitHandler<z.infer<typeof schema>> = (data) =>
     console.log(data);
 
   return (
