@@ -19,7 +19,6 @@ type InputProps = BasicProps & {
 
 // TODO: Check react-hook-forms
 // TODO: Support error messages
-// TODO: Add label
 // TODO: Word count
 // TODO: Support password
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
