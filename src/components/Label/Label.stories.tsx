@@ -1,4 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ComponentProps } from "react";
+
+import { Input } from "@/components/Input";
+import { Select } from "@/components/Select";
 
 import { Label } from "./Label";
 import { styles } from "./Label.styles";
@@ -30,4 +34,40 @@ export const Basic: Story = {
   args: {
     name: "hello",
   },
+};
+
+type Props = ComponentProps<typeof Label>;
+
+const LabelWithInput = (props: Props) => (
+  <Label {...props}>
+    <Input />
+  </Label>
+);
+
+// TODO: When width is fixed, label is put the besides of input.
+export const WithInput: Story = {
+  args: {
+    name: "hello",
+    size: "md",
+  },
+  render: LabelWithInput,
+};
+
+const LabelWithSelect = (props: Props) => (
+  <Label {...props}>
+    <Select
+      options={[
+        { id: "apple", value: "Apple" },
+        { id: "microsoft", value: "Microsoft" },
+      ]}
+    />
+  </Label>
+);
+
+export const WithSelect: Story = {
+  args: {
+    name: "hello",
+    size: "md",
+  },
+  render: LabelWithSelect,
 };
