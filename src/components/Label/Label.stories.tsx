@@ -40,11 +40,10 @@ type Props = ComponentProps<typeof Label>;
 
 const LabelWithInput = (props: Props) => (
   <Label {...props}>
-    <Input />
+    <Input width="md" />
   </Label>
 );
 
-// TODO: When width is fixed, label is put the besides of input.
 export const WithInput: Story = {
   args: {
     name: "hello",
@@ -60,6 +59,7 @@ const LabelWithSelect = (props: Props) => (
         { id: "apple", value: "Apple" },
         { id: "microsoft", value: "Microsoft" },
       ]}
+      width="md"
     />
   </Label>
 );

@@ -13,6 +13,7 @@ const input = cva({
       outline: "none",
       bg: "body.readonly",
     },
+    display: "block",
   },
   variants: {
     size: {
