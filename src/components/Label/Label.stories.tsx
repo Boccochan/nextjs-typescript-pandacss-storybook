@@ -24,6 +24,10 @@ const meta: Meta<typeof Label> = {
       control: "select",
       options: styles.label.variantMap.size,
     },
+    color: {
+      control: "select",
+      options: styles.label.variantMap.color,
+    },
   },
 };
 
@@ -33,6 +37,8 @@ type Story = StoryObj<typeof Label>;
 export const Basic: Story = {
   args: {
     name: "hello",
+    color: "base",
+    size: "md",
   },
 };
 
