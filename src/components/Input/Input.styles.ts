@@ -26,28 +26,28 @@ const input = cva({
       },
       sm: {
         paddingInline: "3",
-        rounded: "sm",
+        rounded: "xs",
         fontSize: "sm",
         minWidth: "12rem",
         height: "2rem",
       },
       md: {
         paddingInline: "4",
-        rounded: "md",
+        rounded: "xs",
         fontSize: "md",
         minWidth: "14rem",
         height: "2.4rem",
       },
       lg: {
         paddingInline: "4",
-        rounded: "lg",
+        rounded: "xs",
         fontSize: "lg",
         minWidth: "16rem",
         height: "2.8rem",
       },
       xl: {
         paddingInline: "4",
-        rounded: "xl",
+        rounded: "xs",
         fontSize: "xl",
         minWidth: "16rem",
         height: "3.2rem",
@@ -61,6 +61,15 @@ const input = cva({
       xl: { width: "18rem" },
       full: { width: "100%" },
       auto: { width: "auto" },
+    },
+    color: {
+      basic: {
+        borderColor: "body.border",
+      },
+      danger: {
+        borderColor: "danger",
+        outlineColor: "danger",
+      },
     },
   },
   defaultVariants: {

@@ -15,6 +15,11 @@ type InputProps = BasicProps & {
    * The width of input. The width of the Input component can be fixed.
    */
   width?: InputVariants["width"];
+
+  /**
+   * The color of the component.
+   */
+  color?: InputVariants["color"];
 };
 
 // TODO: Check react-hook-forms
@@ -22,8 +27,12 @@ type InputProps = BasicProps & {
 // TODO: Word count
 // TODO: Support password
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ size, width, ...rest }, ref) => (
-    <input {...rest} ref={ref} className={styles.input({ size, width })} />
+  ({ size, width, color, ...rest }, ref) => (
+    <input
+      {...rest}
+      ref={ref}
+      className={styles.input({ size, width, color })}
+    />
   ),
 );
 

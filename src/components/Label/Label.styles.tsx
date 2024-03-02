@@ -22,18 +22,9 @@ const label = cva({
         fontSize: "1.0rem",
       },
     },
-    color: {
-      base: {
-        color: "body.text",
-      },
-      danger: {
-        color: "danger",
-      },
-    },
   },
   defaultVariants: {
     size: "md",
-    color: "base",
   },
 });
 

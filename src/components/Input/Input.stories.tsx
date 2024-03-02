@@ -59,6 +59,10 @@ const meta: Meta<typeof Input> = {
       control: "select",
       options: styles.input.variantMap.width,
     },
+    color: {
+      control: "select",
+      options: styles.input.variantMap.color,
+    },
   },
 };
 
@@ -69,6 +73,19 @@ export const Basic: Story = {
   args: {
     size: "md",
     width: "full",
+    color: "basic",
+    placeholder: "Input some text",
+    disabled: false,
+    readOnly: false,
+  },
+  render: DisplayBox,
+};
+
+export const Danger: Story = {
+  args: {
+    size: "md",
+    width: "full",
+    color: "danger",
     placeholder: "Input some text",
     disabled: false,
     readOnly: false,

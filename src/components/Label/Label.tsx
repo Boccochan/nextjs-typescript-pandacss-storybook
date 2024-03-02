@@ -10,11 +10,6 @@ type LabelProps = Omit<React.JSX.IntrinsicElements["label"], "color"> & {
   size?: LabelVariants["size"];
 
   /**
-   * The color of the component.
-   */
-  color?: LabelVariants["color"];
-
-  /**
    * The string of the label.
    */
   name: string;
@@ -22,8 +17,8 @@ type LabelProps = Omit<React.JSX.IntrinsicElements["label"], "color"> & {
   children?: React.ReactNode;
 };
 
-export const Label = ({ name, size, color, children, ...rest }: LabelProps) => (
-  <label {...rest} className={styles.label({ size, color })}>
+export const Label = ({ name, size, children, ...rest }: LabelProps) => (
+  <label {...rest} className={styles.label({ size })}>
     {name}
     {children}
   </label>
