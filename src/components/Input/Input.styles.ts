@@ -62,11 +62,8 @@ const input = cva({
       full: { width: "100%" },
       auto: { width: "auto" },
     },
-    color: {
-      basic: {
-        borderColor: "body.border",
-      },
-      danger: {
+    invalid: {
+      true: {
         borderColor: "danger",
         outlineColor: "danger",
       },
@@ -75,6 +72,7 @@ const input = cva({
   defaultVariants: {
     size: "md",
     width: "full",
+    invalid: false,
   },
 });
 

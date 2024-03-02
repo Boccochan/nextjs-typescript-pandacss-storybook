@@ -3,7 +3,10 @@ import React from "react";
 import type { InputVariants } from "./Input.styles";
 import { styles } from "./Input.styles";
 
-type BasicProps = Omit<React.JSX.IntrinsicElements["input"], "size" | "width">;
+type BasicProps = Omit<
+  React.JSX.IntrinsicElements["input"],
+  "size" | "width" | "invalid"
+>;
 
 type InputProps = BasicProps & {
   /**
@@ -17,21 +20,20 @@ type InputProps = BasicProps & {
   width?: InputVariants["width"];
 
   /**
-   * The color of the component.
+   * If true, the input represents invalid. If you want to put error message, consider to use the ErrorMessage component.
    */
-  color?: InputVariants["color"];
+  invalid?: InputVariants["invalid"];
 };
 
 // TODO: Check react-hook-forms
-// TODO: Support error messages
 // TODO: Word count
 // TODO: Support password
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ size, width, color, ...rest }, ref) => (
+  ({ size, width, invalid, ...rest }, ref) => (
     <input
       {...rest}
       ref={ref}
-      className={styles.input({ size, width, color })}
+      className={styles.input({ size, width, invalid })}
     />
   ),
 );
