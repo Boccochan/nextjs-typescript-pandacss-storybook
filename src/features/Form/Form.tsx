@@ -53,7 +53,7 @@ export const Form = () => {
       {errors.country?.message}
       <Input {...register("name")} width="md" />
       {errors.name?.message}
-      <Button label="Submit" type="submit" />
+      <Button label={t("hello")} type="submit" />
     </form>
   );
 };

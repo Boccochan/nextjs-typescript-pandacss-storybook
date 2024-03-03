@@ -1,12 +1,17 @@
-import createMiddleware from "next-intl/middleware";
+import type { NextRequest } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: ["en", "ja"],
+export default async function middleware(request: NextRequest) {
+  const handleI18nRouting = createIntlMiddleware({
+    locales: ["en", "ja"],
+    defaultLocale: "",
+  });
 
-  // Used when no locale matches
-  defaultLocale: "en",
-});
+  const response = handleI18nRouting(request);
+
+  // Add zod setErrorMap
+  return response;
+}
 
 export const config = {
   // Match only internationalized pathnames
