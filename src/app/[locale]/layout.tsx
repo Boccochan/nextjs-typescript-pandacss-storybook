@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
+// import { getTranslations } from "next-intl/server";
+// import { z } from "zod";
 import { Layout } from "@/components/Layout";
-
 const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,6 +22,19 @@ export default function RootLayout({
   params: { locale: string };
 }>) {
   const messages = useMessages();
+  // const t = await getTranslations();
+
+  // const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
+  //   if (issue.code === z.ZodIssueCode.invalid_type) {
+  //     if (issue.expected === "number") {
+  //       return { message: "hello" };
+  //     }
+  //   }
+
+  //   return { message: ctx.defaultError };
+  // };
+
+  // z.setErrorMap(customErrorMap);
 
   return (
     <html lang={params.locale}>
