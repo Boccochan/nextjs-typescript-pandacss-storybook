@@ -9,12 +9,9 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/Input/Input";
 import { Select } from "@/components/Select";
 
-export const basicFormSchema = (t: (arg: string) => string) =>
+export const basicFormSchema = () =>
   z.object({
-    name: z
-      .string()
-      .min(1, { message: t("hello") })
-      .max(3),
+    name: z.string().min(2),
     country: z.string(),
     // password: z
     //   .string()
@@ -29,7 +26,21 @@ export const basicFormSchema = (t: (arg: string) => string) =>
 
 export const Form = () => {
   const t = useTranslations();
-  const schema = basicFormSchema(t);
+  const schema = basicFormSchema();
+
+  console.log("Hello");
+  const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
+    if (issue.code === z.ZodIssueCode.invalid_type) {
+      if (issue.expected === "number") {
+        return { message: t("hello") };
+      }
+    }
+    return { message: "hogehogheo!!" };
+    // return { message: ctx.defaultError };
+  };
+
+  z.setErrorMap(customErrorMap);
+
   const {
     register,
     handleSubmit,
@@ -37,6 +48,7 @@ export const Form = () => {
   } = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
   });
+
   const onSubmit: SubmitHandler<z.infer<typeof schema>> = (data) =>
     console.log(data);
 
