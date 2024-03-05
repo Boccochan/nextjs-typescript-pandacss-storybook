@@ -28,18 +28,18 @@ export const Form = () => {
   const t = useTranslations();
   const schema = basicFormSchema();
 
-  console.log("Hello");
-  const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
-    if (issue.code === z.ZodIssueCode.invalid_type) {
-      if (issue.expected === "number") {
-        return { message: t("hello") };
-      }
-    }
-    return { message: "hogehogheo!!" };
-    // return { message: ctx.defaultError };
-  };
+  // console.log("Hello");
+  // const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
+  //   if (issue.code === z.ZodIssueCode.invalid_type) {
+  //     if (issue.expected === "number") {
+  //       return { message: t("hello") };
+  //     }
+  //   }
+  //   return { message: "hogehogheo!!" };
+  //   // return { message: ctx.defaultError };
+  // };
 
-  z.setErrorMap(customErrorMap);
+  // z.setErrorMap(customErrorMap);
 
   const {
     register,
