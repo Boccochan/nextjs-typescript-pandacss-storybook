@@ -11,7 +11,7 @@ import { Select } from "@/components/Select";
 
 export const basicFormSchema = () =>
   z.object({
-    name: z.string().min(2),
+    name: z.number(),
     country: z.string(),
     // password: z
     //   .string()
@@ -27,19 +27,6 @@ export const basicFormSchema = () =>
 export const Form = () => {
   const t = useTranslations();
   const schema = basicFormSchema();
-
-  // console.log("Hello");
-  // const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
-  //   if (issue.code === z.ZodIssueCode.invalid_type) {
-  //     if (issue.expected === "number") {
-  //       return { message: t("hello") };
-  //     }
-  //   }
-  //   return { message: "hogehogheo!!" };
-  //   // return { message: ctx.defaultError };
-  // };
-
-  // z.setErrorMap(customErrorMap);
 
   const {
     register,
