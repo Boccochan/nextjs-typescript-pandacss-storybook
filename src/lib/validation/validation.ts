@@ -1,7 +1,14 @@
-import type { useTranslations } from "next-intl";
-import { util, z, ZodIssueCode, ZodParsedType } from "zod";
+// import { util, z, ZodIssueCode, ZodParsedType } from "zod";
+import { util, z, ZodIssueCode } from "zod";
 
-type Translation = ReturnType<typeof useTranslations<string>>;
+import type { Translation } from "./types";
+import { InvalidType } from "./zodInvalidType";
+import { TooSmall } from "./zodTooSmall";
+
+const invaidType = new InvalidType();
+const tooSmall = new TooSmall();
+
+invaidType.setNext(tooSmall);
 
 /**
  * Set error map to support i18n by zod.
@@ -14,11 +21,13 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
     let message: string;
     switch (issue.code) {
       case ZodIssueCode.invalid_type:
-        if (issue.received === ZodParsedType.undefined) {
-          message = t("Required");
-        } else {
-          message = `Expected ${issue.expected}, received ${issue.received}`;
-        }
+      case ZodIssueCode.too_small:
+        message = invaidType.handle({ issue, ctx: _ctx, t })!.message;
+        // if (issue.received === ZodParsedType.undefined) {
+        //   message = t("Required");
+        // } else {
+        //   message = `Expected ${issue.expected}, received ${issue.received}`;
+        // }
         break;
       case ZodIssueCode.invalid_literal:
         message = `Invalid literal value, expected ${JSON.stringify(
@@ -75,33 +84,33 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
           message = "Invalid";
         }
         break;
-      case ZodIssueCode.too_small:
-        if (issue.type === "array")
-          message = `Array must contain ${
-            issue.exact ? "exactly" : issue.inclusive ? `at least` : `more than`
-          } ${issue.minimum} element(s)`;
-        else if (issue.type === "string")
-          message = `String must contain ${
-            issue.exact ? "exactly" : issue.inclusive ? `at least` : `over`
-          } ${issue.minimum} character(s)`;
-        else if (issue.type === "number")
-          message = `Number must be ${
-            issue.exact
-              ? `exactly equal to `
-              : issue.inclusive
-                ? `greater than or equal to `
-                : `greater than `
-          }${issue.minimum}`;
-        else if (issue.type === "date")
-          message = `Date must be ${
-            issue.exact
-              ? `exactly equal to `
-              : issue.inclusive
-                ? `greater than or equal to `
-                : `greater than `
-          }${new Date(Number(issue.minimum))}`;
-        else message = "Invalid input";
-        break;
+      // case ZodIssueCode.too_small:
+      //   if (issue.type === "array")
+      //     message = `Array must contain ${
+      //       issue.exact ? "exactly" : issue.inclusive ? `at least` : `more than`
+      //     } ${issue.minimum} element(s)`;
+      //   else if (issue.type === "string")
+      //     message = `String must contain ${
+      //       issue.exact ? "exactly" : issue.inclusive ? `at least` : `over`
+      //     } ${issue.minimum} character(s)`;
+      //   else if (issue.type === "number")
+      //     message = `Number must be ${
+      //       issue.exact
+      //         ? `exactly equal to `
+      //         : issue.inclusive
+      //           ? `greater than or equal to `
+      //           : `greater than `
+      //     }${issue.minimum}`;
+      //   else if (issue.type === "date")
+      //     message = `Date must be ${
+      //       issue.exact
+      //         ? `exactly equal to `
+      //         : issue.inclusive
+      //           ? `greater than or equal to `
+      //           : `greater than `
+      //     }${new Date(Number(issue.minimum))}`;
+      //   else message = "Invalid input";
+      //   break;
       case ZodIssueCode.too_big:
         if (issue.type === "array")
           message = `Array must contain ${

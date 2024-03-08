@@ -11,7 +11,7 @@ import { Select } from "@/components/Select";
 
 export const basicFormSchema = () =>
   z.object({
-    name: z.number(),
+    name: z.string().min(3),
     country: z.string(),
     // password: z
     //   .string()
