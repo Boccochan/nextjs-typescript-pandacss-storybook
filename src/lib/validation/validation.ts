@@ -112,9 +112,6 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
     //     issue.options,
     //   )}, received '${issue.received}'`;
     //   break;
-    // case ZodIssueCode.invalid_arguments:
-    //   message = `Invalid function arguments`;
-    //   break;
     // case ZodIssueCode.invalid_return_type:
     //   message = `Invalid function return type`;
     //   break;
