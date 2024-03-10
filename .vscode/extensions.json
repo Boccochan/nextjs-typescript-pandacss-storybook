@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
-    "formulahendry.auto-rename-tag"
+    "formulahendry.auto-rename-tag",
+    "orta.vscode-jest"
   ]
 }
