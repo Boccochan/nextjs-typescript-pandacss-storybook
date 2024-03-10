@@ -204,9 +204,6 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
     //     } ${new Date(Number(issue.maximum))}`;
     //   else message = "Invalid input";
     //   break;
-    // case ZodIssueCode.custom:
-    //   message = `Invalid input`;
-    //   break;
     // case ZodIssueCode.invalid_intersection_types:
     //   message = `Intersection results could not be merged`;
     //   break;

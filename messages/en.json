@@ -10,5 +10,6 @@
   "Good button": "Click a good button",
   "Loading": "Loading..",
   "Required": "Required",
-  "Invalid value": "Invalid value"
+  "Invalid value": "Invalid value",
+  "Invalid function arguments": "Invalid function arguments"
 }

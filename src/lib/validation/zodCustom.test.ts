@@ -9,7 +9,7 @@ beforeEach(async () => {
   setI18nZodDefaultErrorMsg(t);
 });
 
-describe("zodCustom", () => {
+describe("Custom", () => {
   it("The refine default error message in English", () => {
     const myString = z.string().refine((val) => val.length <= 2);
     const res = myString.safeParse("111");
