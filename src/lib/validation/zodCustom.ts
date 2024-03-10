@@ -6,9 +6,7 @@ import type { Request, Response } from "./types";
 export class Custom extends AbstractHandler<Request, Response> {
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.custom) {
-      const message = request.t("Required");
-
-      // TODO: Add error messages for number, string and so on.
+      const message = request.t("Invalid value");
 
       return { message };
     }
