@@ -6,9 +6,20 @@ import type { Request, Response } from "./types";
 export class InvalidString extends AbstractHandler<Request, Response> {
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.invalid_string) {
-      const message = request.t("Required");
+      if (typeof request.issue.validation === "object") {
+        if ("includes" in request.issue.validation) {
+          if (typeof request.issue.validation.position === "number") {
+            return { message: "number" };
+          }
+          return {
+            message: request.t("Invalid string", {
+              includes: request.issue.validation.includes,
+            }),
+          };
+        }
+      }
 
-      // TODO: Add error messages for number, string and so on.
+      const message = request.t("Required");
 
       return { message };
     }

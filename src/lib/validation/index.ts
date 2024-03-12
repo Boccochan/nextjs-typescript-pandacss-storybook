@@ -8,6 +8,7 @@ import { InvalidUnionEnumValue } from "./zodInvalidEnumValue";
 import { InvalidIntersectionType } from "./zodInvalidIntersectionTypes";
 import { InvalidLiteral } from "./zodInvalidLiteral";
 import { InvalidReturnType } from "./zodInvalidReturnType";
+import { InvalidString } from "./zodInvalidString";
 import { InvalidType } from "./zodInvalidType";
 import { InvalidUnion } from "./zodInvalidUnion";
 import { InvalidUnionDiscriminator } from "./zodInvalidUnionDiscriminator";
@@ -18,6 +19,7 @@ import { TooSmall } from "./zodTooSmall";
 import { UnrecognizedKeys } from "./zodUnrecognizedKeys";
 
 const invaidType = new InvalidType();
+const invalidString = new InvalidString();
 const invalidLiteral = new InvalidLiteral();
 const unrecognizedKeys = new UnrecognizedKeys();
 const invalidUnion = new InvalidUnion();
@@ -35,6 +37,7 @@ const notFinite = new NotFinite();
 
 invaidType
   .setNext(invalidLiteral)
+  .setNext(invalidString)
   .setNext(unrecognizedKeys)
   .setNext(invalidUnion)
   .setNext(invalidUnionDiscriminator)

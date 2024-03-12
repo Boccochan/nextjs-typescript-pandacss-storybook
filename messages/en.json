@@ -16,5 +16,6 @@
   "Invalid enum": "Invalid value. Expected {expected}, received {received}",
   "Intersection": "Intersection results could not be merged",
   "Invalid literal": "Invalid literal value, expected {expected}",
-  "Invalid function return type": "Invalid function return type"
+  "Invalid function return type": "Invalid function return type",
+  "Invalid string": "Invalid input: must include \"{includes}\""
 }

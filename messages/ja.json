@@ -16,5 +16,6 @@
   "Invalid enum": "不正な値です。{received}が指定されましたが、{expected}のいずれかを指定してください",
   "Intersection": "交差結果をマージできませんでした。",
   "Invalid literal": "不正な値です。{expected}を指定してください",
-  "Invalid function return type": "不正な戻り値です"
+  "Invalid function return type": "不正な戻り値です",
+  "Invalid string": "不正な値です。文字列に\"{includes}\"を含めて下さい"
 }
