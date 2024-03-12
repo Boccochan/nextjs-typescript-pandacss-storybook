@@ -13,5 +13,6 @@
   "Invalid value": "不正な値です",
   "Invalid function arguments": "不正な引数です",
   "Invalid date": "不正な日付です",
-  "Invalid enum": "不正な値です。{received}が指定されましたが、{expected}のいずれかを指定してください"
+  "Invalid enum": "不正な値です。{received}が指定されましたが、{expected}のいずれかを指定してください",
+  "Intersection": "交差結果をマージできませんでした。"
 }
