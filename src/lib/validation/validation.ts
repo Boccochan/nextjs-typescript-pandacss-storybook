@@ -103,14 +103,6 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
     //     issue.options,
     //   )}`;
     //   break;
-    // case ZodIssueCode.invalid_enum_value:
-    //   message = `Invalid enum value. Expected ${util.joinValues(
-    //     issue.options,
-    //   )}, received '${issue.received}'`;
-    //   break;
-    // case ZodIssueCode.invalid_return_type:
-    //   message = `Invalid function return type`;
-    //   break;
     // case ZodIssueCode.invalid_date:
     //   message = `Invalid date`;
     //   break;
