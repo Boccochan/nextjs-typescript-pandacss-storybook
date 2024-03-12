@@ -89,12 +89,6 @@ export const setI18nZodDefaultErrorMsg = (t: Translation) => {
     //     //   message = `Expected ${issue.expected}, received ${issue.received}`;
     //     // }
     //     break;
-    // case ZodIssueCode.invalid_literal:
-    //   message = `Invalid literal value, expected ${JSON.stringify(
-    //     issue.expected,
-    //     util.jsonStringifyReplacer,
-    //   )}`;
-    //   break;
     // case ZodIssueCode.unrecognized_keys:
     //   message = `Unrecognized key(s) in object: ${util.joinValues(
     //     issue.keys,

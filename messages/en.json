@@ -14,5 +14,6 @@
   "Invalid function arguments": "Invalid function arguments",
   "Invalid date": "Invalid date",
   "Invalid enum": "Invalid value. Expected {expected}, received {received}",
-  "Intersection": "Intersection results could not be merged"
+  "Intersection": "Intersection results could not be merged",
+  "Invalid literal": "Invalid literal value, expected {expected}"
 }
