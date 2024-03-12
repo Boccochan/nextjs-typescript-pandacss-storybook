@@ -1,4 +1,4 @@
-import { z, ZodIssueCode } from "zod";
+import { ZodIssueCode } from "zod";
 
 import { AbstractHandler } from "../chainOrResponsibility";
 import type { Request, Response } from "./types";
