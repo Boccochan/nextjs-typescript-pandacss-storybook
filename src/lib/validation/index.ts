@@ -3,6 +3,7 @@ import { util, z } from "zod";
 import type { Translation } from "./types";
 import { Custom } from "./zodCustom";
 import { InvalidArguments } from "./zodInvalidArguments";
+import { InvalidDate } from "./zodInvalidDate";
 import { InvalidUnionEnumValue } from "./zodInvalidEnumValue";
 import { InvalidIntersectionType } from "./zodInvalidIntersectionTypes";
 import { InvalidLiteral } from "./zodInvalidLiteral";
@@ -24,6 +25,7 @@ const invalidUnionDiscriminator = new InvalidUnionDiscriminator();
 const invalidUnionEnumValue = new InvalidUnionEnumValue();
 const invalidArguments = new InvalidArguments();
 const invalidReturnType = new InvalidReturnType();
+const invalidDate = new InvalidDate();
 const tooSmall = new TooSmall();
 const tooBig = new TooBig();
 const custom = new Custom();
@@ -39,6 +41,7 @@ invaidType
   .setNext(invalidUnionEnumValue)
   .setNext(invalidArguments)
   .setNext(invalidReturnType)
+  .setNext(invalidDate)
   .setNext(tooSmall)
   .setNext(tooBig)
   .setNext(custom)

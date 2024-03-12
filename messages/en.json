@@ -11,5 +11,6 @@
   "Loading": "Loading..",
   "Required": "Required",
   "Invalid value": "Invalid value",
-  "Invalid function arguments": "Invalid function arguments"
+  "Invalid function arguments": "Invalid function arguments",
+  "Invalid date": "Invalid date"
 }

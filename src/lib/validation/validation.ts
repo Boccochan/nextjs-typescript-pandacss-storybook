@@ -3,6 +3,7 @@ import { util, z } from "zod";
 import type { Translation } from "./types";
 import { Custom } from "./zodCustom";
 import { InvalidArguments } from "./zodInvalidArguments";
+import { InvalidDate } from "./zodInvalidDate";
 import { InvalidUnionEnumValue } from "./zodInvalidEnumValue";
 import { InvalidIntersectionType } from "./zodInvalidIntersectionTypes";
 import { InvalidLiteral } from "./zodInvalidLiteral";
@@ -20,6 +21,7 @@ const invaidType = new InvalidType();
 const invalidLiteral = new InvalidLiteral();
 const unrecognizedKeys = new UnrecognizedKeys();
 const invalidUnion = new InvalidUnion();
+const invalidDate = new InvalidDate();
 const invalidUnionDiscriminator = new InvalidUnionDiscriminator();
 const invalidUnionEnumValue = new InvalidUnionEnumValue();
 const invalidArguments = new InvalidArguments();
@@ -39,13 +41,13 @@ invaidType
   .setNext(invalidUnionEnumValue)
   .setNext(invalidArguments)
   .setNext(invalidReturnType)
+  .setNext(invalidDate)
   .setNext(tooSmall)
   .setNext(tooBig)
   .setNext(custom)
   .setNext(invalidIntersectionType)
   .setNext(notMultipleOf)
   .setNext(notFinite);
-
 /**
  * Set error map to support i18n by zod.
  * The default error messages of zod does not support i18n.
