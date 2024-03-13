@@ -34,8 +34,37 @@ describe("InvalidString", () => {
     expect(res.success).toBeFalsy();
 
     if (res.success === false) {
+      expect(res.error.errors[0].message).toBe('文字列に"test"を含めて下さい');
+    }
+  });
+
+  it("The string includes with position default error message in English", () => {
+    const myFunction = z.string().includes("es", { position: 4 });
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        '不正な値です。文字列に"test"を含めて下さい',
+        'Invalid input: must include "es" at one or more positions greater than or equal to 4',
+      );
+    }
+  });
+
+  it("The string includes with position default error message in Japan", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().includes("es", { position: 4 });
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        '4以上の位置に文字列に"es"を含めて下さい',
       );
     }
   });

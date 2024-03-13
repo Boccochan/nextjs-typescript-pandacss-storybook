@@ -17,5 +17,6 @@
   "Intersection": "交差結果をマージできませんでした。",
   "Invalid literal": "不正な値です。{expected}を指定してください",
   "Invalid function return type": "不正な戻り値です",
-  "Invalid string": "不正な値です。文字列に\"{includes}\"を含めて下さい"
+  "Invalid string": "文字列に\"{includes}\"を含めて下さい",
+  "Invalid string number": "{position}以上の位置に{message}"
 }

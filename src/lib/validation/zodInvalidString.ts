@@ -8,13 +8,19 @@ export class InvalidString extends AbstractHandler<Request, Response> {
     if (request.issue.code == ZodIssueCode.invalid_string) {
       if (typeof request.issue.validation === "object") {
         if ("includes" in request.issue.validation) {
+          const message = request.t("Invalid string", {
+            includes: request.issue.validation.includes,
+          });
           if (typeof request.issue.validation.position === "number") {
-            return { message: "number" };
+            return {
+              message: request.t("Invalid string number", {
+                message,
+                position: request.issue.validation.position,
+              }),
+            };
           }
           return {
-            message: request.t("Invalid string", {
-              includes: request.issue.validation.includes,
-            }),
+            message,
           };
         }
       }
