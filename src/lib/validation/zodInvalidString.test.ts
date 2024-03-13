@@ -64,7 +64,7 @@ describe("InvalidString", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        '4以上の位置に文字列に"es"を含めて下さい',
+        '4文字以上の位置に文字列に"es"を含めて下さい',
       );
     }
   });
