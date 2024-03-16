@@ -26,5 +26,6 @@
   "Invalid emoji": "不正な絵文字です",
   "Invalid uuid": "不正なUUIDです",
   "Invalid cuid": "不正なCUIDです",
-  "Invalid cuid2": "不正なCUID2です"
+  "Invalid cuid2": "不正なCUID2です",
+  "Invalid ulid": "不正なULIDです"
 }

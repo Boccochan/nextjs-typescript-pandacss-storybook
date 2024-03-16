@@ -292,4 +292,31 @@ describe("InvalidString", () => {
       expect(res.error.errors[0].message).toBe("不正なCUID2です");
     }
   });
+
+  it("The string cuid2 default error message in English", () => {
+    const myFunction = z.string().ulid();
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid ULID");
+    }
+  });
+
+  it("The string cuid2 default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().ulid();
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正なULIDです");
+    }
+  });
 });

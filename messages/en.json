@@ -26,5 +26,6 @@
   "Invalid emoji": "Invalid emoji",
   "Invalid uuid": "Invalid UUID",
   "Invalid cuid": "Invalid CUID",
-  "Invalid cuid2": "Invalid CUID2"
+  "Invalid cuid2": "Invalid CUID2",
+  "Invalid ulid": "Invalid ULID"
 }
