@@ -24,5 +24,6 @@
   "Invalid email": "Invalid email",
   "Invalid url": "Invalid URL",
   "Invalid emoji": "Invalid emoji",
-  "Invalid uuid": "Invalid UUID"
+  "Invalid uuid": "Invalid UUID",
+  "Invalid cuid": "Invalid CUID"
 }
