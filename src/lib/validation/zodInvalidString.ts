@@ -41,9 +41,7 @@ export class InvalidString extends AbstractHandler<Request, Response> {
         return { message: request.t(`Invalid ${request.issue.validation}`) };
       }
 
-      const message = request.t("Required");
-
-      return { message };
+      return { message: request.t("Invalid regex") };
     }
 
     return super.handle(request);

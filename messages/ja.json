@@ -29,5 +29,6 @@
   "Invalid cuid2": "不正なCUID2です",
   "Invalid ulid": "不正なULIDです",
   "Invalid datetime": "不正な時間フォーマットです",
-  "Invalid ip": "不正なIPアドレスです"
+  "Invalid ip": "不正なIPアドレスです",
+  "Invalid regex": "不正な文字列です"
 }

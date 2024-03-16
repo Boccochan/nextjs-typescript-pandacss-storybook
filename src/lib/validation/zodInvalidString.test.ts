@@ -373,4 +373,31 @@ describe("InvalidString", () => {
       expect(res.error.errors[0].message).toBe("不正なIPアドレスです");
     }
   });
+
+  it("The string regex default error message in English", () => {
+    const myFunction = z.string().regex(new RegExp("^hoge"));
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid string");
+    }
+  });
+
+  it("The string regex default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().regex(new RegExp("^hoge"));
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正な文字列です");
+    }
+  });
 });
