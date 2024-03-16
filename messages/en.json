@@ -23,5 +23,6 @@
   "Invalid ends with": "Invalid input: must end with {endsWith}",
   "Invalid email": "Invalid email",
   "Invalid url": "Invalid URL",
-  "Invalid emoji": "Invalid emoji"
+  "Invalid emoji": "Invalid emoji",
+  "Invalid uuid": "Invalid UUID"
 }

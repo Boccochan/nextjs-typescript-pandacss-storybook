@@ -158,7 +158,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string min default error message in English", () => {
+  it("The string url default error message in English", () => {
     const myFunction = z.string().url();
 
     const res = myFunction.safeParse("test");
@@ -170,7 +170,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string min default error message in Japanese", async () => {
+  it("The string url default error message in Japanese", async () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
@@ -185,7 +185,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string min default error message in English", () => {
+  it("The string emoji default error message in English", () => {
     const myFunction = z.string().emoji();
 
     const res = myFunction.safeParse("hoge");
@@ -197,7 +197,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string min default error message in Japanese", async () => {
+  it("The string emoji default error message in Japanese", async () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
@@ -209,6 +209,33 @@ describe("InvalidString", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe("不正な絵文字です");
+    }
+  });
+
+  it("The string uuid default error message in English", () => {
+    const myFunction = z.string().uuid();
+
+    const res = myFunction.safeParse("hoge");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid UUID");
+    }
+  });
+
+  it("The string uuid default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().uuid();
+
+    const res = myFunction.safeParse("hoge");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正なUUIDです");
     }
   });
 });
