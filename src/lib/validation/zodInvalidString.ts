@@ -1,4 +1,4 @@
-import { ZodIssueCode } from "zod";
+import { util, ZodIssueCode } from "zod";
 
 import { AbstractHandler } from "../chainOrResponsibility";
 import type { Request, Response } from "./types";
@@ -34,6 +34,8 @@ export class InvalidString extends AbstractHandler<Request, Response> {
               endsWith: request.issue.validation.endsWith,
             }),
           };
+        } else {
+          util.assertNever(request.issue.validation);
         }
       }
 
