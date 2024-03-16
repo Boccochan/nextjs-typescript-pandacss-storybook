@@ -293,7 +293,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string cuid2 default error message in English", () => {
+  it("The string ulid default error message in English", () => {
     const myFunction = z.string().ulid();
 
     const res = myFunction.safeParse("11");
@@ -305,7 +305,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string cuid2 default error message in Japanese", async () => {
+  it("The string ulid default error message in Japanese", async () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
@@ -317,6 +317,33 @@ describe("InvalidString", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe("不正なULIDです");
+    }
+  });
+
+  it("The string datetime default error message in English", () => {
+    const myFunction = z.string().datetime();
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid datetime");
+    }
+  });
+
+  it("The string ulid default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().datetime();
+
+    const res = myFunction.safeParse("11");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正な時間フォーマットです");
     }
   });
 });

@@ -27,5 +27,6 @@
   "Invalid uuid": "不正なUUIDです",
   "Invalid cuid": "不正なCUIDです",
   "Invalid cuid2": "不正なCUID2です",
-  "Invalid ulid": "不正なULIDです"
+  "Invalid ulid": "不正なULIDです",
+  "Invalid datetime": "不正な時間フォーマットです"
 }
