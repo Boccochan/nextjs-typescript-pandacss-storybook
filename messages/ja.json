@@ -22,5 +22,6 @@
   "Invalid starts with": "不正な値です。{startsWith}で開始して下さい",
   "Invalid ends with": "不正な値です。{endsWith}で終了して下さい",
   "Invalid email": "不正なEメールアドレスです",
-  "Invalid url": "不正なURLです"
+  "Invalid url": "不正なURLです",
+  "Invalid emoji": "不正な絵文字です"
 }

@@ -22,5 +22,6 @@
   "Invalid starts with": "Invalid input: must start with {startsWith}",
   "Invalid ends with": "Invalid input: must end with {endsWith}",
   "Invalid email": "Invalid email",
-  "Invalid url": "Invalid URL"
+  "Invalid url": "Invalid URL",
+  "Invalid emoji": "Invalid emoji"
 }
