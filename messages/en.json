@@ -18,5 +18,6 @@
   "Invalid literal": "Invalid literal value, expected {expected}",
   "Invalid function return type": "Invalid function return type",
   "Invalid string": "Invalid input: must include \"{includes}\"",
-  "Invalid string number": "{message} at one or more positions greater than or equal to {position}"
+  "Invalid string number": "{message} at one or more positions greater than or equal to {position}",
+  "Invalid starts with": "Invalid input: must start with {startsWith}"
 }

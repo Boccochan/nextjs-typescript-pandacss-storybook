@@ -68,4 +68,35 @@ describe("InvalidString", () => {
       );
     }
   });
+
+  it("The string startsWith default error message in English", () => {
+    const myFunction = z.string().startsWith("hoge");
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Invalid input: must start with hoge",
+      );
+    }
+  });
+
+  it("The string startsWith default error message in Japan", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().startsWith("hoge");
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "不正な値です。hogeで開始して下さい",
+      );
+    }
+  });
 });
