@@ -37,6 +37,8 @@ export class InvalidString extends AbstractHandler<Request, Response> {
         } else {
           util.assertNever(request.issue.validation);
         }
+      } else if (request.issue.validation != "regex") {
+        return { message: request.t(`Invalid ${request.issue.validation}`) };
       }
 
       const message = request.t("Required");

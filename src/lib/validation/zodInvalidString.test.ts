@@ -130,4 +130,31 @@ describe("InvalidString", () => {
       );
     }
   });
+
+  it("The string email default error message in English", () => {
+    const myFunction = z.string().email();
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid email");
+    }
+  });
+
+  it("The string email default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().email();
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正なEメールアドレスです");
+    }
+  });
 });
