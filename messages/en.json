@@ -30,5 +30,6 @@
   "Invalid ulid": "Invalid ULID",
   "Invalid datetime": "Invalid datetime",
   "Invalid ip": "Invalid IP address",
-  "Invalid regex": "Invalid string"
+  "Invalid regex": "Invalid string",
+  "Invalid type": "Expected: {expected}, received: {received}"
 }

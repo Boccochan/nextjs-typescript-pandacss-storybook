@@ -30,5 +30,6 @@
   "Invalid ulid": "不正なULIDです",
   "Invalid datetime": "不正な時間フォーマットです",
   "Invalid ip": "不正なIPアドレスです",
-  "Invalid regex": "不正な文字列です"
+  "Invalid regex": "不正な文字列です",
+  "Invalid type": "{expected}型ではなく{received}型を受け取りました"
 }
