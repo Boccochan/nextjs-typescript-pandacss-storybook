@@ -157,4 +157,31 @@ describe("InvalidString", () => {
       expect(res.error.errors[0].message).toBe("不正なEメールアドレスです");
     }
   });
+
+  it("The string min default error message in English", () => {
+    const myFunction = z.string().url();
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("Invalid URL");
+    }
+  });
+
+  it("The string min default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().url();
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("不正なURLです");
+    }
+  });
 });

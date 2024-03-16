@@ -21,5 +21,6 @@
   "Invalid string number": "{message} at one or more positions greater than or equal to {position}",
   "Invalid starts with": "Invalid input: must start with {startsWith}",
   "Invalid ends with": "Invalid input: must end with {endsWith}",
-  "Invalid email": "Invalid email"
+  "Invalid email": "Invalid email",
+  "Invalid url": "Invalid URL"
 }

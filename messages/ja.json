@@ -21,5 +21,6 @@
   "Invalid string number": "{position}文字以上の位置に{message}",
   "Invalid starts with": "不正な値です。{startsWith}で開始して下さい",
   "Invalid ends with": "不正な値です。{endsWith}で終了して下さい",
-  "Invalid email": "不正なEメールアドレスです"
+  "Invalid email": "不正なEメールアドレスです",
+  "Invalid url": "不正なURLです"
 }
