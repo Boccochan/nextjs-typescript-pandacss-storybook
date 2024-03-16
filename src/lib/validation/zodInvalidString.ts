@@ -28,15 +28,13 @@ export class InvalidString extends AbstractHandler<Request, Response> {
               startsWith: request.issue.validation.startsWith,
             }),
           };
+        } else if ("endsWith" in request.issue.validation) {
+          return {
+            message: request.t("Invalid ends with", {
+              endsWith: request.issue.validation.endsWith,
+            }),
+          };
         }
-        // } else if("endsWith" in request.issue.validation) {
-        //   return {
-        //     message: request.t("Invalid ends with", {
-        //       startsWith: request.issue.validation.endsWith,
-        //     }),
-        //   };
-
-        // }
       }
 
       const message = request.t("Required");

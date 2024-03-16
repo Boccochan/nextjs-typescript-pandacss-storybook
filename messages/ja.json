@@ -19,5 +19,6 @@
   "Invalid function return type": "不正な戻り値です",
   "Invalid string": "文字列に\"{includes}\"を含めて下さい",
   "Invalid string number": "{position}文字以上の位置に{message}",
-  "Invalid starts with": "不正な値です。{startsWith}で開始して下さい"
+  "Invalid starts with": "不正な値です。{startsWith}で開始して下さい",
+  "Invalid ends with": "不正な値です。{endsWith}で終了して下さい"
 }

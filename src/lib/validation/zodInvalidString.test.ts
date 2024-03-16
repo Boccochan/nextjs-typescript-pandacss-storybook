@@ -83,7 +83,7 @@ describe("InvalidString", () => {
     }
   });
 
-  it("The string startsWith default error message in Japan", async () => {
+  it("The string startsWith default error message in Japanese", async () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
@@ -96,6 +96,37 @@ describe("InvalidString", () => {
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
         "不正な値です。hogeで開始して下さい",
+      );
+    }
+  });
+
+  it("The string endsWith default error message in English", () => {
+    const myFunction = z.string().endsWith("hoge");
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Invalid input: must end with hoge",
+      );
+    }
+  });
+
+  it("The string endsWith default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const myFunction = z.string().endsWith("hoge");
+
+    const res = myFunction.safeParse("test");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "不正な値です。hogeで終了して下さい",
       );
     }
   });
