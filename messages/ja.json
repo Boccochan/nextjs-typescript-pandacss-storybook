@@ -25,5 +25,6 @@
   "Invalid url": "不正なURLです",
   "Invalid emoji": "不正な絵文字です",
   "Invalid uuid": "不正なUUIDです",
-  "Invalid cuid": "不正なCUIDです"
+  "Invalid cuid": "不正なCUIDです",
+  "Invalid cuid2": "不正なCUID2です"
 }
