@@ -28,5 +28,6 @@
   "Invalid cuid": "Invalid CUID",
   "Invalid cuid2": "Invalid CUID2",
   "Invalid ulid": "Invalid ULID",
-  "Invalid datetime": "Invalid datetime"
+  "Invalid datetime": "Invalid datetime",
+  "Invalid ip": "Invalid IP address"
 }
