@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const t = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t);
+  const { t, f } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t, f);
 });
 
 describe("InvalidReturnType", () => {
@@ -27,8 +27,8 @@ describe("InvalidReturnType", () => {
   });
 
   it("The literal default error message in Japan", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z
       .function()

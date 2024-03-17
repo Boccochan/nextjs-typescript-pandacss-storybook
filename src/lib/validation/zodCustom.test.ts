@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const t = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t);
+  const { t, f } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t, f);
 });
 
 describe("Custom", () => {
@@ -22,8 +22,8 @@ describe("Custom", () => {
   });
 
   it("The refine default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myString = z.string().refine((val) => val.length <= 2);
     const res = myString.safeParse("111");

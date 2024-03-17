@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const t = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t);
+  const { t, f } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t, f);
 });
 
 describe("InvalidDate", () => {
@@ -21,8 +21,8 @@ describe("InvalidDate", () => {
   });
 
   it("The date default error message in Japan", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const res = z.date().safeParse(new Date("invalid"));
     expect(res.success).toBeFalsy();

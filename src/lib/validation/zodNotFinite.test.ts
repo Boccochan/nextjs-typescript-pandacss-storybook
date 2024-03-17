@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const t = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t);
+  const { t, f } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t, f);
 });
 
 describe("NotFinite", () => {
@@ -23,8 +23,8 @@ describe("NotFinite", () => {
   });
 
   it("The finite default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const val = z.number().finite();
 

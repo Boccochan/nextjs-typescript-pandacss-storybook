@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const t = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t);
+  const { t, f } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t, f);
 });
 
 describe("InvalidString", () => {
@@ -25,8 +25,8 @@ describe("InvalidString", () => {
   });
 
   it("The string includes default error message in Japan", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().includes("test");
     const res = myFunction.safeParse("hoge");
@@ -53,8 +53,8 @@ describe("InvalidString", () => {
   });
 
   it("The string includes with position default error message in Japan", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().includes("es", { position: 4 });
 
@@ -84,8 +84,8 @@ describe("InvalidString", () => {
   });
 
   it("The string startsWith default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().startsWith("hoge");
 
@@ -115,8 +115,8 @@ describe("InvalidString", () => {
   });
 
   it("The string endsWith default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().endsWith("hoge");
 
@@ -144,8 +144,8 @@ describe("InvalidString", () => {
   });
 
   it("The string email default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().email();
 
@@ -171,8 +171,8 @@ describe("InvalidString", () => {
   });
 
   it("The string url default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().url();
 
@@ -198,8 +198,8 @@ describe("InvalidString", () => {
   });
 
   it("The string emoji default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().emoji();
 
@@ -225,8 +225,8 @@ describe("InvalidString", () => {
   });
 
   it("The string uuid default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().uuid();
 
@@ -252,8 +252,8 @@ describe("InvalidString", () => {
   });
 
   it("The string cuid default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().cuid();
 
@@ -279,8 +279,8 @@ describe("InvalidString", () => {
   });
 
   it("The string cuid2 default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().cuid2();
 
@@ -306,8 +306,8 @@ describe("InvalidString", () => {
   });
 
   it("The string ulid default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().ulid();
 
@@ -333,8 +333,8 @@ describe("InvalidString", () => {
   });
 
   it("The string datetime default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().datetime();
 
@@ -360,8 +360,8 @@ describe("InvalidString", () => {
   });
 
   it("The string IP address default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().ip();
 
@@ -387,8 +387,8 @@ describe("InvalidString", () => {
   });
 
   it("The string regex default error message in Japanese", async () => {
-    const t = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t);
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
 
     const myFunction = z.string().regex(new RegExp("^hoge"));
 

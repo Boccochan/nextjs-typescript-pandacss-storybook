@@ -1,6 +1,6 @@
 import { util, z } from "zod";
 
-import type { Translation } from "./types";
+import type { Formatter, Translation } from "./types";
 import { Custom } from "./zodCustom";
 import { InvalidArguments } from "./zodInvalidArguments";
 import { InvalidDate } from "./zodInvalidDate";
@@ -58,9 +58,9 @@ invaidType
  * This function should be called at the top component
  * of the client component, such as Layout.tsx.
  */
-export const setI18nZodDefaultErrorMsg = (t: Translation) => {
+export const setI18nZodDefaultErrorMsg = (t: Translation, f: Formatter) => {
   const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
-    const res = invaidType.handle({ issue, ctx, t });
+    const res = invaidType.handle({ issue, ctx, t, f });
 
     if (!res) {
       util.assertNever(issue as never);
