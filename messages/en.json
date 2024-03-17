@@ -43,5 +43,8 @@
   "Too big string less than": "String must contain under {max} character(s)",
   "Too big number exactly": "Number must be exactly {max}",
   "Too big number at most": "Number must be less than or equal to {max}",
-  "Too big number less than": "Number must be less than {max}"
+  "Too big number less than": "Number must be less than {max}",
+  "Too big bigint exactly": "BigInt must be exactly {max}",
+  "Too big bigint at most": "BigInt must be less than or equal to {max}",
+  "Too big bigint less than": "BigInt must be less than {max}"
 }
