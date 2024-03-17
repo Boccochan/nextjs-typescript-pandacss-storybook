@@ -436,4 +436,79 @@ describe("TooBig", () => {
       expect(res.error.errors[0].message).toBe("BigInt must be less than 2");
     }
   });
+
+  it("The too big bigint exactly default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.bigint().superRefine((val, ctx) => {
+      if (val.toString() != "2") {
+        ctx.addIssue({
+          code: z.ZodIssueCode.too_big,
+          type: "bigint",
+          maximum: 2,
+          exact: true,
+          inclusive: false,
+        });
+      }
+    });
+
+    const res = val.safeParse(BigInt("1"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("数値は2である必要があります");
+    }
+  });
+
+  it("The too big number at most default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.bigint().superRefine((val, ctx) => {
+      if (val.toString() != "2") {
+        ctx.addIssue({
+          code: z.ZodIssueCode.too_big,
+          maximum: 2,
+          type: "bigint",
+          inclusive: true,
+        });
+      }
+    });
+
+    const res = val.safeParse(BigInt("1"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "数値は2以下である必要があります",
+      );
+    }
+  });
+
+  it("The too big number less than default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.bigint().superRefine((val, ctx) => {
+      if (val.toString() != "2") {
+        ctx.addIssue({
+          code: z.ZodIssueCode.too_big,
+          maximum: 2,
+          type: "bigint",
+          inclusive: false,
+        });
+      }
+    });
+
+    const res = val.safeParse(BigInt("1"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("数値は2である必要があります");
+    }
+  });
 });

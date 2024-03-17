@@ -44,5 +44,8 @@
   "Too big string less than": "文字列は{max}要素未満である必要があります",
   "Too big number exactly": "数値は{max}である必要があります",
   "Too big number at most": "数値は{max}以下である必要があります",
-  "Too big number less than": "数値は{max}未満である必要があります"
+  "Too big number less than": "数値は{max}未満である必要があります",
+  "Too big bigint exactly": "数値は{max}である必要があります",
+  "Too big bigint at most": "数値は{max}以下である必要があります",
+  "Too big bigint less than": "数値は{max}である必要があります"
 }
