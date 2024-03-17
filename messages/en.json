@@ -33,5 +33,6 @@
   "Invalid regex": "Invalid string",
   "Invalid type": "Expected: {expected}, received: {received}",
   "Invalid discriminator": "Invalid discriminator value. Expected {expected}",
-  "Must be finite": "Number must be finite"
+  "Must be finite": "Number must be finite",
+  "Multiple of": "Number must be a multiple of {multipleOf}"
 }

@@ -33,5 +33,6 @@
   "Invalid regex": "不正な文字列です",
   "Invalid type": "{expected}型ではなく{received}型を受け取りました",
   "Invalid discriminator": "不正な識別子です。 {expected}のいずれかを指定してください",
-  "Must be finite": "数値は有限である必要があります"
+  "Must be finite": "数値は有限である必要があります",
+  "Multiple of": "値は{multipleOf}の倍数である必要があります"
 }
