@@ -46,5 +46,8 @@
   "Too big number less than": "Number must be less than {max}",
   "Too big bigint exactly": "BigInt must be exactly {max}",
   "Too big bigint at most": "BigInt must be less than or equal to {max}",
-  "Too big bigint less than": "BigInt must be less than {max}"
+  "Too big bigint less than": "BigInt must be less than {max}",
+  "Too big date exactly": "Date must be exactly {max}",
+  "Too big date at most": "Date must be less than or equal to {max}",
+  "Too big date less than": "Date must be less than {max}"
 }

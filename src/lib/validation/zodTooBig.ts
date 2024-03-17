@@ -8,7 +8,11 @@ export class TooBig extends AbstractHandler<Request, Response> {
     if (request.issue.code == ZodIssueCode.too_big) {
       // For Typescript
       if (request.issue.type === expectType) {
-        const max = request.issue.maximum.toString();
+        const max =
+          expectType === "date"
+            ? new Date(Number(request.issue.maximum)).toISOString()
+            : request.issue.maximum.toString();
+
         if (request.issue.exact) {
           return {
             message: request.t(`Too big ${expectType} exactly`, { max }),
@@ -29,7 +33,9 @@ export class TooBig extends AbstractHandler<Request, Response> {
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.too_big) {
       if (
-        ["array", "string", "number", "bigint"].includes(request.issue.type)
+        ["array", "string", "number", "bigint", "date"].includes(
+          request.issue.type,
+        )
       ) {
         return this.createErrorMessage(request, request.issue.type);
       }

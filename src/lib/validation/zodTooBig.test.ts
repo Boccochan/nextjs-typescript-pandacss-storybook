@@ -511,4 +511,62 @@ describe("TooBig", () => {
       expect(res.error.errors[0].message).toBe("数値は2である必要があります");
     }
   });
+
+  // it("The too big date exactly default error message in English", () => {
+  //   const val = z.date().superRefine((val, ctx) => {
+  //     const d = new Date("1900-01-01");
+  //     if (val != d) {
+  //       ctx.addIssue({
+  //         code: z.ZodIssueCode.too_big,
+  //         type: "date",
+  //         maximum: d,
+  //         exact: true,
+  //         inclusive: false,
+  //       });
+  //     }
+  //   });
+
+  //   const res = val.safeParse(new Date("2023-03-17"));
+
+  //   expect(res.success).toBeFalsy();
+
+  //   if (res.success === false) {
+  //     expect(res.error.errors[0].message).toBe("BigInt must be exactly 2");
+  //   }
+  // });
+
+  it("The too big date at most default error message in English", () => {
+    const val = z.date().max(new Date("2013-11-20"));
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Date must be less than or equal to 2013-11-20T00:00:00.000Z",
+      );
+    }
+  });
+
+  // it("The too big date less than default error message in English", () => {
+  //   const val = z.bigint().superRefine((val, ctx) => {
+  //     if (val.toString() != "2") {
+  //       ctx.addIssue({
+  //         code: z.ZodIssueCode.too_big,
+  //         maximum: 2,
+  //         type: "bigint",
+  //         inclusive: false,
+  //       });
+  //     }
+  //   });
+
+  //   const res = val.safeParse(BigInt("1"));
+
+  //   expect(res.success).toBeFalsy();
+
+  //   if (res.success === false) {
+  //     expect(res.error.errors[0].message).toBe("BigInt must be less than 2");
+  //   }
+  // });
 });
