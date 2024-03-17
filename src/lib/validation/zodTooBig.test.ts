@@ -60,21 +60,61 @@ describe("TooBig", () => {
       );
     }
   });
+  it("The too big array at most default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
-  // it("The finite default error message in Japanese", async () => {
-  //   const t = await getTranslator("ja");
-  //   setI18nZodDefaultErrorMsg(t);
+    const val = z.array(z.string()).max(1);
 
-  //   const myUnion = z.number().multipleOf(5);
+    const res = val.safeParse(["hello", "hoho"]);
 
-  //   const res = myUnion.safeParse(3);
+    expect(res.success).toBeFalsy();
 
-  //   expect(res.success).toBeFalsy();
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "配列は最大で1要素含む必要があります",
+      );
+    }
+  });
 
-  //   if (res.success === false) {
-  //     expect(res.error.errors[0].message).toBe(
-  //       "値は5の倍数である必要があります",
-  //     );
-  //   }
-  // });
+  it("The too big array exactly default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.array(z.string()).length(1);
+
+    const res = val.safeParse(["hello", "hoho"]);
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe("配列は1要素含む必要があります");
+    }
+  });
+
+  it("The too big array less than default error message in Japanese", async () => {
+    const t = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.array(z.string()).superRefine((val, ctx) => {
+      if (val.length > 1) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.too_big,
+          maximum: 1,
+          type: "array",
+          inclusive: true,
+        });
+      }
+    });
+
+    const res = val.safeParse(["hello", "hoho"]);
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "配列は最大で1要素含む必要があります",
+      );
+    }
+  });
 });
