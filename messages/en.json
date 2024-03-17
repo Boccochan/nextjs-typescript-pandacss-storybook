@@ -37,5 +37,8 @@
   "Multiple of": "Number must be a multiple of {multipleOf}",
   "Too big array exactly": "Array must contain exactly {max} element(s)",
   "Too big array at most": "Array must contain at most {max} element(s)",
-  "Too big array less than": "Array must contain less than {max} element(s)"
+  "Too big array less than": "Array must contain less than {max} element(s)",
+  "Too big string exactly": "String must contain exactly {max} character(s)",
+  "Too big string at most": "String must contain at most {max} character(s)",
+  "Too big string less than": "String must contain under {max} character(s)"
 }

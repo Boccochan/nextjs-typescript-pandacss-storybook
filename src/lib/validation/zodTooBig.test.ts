@@ -117,4 +117,54 @@ describe("TooBig", () => {
       );
     }
   });
+
+  it("The too big string at most default error message in English", () => {
+    const val = z.string().max(1);
+
+    const res = val.safeParse("aa");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "String must contain at most 1 character(s)",
+      );
+    }
+  });
+
+  it("The too big string exactly default error message in English", () => {
+    const val = z.string().length(2);
+
+    const res = val.safeParse("aaa");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "String must contain exactly 2 character(s)",
+      );
+    }
+  });
+
+  it("The too big string less than default error message in English", () => {
+    const val = z.string().superRefine((val, ctx) => {
+      if (val.length > 2) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.too_big,
+          maximum: 2,
+          type: "string",
+          inclusive: false,
+        });
+      }
+    });
+    const res = val.safeParse("aaa");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "String must contain under 2 character(s)",
+      );
+    }
+  });
 });
