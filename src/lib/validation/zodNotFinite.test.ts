@@ -11,9 +11,9 @@ beforeEach(async () => {
 
 describe("NotFinite", () => {
   it("The finite default error message in English", () => {
-    const myUnion = z.number().finite();
+    const val = z.number().finite();
 
-    const res = myUnion.safeParse(Math.pow(10, 1000));
+    const res = val.safeParse(Math.pow(10, 1000));
 
     expect(res.success).toBeFalsy();
 
@@ -26,9 +26,9 @@ describe("NotFinite", () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
-    const myUnion = z.number().finite();
+    const val = z.number().finite();
 
-    const res = myUnion.safeParse(Math.pow(10, 1000));
+    const res = val.safeParse(Math.pow(10, 1000));
     expect(res.success).toBeFalsy();
 
     if (res.success === false) {

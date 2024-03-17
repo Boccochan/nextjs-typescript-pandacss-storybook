@@ -34,5 +34,8 @@
   "Invalid type": "Expected: {expected}, received: {received}",
   "Invalid discriminator": "Invalid discriminator value. Expected {expected}",
   "Must be finite": "Number must be finite",
-  "Multiple of": "Number must be a multiple of {multipleOf}"
+  "Multiple of": "Number must be a multiple of {multipleOf}",
+  "Too big array exactly": "Array must contain exactly {max} element(s)",
+  "Too big array at most": "Array must contain at most {max} element(s)",
+  "Too big array less than": "Array must contain less than {max} element(s)"
 }

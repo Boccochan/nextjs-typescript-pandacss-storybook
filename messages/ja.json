@@ -34,5 +34,9 @@
   "Invalid type": "{expected}型ではなく{received}型を受け取りました",
   "Invalid discriminator": "不正な識別子です。 {expected}のいずれかを指定してください",
   "Must be finite": "数値は有限である必要があります",
-  "Multiple of": "値は{multipleOf}の倍数である必要があります"
+  "Multiple of": "値は{multipleOf}の倍数である必要があります",
+  "Too big array": "配列は{exactly}{max}要素含む必要があります",
+  "Too big array exactly": "配列は{max}要素含む必要があります",
+  "Too big array at most": "配列は最大で{max}要素含む必要があります",
+  "Too big array less than": "配列は{max}要素未満である必要があります"
 }

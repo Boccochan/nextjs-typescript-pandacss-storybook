@@ -11,9 +11,9 @@ beforeEach(async () => {
 
 describe("NotMultipleOf", () => {
   it("The multiple of default error message in English", () => {
-    const myUnion = z.number().multipleOf(5);
+    const val = z.number().multipleOf(5);
 
-    const res = myUnion.safeParse(3);
+    const res = val.safeParse(3);
 
     expect(res.success).toBeFalsy();
 
@@ -28,9 +28,9 @@ describe("NotMultipleOf", () => {
     const t = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
-    const myUnion = z.number().multipleOf(5);
+    const val = z.number().multipleOf(5);
 
-    const res = myUnion.safeParse(3);
+    const res = val.safeParse(3);
 
     expect(res.success).toBeFalsy();
 
