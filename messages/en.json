@@ -31,5 +31,6 @@
   "Invalid datetime": "Invalid datetime",
   "Invalid ip": "Invalid IP address",
   "Invalid regex": "Invalid string",
-  "Invalid type": "Expected: {expected}, received: {received}"
+  "Invalid type": "Expected: {expected}, received: {received}",
+  "Invalid discriminator": "Invalid discriminator value. Expected {expected}"
 }
