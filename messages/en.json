@@ -32,5 +32,6 @@
   "Invalid ip": "Invalid IP address",
   "Invalid regex": "Invalid string",
   "Invalid type": "Expected: {expected}, received: {received}",
-  "Invalid discriminator": "Invalid discriminator value. Expected {expected}"
+  "Invalid discriminator": "Invalid discriminator value. Expected {expected}",
+  "Must be finite": "Number must be finite"
 }

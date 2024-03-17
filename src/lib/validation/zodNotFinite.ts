@@ -6,9 +6,7 @@ import type { Request, Response } from "./types";
 export class NotFinite extends AbstractHandler<Request, Response> {
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.not_finite) {
-      const message = request.t("Required");
-
-      // TODO: Add error messages for number, string and so on.
+      const message = request.t("Must be finite");
 
       return { message };
     }
