@@ -40,5 +40,8 @@
   "Too big array less than": "Array must contain less than {max} element(s)",
   "Too big string exactly": "String must contain exactly {max} character(s)",
   "Too big string at most": "String must contain at most {max} character(s)",
-  "Too big string less than": "String must contain under {max} character(s)"
+  "Too big string less than": "String must contain under {max} character(s)",
+  "Too big number exactly": "Number must be exactly {max}",
+  "Too big number at most": "Number must be less than or equal to {max}",
+  "Too big number less than": "Number must be less than {max}"
 }
