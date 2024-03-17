@@ -28,11 +28,10 @@ export class TooBig extends AbstractHandler<Request, Response> {
 
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.too_big) {
-      if (request.issue.type === "array") {
+      if (["array", "string"].includes(request.issue.type)) {
         return this.createErrorMessage(request, request.issue.type);
       }
       const message = request.t("Required");
-
       // TODO: Add error messages for number, string and so on.
 
       return { message };
