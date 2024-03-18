@@ -521,7 +521,24 @@ describe("TooBig", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Date must be less than or equal to 2013-11-20T00:00:00.000Z",
+        "Date must be less than or equal to Nov 20, 2013, 09:00:00",
+      );
+    }
+  });
+
+  it("The too big date at most default error message in Japanese", async () => {
+    const { t, f } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t, f);
+
+    const val = z.date().max(new Date("2013-11-20"));
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "日付は2013年11月20日 9:00:00以前である必要があります",
       );
     }
   });
