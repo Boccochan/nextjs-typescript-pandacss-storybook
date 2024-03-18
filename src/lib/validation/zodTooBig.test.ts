@@ -525,25 +525,4 @@ describe("TooBig", () => {
       );
     }
   });
-
-  // it("The too big date less than default error message in English", () => {
-  //   const val = z.bigint().superRefine((val, ctx) => {
-  //     if (val.toString() != "2") {
-  //       ctx.addIssue({
-  //         code: z.ZodIssueCode.too_big,
-  //         maximum: 2,
-  //         type: "bigint",
-  //         inclusive: false,
-  //       });
-  //     }
-  //   });
-
-  //   const res = val.safeParse(BigInt("1"));
-
-  //   expect(res.success).toBeFalsy();
-
-  //   if (res.success === false) {
-  //     expect(res.error.errors[0].message).toBe("BigInt must be less than 2");
-  //   }
-  // });
 });
