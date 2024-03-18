@@ -462,7 +462,7 @@ describe("TooBig", () => {
     }
   });
 
-  it("The too big number at most default error message in Japanese", async () => {
+  it("The too big bigint at most default error message in Japanese", async () => {
     const { t, f } = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t, f);
 
@@ -488,7 +488,7 @@ describe("TooBig", () => {
     }
   });
 
-  it("The too big number less than default error message in Japanese", async () => {
+  it("The too big bigint less than default error message in Japanese", async () => {
     const { t, f } = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t, f);
 
@@ -511,29 +511,6 @@ describe("TooBig", () => {
       expect(res.error.errors[0].message).toBe("数値は2である必要があります");
     }
   });
-
-  // it("The too big date exactly default error message in English", () => {
-  //   const val = z.date().superRefine((val, ctx) => {
-  //     const d = new Date("1900-01-01");
-  //     if (val != d) {
-  //       ctx.addIssue({
-  //         code: z.ZodIssueCode.too_big,
-  //         type: "date",
-  //         maximum: d,
-  //         exact: true,
-  //         inclusive: false,
-  //       });
-  //     }
-  //   });
-
-  //   const res = val.safeParse(new Date("2023-03-17"));
-
-  //   expect(res.success).toBeFalsy();
-
-  //   if (res.success === false) {
-  //     expect(res.error.errors[0].message).toBe("BigInt must be exactly 2");
-  //   }
-  // });
 
   it("The too big date at most default error message in English", () => {
     const val = z.date().max(new Date("2013-11-20"));
