@@ -83,9 +83,7 @@ export class TooBig extends AbstractHandler<Request, Response> {
         return this.createErrorMessage(request, request.issue.type);
       }
 
-      const message = request.t("Required");
-
-      return { message };
+      return { message: request.t("Invalid value") };
     }
 
     return super.handle(request);
