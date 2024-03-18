@@ -49,5 +49,5 @@
   "Too big bigint less than": "BigInt must be less than {max}",
   "Too big date exactly": "Date must be exactly {orderDate, date, short}",
   "Too big date at most": "Date must be less than or equal to {orderDate, date, short}",
-  "Too big date less than": "Date must be less than {orderDate, date, ::yyyyMdhms}"
+  "Too big date less than": "Date must be less than {orderDate, date, short}"
 }
