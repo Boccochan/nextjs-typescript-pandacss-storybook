@@ -5,8 +5,8 @@ import { getTranslator } from "@/testlib";
 import { setI18nZodDefaultErrorMsg } from ".";
 
 beforeEach(async () => {
-  const { t, f } = await getTranslator("en");
-  setI18nZodDefaultErrorMsg(t, f);
+  const { t } = await getTranslator("en");
+  setI18nZodDefaultErrorMsg(t);
 });
 
 describe("TooBig", () => {
@@ -61,8 +61,8 @@ describe("TooBig", () => {
     }
   });
   it("The too big array at most default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.array(z.string()).max(1);
 
@@ -78,8 +78,8 @@ describe("TooBig", () => {
   });
 
   it("The too big array exactly default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.array(z.string()).length(1);
 
@@ -93,8 +93,8 @@ describe("TooBig", () => {
   });
 
   it("The too big array less than default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.array(z.string()).superRefine((val, ctx) => {
       if (val.length > 1) {
@@ -169,8 +169,8 @@ describe("TooBig", () => {
   });
 
   it("The too big string at most default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.string().max(1);
 
@@ -186,8 +186,8 @@ describe("TooBig", () => {
   });
 
   it("The too big string exactly default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.string().length(2);
 
@@ -203,8 +203,8 @@ describe("TooBig", () => {
   });
 
   it("The too big string less than default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.string().superRefine((val, ctx) => {
       if (val.length > 2) {
@@ -295,8 +295,8 @@ describe("TooBig", () => {
   });
 
   it("The too big number exactly default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.number().superRefine((val, ctx) => {
       if (val != 2) {
@@ -320,8 +320,8 @@ describe("TooBig", () => {
   });
 
   it("The too big number at most default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.number().superRefine((val, ctx) => {
       if (val > 2) {
@@ -346,8 +346,8 @@ describe("TooBig", () => {
   });
 
   it("The too big number less than default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.number().superRefine((val, ctx) => {
       if (val > 2) {
@@ -438,8 +438,8 @@ describe("TooBig", () => {
   });
 
   it("The too big bigint exactly default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.bigint().superRefine((val, ctx) => {
       if (val.toString() != "2") {
@@ -463,8 +463,8 @@ describe("TooBig", () => {
   });
 
   it("The too big bigint at most default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.bigint().superRefine((val, ctx) => {
       if (val.toString() != "2") {
@@ -489,8 +489,8 @@ describe("TooBig", () => {
   });
 
   it("The too big bigint less than default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.bigint().superRefine((val, ctx) => {
       if (val.toString() != "2") {
@@ -527,8 +527,8 @@ describe("TooBig", () => {
   });
 
   it("The too big date at most default error message in Japanese", async () => {
-    const { t, f } = await getTranslator("ja");
-    setI18nZodDefaultErrorMsg(t, f);
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
 
     const val = z.date().max(new Date("2013-11-20"));
 

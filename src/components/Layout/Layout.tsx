@@ -1,5 +1,5 @@
 "use client";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import { setI18nZodDefaultErrorMsg } from "@/lib";
@@ -10,9 +10,8 @@ type LayoutProps = {
 
 export const Layout = (props: LayoutProps) => {
   const t = useTranslations();
-  const f = useFormatter();
 
-  setI18nZodDefaultErrorMsg(t, f);
+  setI18nZodDefaultErrorMsg(t);
 
   return <>{props.children}</>;
 };
