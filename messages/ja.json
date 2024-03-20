@@ -56,5 +56,6 @@
   "Too small array exactly": "配列は{min}要素含む必要があります",
   "Too small string at least": "文字列は少なくとも{min}文字含む必要があります",
   "Too small string more than": "文字列は{min}文字より大きい必要があります",
-  "Too small string exactly": "文字列は{min}文字含む必要があります"
+  "Too small string exactly": "文字列は{min}文字含む必要があります",
+  "Too small number at least": "数値は少なくとも{min}である必要があります"
 }

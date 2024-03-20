@@ -24,7 +24,7 @@ export class TooSmall extends AbstractHandler<Request, Response> {
   }
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.too_small) {
-      if (["array", "string"].includes(request.issue.type)) {
+      if (["array", "string", "number"].includes(request.issue.type)) {
         return this.createErrorMessage(request, request.issue.type);
       }
 
