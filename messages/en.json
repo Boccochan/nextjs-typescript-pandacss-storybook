@@ -52,5 +52,6 @@
   "Too big date less than": "Date must be less than {orderDate, date, short}",
   "Too small array at least": "Array must contain at least {min} element(s)",
   "Too small array more than": "Array must contain more than {min} element(s)",
-  "Too small array exactly": "Array must contain exactly {min} element(s)"
+  "Too small array exactly": "Array must contain exactly {min} element(s)",
+  "Too small string at least": "String must contain at least {min} element(s)"
 }

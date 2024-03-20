@@ -10,7 +10,7 @@ beforeEach(async () => {
 });
 
 describe("TooSmall", () => {
-  it("The too small array at most default error message in English", () => {
+  it("The too small array at least default error message in English", () => {
     const val = z.array(z.string()).min(2);
 
     const res = val.safeParse(["hello"]);
@@ -23,7 +23,7 @@ describe("TooSmall", () => {
       );
     }
   });
-  it("The too small array at most default error message in Japanese", async () => {
+  it("The too small array at least default error message in Japanese", async () => {
     const { t } = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
@@ -125,6 +125,38 @@ describe("TooSmall", () => {
       expect(res.error.errors[0].message).toBe("配列は1要素含む必要があります");
     }
   });
+
+  it("The too small string at least default error message in English", () => {
+    const val = z.string().min(2);
+
+    const res = val.safeParse("h");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "String must contain at least 2 element(s)",
+      );
+    }
+  });
+
+  it("The too small string at least default error message in Japanese", async () => {
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.string().min(2);
+
+    const res = val.safeParse("h");
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "文字列は少なくとも2文字含む必要があります",
+      );
+    }
+  });
+
   // it("The too big array at most default error message in Japanese", async () => {
   //   const { t } = await getTranslator("ja");
   //   setI18nZodDefaultErrorMsg(t);
