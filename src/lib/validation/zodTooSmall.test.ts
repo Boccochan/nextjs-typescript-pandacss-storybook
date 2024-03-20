@@ -290,6 +290,50 @@ describe("TooSmall", () => {
     }
   });
 
+  it("The too small number more than default error message in English", () => {
+    const val = z.number().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "number",
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(2);
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Number must be more than 1 element(s)",
+      );
+    }
+  });
+
+  it("The too small number more than default error message in Japanese", async () => {
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.number().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "number",
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(2);
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "数値は1文字より大きい必要があります",
+      );
+    }
+  });
   // it("The too big array at most default error message in Japanese", async () => {
   //   const { t } = await getTranslator("ja");
   //   setI18nZodDefaultErrorMsg(t);

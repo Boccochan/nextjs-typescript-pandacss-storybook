@@ -56,5 +56,6 @@
   "Too small string at least": "String must contain at least {min} element(s)",
   "Too small string more than": "String must contain more than {min} element(s)",
   "Too small string exactly": "String must contain exactly {min} element(s)",
-  "Too small number at least": "Number must be at least {min} element(s)"
+  "Too small number at least": "Number must be at least {min} element(s)",
+  "Too small number more than": "Number must be more than {min} element(s)"
 }
