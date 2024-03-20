@@ -7,7 +7,11 @@ export class TooSmall extends AbstractHandler<Request, Response> {
   private createErrorMessage(request: Request, expectType: string) {
     if (request.issue.code == ZodIssueCode.too_small) {
       const min = request.issue.minimum.toString();
-      if (request.issue.inclusive) {
+      if (request.issue.exact) {
+        return {
+          message: request.t(`Too small ${expectType} exactly`, { min }),
+        };
+      } else if (request.issue.inclusive) {
         return {
           message: request.t(`Too small ${expectType} at least`, { min }),
         };
