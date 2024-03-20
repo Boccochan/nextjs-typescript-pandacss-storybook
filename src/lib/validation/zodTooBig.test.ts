@@ -513,7 +513,7 @@ describe("TooBig", () => {
   });
 
   it("The too big date at most default error message in English", () => {
-    const val = z.date().max(new Date("2013-11-20"));
+    const val = z.date().max(new Date("2013-11-20T09:00:00"));
 
     const res = val.safeParse(new Date("2023-03-17"));
 
@@ -530,7 +530,7 @@ describe("TooBig", () => {
     const { t } = await getTranslator("ja");
     setI18nZodDefaultErrorMsg(t);
 
-    const val = z.date().max(new Date("2013-11-20"));
+    const val = z.date().max(new Date("2013-11-20T09:00:00"));
 
     const res = val.safeParse(new Date("2023-03-17"));
 
@@ -547,7 +547,7 @@ describe("TooBig", () => {
     const val = z.date().superRefine((_, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_big,
-        maximum: new Date("2013-11-20").getTime(),
+        maximum: new Date("2013-11-20T09:00:00").getTime(),
         type: "date",
         inclusive: false,
       });
@@ -571,7 +571,7 @@ describe("TooBig", () => {
     const val = z.date().superRefine((_, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_big,
-        maximum: new Date("2013-11-20").getTime(),
+        maximum: new Date("2013-11-20T09:00:00").getTime(),
         type: "date",
         inclusive: false,
       });
@@ -592,7 +592,7 @@ describe("TooBig", () => {
     const val = z.date().superRefine((_, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_big,
-        maximum: new Date("2013-11-20").getTime(),
+        maximum: new Date("2013-11-20T09:00:00").getTime(),
         exact: true,
         type: "date",
         inclusive: false,
@@ -617,7 +617,7 @@ describe("TooBig", () => {
     const val = z.date().superRefine((_, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_big,
-        maximum: new Date("2013-11-20").getTime(),
+        maximum: new Date("2013-11-20T09:00:00").getTime(),
         exact: true,
         type: "date",
         inclusive: false,
