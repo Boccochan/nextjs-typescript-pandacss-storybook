@@ -51,5 +51,6 @@
   "Too big date exactly": "日付は{orderDate, date, short}である必要があります",
   "Too big date at most": "日付は{orderDate, date, short}以前である必要があります",
   "Too big date less than": "日付は{orderDate, date, short}よりも前である必要があります",
-  "Too small array at least": "配列は少なくとも{min}要素含む必要があります"
+  "Too small array at least": "配列は少なくとも{min}要素含む必要があります",
+  "Too small array more than": "配列は{min}要素より大きい必要があります"
 }
