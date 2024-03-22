@@ -58,5 +58,6 @@
   "Too small string more than": "文字列は{min}文字より大きい必要があります",
   "Too small string exactly": "文字列は{min}文字含む必要があります",
   "Too small number at least": "数値は少なくとも{min}である必要があります",
-  "Too small number more than": "数値は{min}文字より大きい必要があります"
+  "Too small number more than": "数値は{min}より大きい必要があります",
+  "Too small number exactly": "数値は{min}である必要があります"
 }
