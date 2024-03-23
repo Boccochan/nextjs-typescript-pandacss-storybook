@@ -172,7 +172,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "String must contain more than 1 element(s)",
+        "String must contain over 1 element(s)",
       );
     }
   });
@@ -261,7 +261,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Number must be at least 1 element(s)",
+        "Number must be greater than or equal to 1 element(s)",
       );
     }
   });
@@ -306,7 +306,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Number must be more than 1 element(s)",
+        "Number must be greater than 1 element(s)",
       );
     }
   });
@@ -352,7 +352,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Number must be exactly 1 element(s)",
+        "Number must be exactly equal to 1 element(s)",
       );
     }
   });

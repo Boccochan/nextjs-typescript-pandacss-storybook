@@ -54,9 +54,12 @@
   "Too small array more than": "Array must contain more than {min} element(s)",
   "Too small array exactly": "Array must contain exactly {min} element(s)",
   "Too small string at least": "String must contain at least {min} element(s)",
-  "Too small string more than": "String must contain more than {min} element(s)",
+  "Too small string more than": "String must contain over {min} element(s)",
   "Too small string exactly": "String must contain exactly {min} element(s)",
-  "Too small number at least": "Number must be at least {min} element(s)",
-  "Too small number more than": "Number must be more than {min} element(s)",
-  "Too small number exactly": "Number must be exactly {min} element(s)"
+  "Too small number at least": "Number must be greater than or equal to {min} element(s)",
+  "Too small number more than": "Number must be greater than {min} element(s)",
+  "Too small number exactly": "Number must be exactly equal to {min} element(s)",
+  "Too small date at least": "Date must be greater than or equal to {min} element(s)",
+  "Too small date more than": "Date must be greater than {min} element(s)",
+  "Too small date exactly": "Date must be exactly equal to {min} element(s)"
 }
