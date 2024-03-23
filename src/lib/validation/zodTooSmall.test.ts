@@ -396,7 +396,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Date must be greater than Jan 1, 1970, 09:00:00",
+        "Date must be greater than Mar 17, 2023, 09:00:00",
       );
     }
   });
@@ -420,7 +420,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "日付は1970年1月1日 9:00:00よりも後である必要があります",
+        "日付は2023年3月17日 9:00:00よりも後である必要があります",
       );
     }
   });
@@ -441,7 +441,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Date must be greater than or equal to Jan 1, 1970, 09:00:00",
+        "Date must be greater than or equal to Mar 17, 2023, 09:00:00",
       );
     }
   });
@@ -465,7 +465,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "日付は1970年1月1日 9:00:00以降である必要があります",
+        "日付は2023年3月17日 9:00:00以降である必要があります",
       );
     }
   });
@@ -487,7 +487,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "Date must be exactly equal to Jan 1, 1970, 09:00:00",
+        "Date must be exactly equal to Mar 17, 2023, 09:00:00",
       );
     }
   });
@@ -512,7 +512,7 @@ describe("TooSmall", () => {
 
     if (res.success === false) {
       expect(res.error.errors[0].message).toBe(
-        "日付は1970年1月1日 9:00:00である必要があります",
+        "日付は2023年3月17日 9:00:00である必要があります",
       );
     }
   });
