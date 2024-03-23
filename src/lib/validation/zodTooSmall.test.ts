@@ -384,7 +384,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         inclusive: false,
       });
@@ -408,7 +408,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         inclusive: false,
       });
@@ -429,7 +429,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         inclusive: true,
       });
@@ -453,7 +453,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         inclusive: true,
       });
@@ -474,7 +474,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         exact: true,
         inclusive: false,
@@ -499,7 +499,7 @@ describe("TooSmall", () => {
     const val = z.date().superRefine((val, ctx) => {
       ctx.addIssue({
         code: z.ZodIssueCode.too_small,
-        minimum: 1,
+        minimum: new Date("2023-03-17T09:00:00").getTime(),
         type: "date",
         exact: true,
         inclusive: false,
