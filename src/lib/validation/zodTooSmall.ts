@@ -54,7 +54,7 @@ export class TooSmall extends AbstractHandler<Request, Response> {
         return this.createErrorMessage(request, request.issue.type);
       }
 
-      const message = request.t("hello");
+      const message = request.t("Invalid value");
 
       return { message };
     }
