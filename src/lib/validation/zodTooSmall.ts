@@ -1,50 +1,29 @@
 import { ZodIssueCode } from "zod";
 
 import { AbstractHandler } from "../chainOrResponsibility";
+import { createDateMessage } from "./lib";
 import type { Request, Response } from "./types";
 
 export class TooSmall extends AbstractHandler<Request, Response> {
-  private createDateMessage(request: Request, key: string, orderDate: Date) {
-    return {
-      message: request.t(
-        key,
-        { orderDate },
-        {
-          dateTime: {
-            short: {
-              day: "numeric",
-              month: "short",
-              year: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-              second: "numeric",
-              hour12: false,
-            },
-          },
-        },
-      ),
-    };
-  }
-
   private createErrorMessage(request: Request, expectType: string) {
     if (request.issue.code == ZodIssueCode.too_small) {
       if (expectType === "date") {
         const orderDate = new Date(Number(request.issue.minimum));
 
         if (request.issue.exact) {
-          return this.createDateMessage(
+          return createDateMessage(
             request,
             `Too small ${expectType} exactly`,
             orderDate,
           );
         } else if (request.issue.inclusive) {
-          return this.createDateMessage(
+          return createDateMessage(
             request,
             `Too small ${expectType} at least`,
             orderDate,
           );
         } else {
-          return this.createDateMessage(
+          return createDateMessage(
             request,
             `Too small ${expectType} more than`,
             orderDate,
