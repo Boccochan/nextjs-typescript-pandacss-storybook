@@ -379,4 +379,141 @@ describe("TooSmall", () => {
       expect(res.error.errors[0].message).toBe("数値は1である必要があります");
     }
   });
+
+  it("The too small date more than default error message in English", () => {
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Date must be greater than Jan 1, 1970, 09:00:00",
+      );
+    }
+  });
+
+  it("The too small date more than default error message in Japanese", async () => {
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "日付は1970年1月1日 9:00:00よりも後である必要があります",
+      );
+    }
+  });
+
+  it("The too small date at least default error message in English", () => {
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        inclusive: true,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Date must be greater than or equal to Jan 1, 1970, 09:00:00",
+      );
+    }
+  });
+
+  it("The too small date at least default error message in Japanese", async () => {
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        inclusive: true,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "日付は1970年1月1日 9:00:00以降である必要があります",
+      );
+    }
+  });
+
+  it("The too small date exactly default error message in English", () => {
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        exact: true,
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "Date must be exactly equal to Jan 1, 1970, 09:00:00",
+      );
+    }
+  });
+
+  it("The too small date exactly default error message in Japanese", async () => {
+    const { t } = await getTranslator("ja");
+    setI18nZodDefaultErrorMsg(t);
+
+    const val = z.date().superRefine((val, ctx) => {
+      ctx.addIssue({
+        code: z.ZodIssueCode.too_small,
+        minimum: 1,
+        type: "date",
+        exact: true,
+        inclusive: false,
+      });
+    });
+
+    const res = val.safeParse(new Date("2023-03-17"));
+
+    expect(res.success).toBeFalsy();
+
+    if (res.success === false) {
+      expect(res.error.errors[0].message).toBe(
+        "日付は1970年1月1日 9:00:00である必要があります",
+      );
+    }
+  });
 });

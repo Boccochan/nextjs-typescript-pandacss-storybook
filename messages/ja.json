@@ -59,5 +59,8 @@
   "Too small string exactly": "文字列は{min}文字含む必要があります",
   "Too small number at least": "数値は少なくとも{min}である必要があります",
   "Too small number more than": "数値は{min}より大きい必要があります",
-  "Too small number exactly": "数値は{min}である必要があります"
+  "Too small number exactly": "数値は{min}である必要があります",
+  "Too small date at least": "日付は{orderDate, date, short}以降である必要があります",
+  "Too small date more than": "日付は{orderDate, date, short}よりも後である必要があります",
+  "Too small date exactly": "日付は{orderDate, date, short}である必要があります"
 }
