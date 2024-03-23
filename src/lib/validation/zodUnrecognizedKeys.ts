@@ -1,4 +1,4 @@
-import { ZodIssueCode } from "zod";
+import { util, ZodIssueCode } from "zod";
 
 import { AbstractHandler } from "../chainOrResponsibility";
 import type { Request, Response } from "./types";
@@ -6,9 +6,8 @@ import type { Request, Response } from "./types";
 export class UnrecognizedKeys extends AbstractHandler<Request, Response> {
   public handle(request: Request): Response | undefined {
     if (request.issue.code == ZodIssueCode.unrecognized_keys) {
-      const message = request.t("Required");
-
-      // TODO: Add error messages for number, string and so on.
+      const keys = util.joinValues(request.issue.keys, ", ");
+      const message = request.t("Unrecognized key", { keys });
 
       return { message };
     }

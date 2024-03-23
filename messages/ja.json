@@ -62,5 +62,6 @@
   "Too small number exactly": "数値は{min}である必要があります",
   "Too small date at least": "日付は{orderDate, date, short}以降である必要があります",
   "Too small date more than": "日付は{orderDate, date, short}よりも後である必要があります",
-  "Too small date exactly": "日付は{orderDate, date, short}である必要があります"
+  "Too small date exactly": "日付は{orderDate, date, short}である必要があります",
+  "Unrecognized key": "オブジェクトの中に不明なキーがあります: {keys}"
 }
