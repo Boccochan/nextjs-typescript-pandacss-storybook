@@ -38,7 +38,7 @@ export const Options = (props: OptionsProps) => {
       key={option.id}
       hidden={option.hidden}
       value={option.value}
-      selected={option.isSelected}
+      // selected={option.isSelected}
     >
       {option.value}
     </option>

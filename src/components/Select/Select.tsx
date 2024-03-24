@@ -12,7 +12,7 @@ type OptionProps = {
   hidden?: boolean;
 
   /**
-   * The selected attribute.
+   * The current selected option.
    */
   isSelected?: boolean;
 
@@ -60,6 +60,9 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ options, disabled, size, width, loading, ...rest }, ref) => {
     const isDisabled = disabled || options.length === 0 || loading;
+    const selectedOption = options
+      .filter((option) => option.isSelected)
+      .shift()?.value;
 
     return (
       <div
@@ -72,6 +75,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           {...rest}
           className={styles.select({ size, width })}
           disabled={isDisabled}
+          value={selectedOption}
         >
           <Options loading={loading} options={options} />
         </select>
