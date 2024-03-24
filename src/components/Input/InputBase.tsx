@@ -16,6 +16,8 @@ type InputBaseProps = BasicProps & {
 };
 
 /**
+ * - Consider to use InputGroup for the parent component of the InputBase component
+ * - The InputBase component does not have border and outline. The parent component need to handle it
  * - The width of the InputBase component is always 100%. The parent component of the InputBase component should decide the width
  */
 export const InputBase = React.forwardRef<HTMLInputElement, InputBaseProps>(
