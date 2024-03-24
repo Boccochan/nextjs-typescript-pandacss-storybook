@@ -25,9 +25,6 @@ type InputProps = BasicProps & {
   invalid?: InputVariants["invalid"];
 };
 
-// TODO: Check react-hook-forms
-// TODO: Word count
-// TODO: Support password
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ size, width, invalid, ...rest }, ref) => (
     <input
