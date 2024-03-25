@@ -5,7 +5,6 @@ const inputBuilder = cva({
     border: "1px solid {colors.body.border}",
     bg: "body.bg",
     color: "body.text",
-
     // _disabled: {
     //   opacity: "0.6",
     // },
@@ -17,6 +16,12 @@ const inputBuilder = cva({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    _focusWithin: {
+      outline: {
+        base: "2px solid black",
+        _osDark: "2px solid white",
+      },
+    },
   },
   variants: {
     size: {

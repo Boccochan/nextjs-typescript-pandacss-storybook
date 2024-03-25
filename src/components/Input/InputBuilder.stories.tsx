@@ -3,8 +3,8 @@ import type { ComponentProps } from "react";
 
 import { css } from "#/styled-system/css";
 
-// import { styles } from "./InputBase.styles";
 import { InputBuilder } from "./InputBuilder";
+import { styles } from "./InputBuilder.styles";
 
 type Props = ComponentProps<typeof InputBuilder>;
 
@@ -50,10 +50,14 @@ const meta: Meta<typeof InputBuilder> = {
     },
   },
   argTypes: {
-    // size: {
-    //   control: "select",
-    //   options: styles.inputBase.variantMap.size,
-    // },
+    size: {
+      control: "select",
+      options: styles.inputBuilder.variantMap.size,
+    },
+    width: {
+      control: "select",
+      options: styles.inputBuilder.variantMap.width,
+    },
   },
 };
 
@@ -65,6 +69,8 @@ export const Basic: Story = {
     // placeholder: "Input some text",
     // disabled: false,
     // readOnly: false,
+    size: "md",
+    width: "md",
   },
   render: DisplayBox,
 };
