@@ -16,14 +16,14 @@ type InputBuilderProps = Omit<BasicProps, "size"> & {
   /**
    * The width of input. The width of the Input component can be fixed.
    */
-  width?: InputBuilderVariants["size"];
+  width?: InputBuilderVariants["width"];
 };
 
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
   ({ size, width, ...rest }, ref) => {
     return (
       <div ref={ref} className={styles.inputBuilder({ size, width })}>
-        <InputBase {...rest} />
+        <InputBase {...rest} size={size} />
       </div>
     );
   },

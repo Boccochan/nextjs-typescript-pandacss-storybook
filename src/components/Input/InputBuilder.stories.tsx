@@ -70,7 +70,7 @@ export const Basic: Story = {
     // disabled: false,
     // readOnly: false,
     size: "md",
-    width: "md",
+    width: "full",
   },
   render: DisplayBox,
 };
