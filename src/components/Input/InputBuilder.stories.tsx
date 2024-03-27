@@ -66,7 +66,7 @@ type Story = StoryObj<typeof InputBuilder>;
 
 export const Basic: Story = {
   args: {
-    // placeholder: "Input some text",
+    placeholder: "Input some text",
     // disabled: false,
     // readOnly: false,
     size: "md",

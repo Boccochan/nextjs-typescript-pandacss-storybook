@@ -1,12 +1,13 @@
+import type { ComponentProps } from "react";
 import React from "react";
 
 import { InputBase } from ".";
 import type { InputBuilderVariants } from "./InputBuilder.styles";
 import { styles } from "./InputBuilder.styles";
 
-type BasicProps = React.JSX.IntrinsicElements["div"];
+type BasicProps = ComponentProps<typeof InputBase>;
 
-type InputBuilderProps = BasicProps & {
+type InputBuilderProps = Omit<BasicProps, "size"> & {
   /**
    * The size of the component.
    */
@@ -21,8 +22,8 @@ type InputBuilderProps = BasicProps & {
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
   ({ size, width, ...rest }, ref) => {
     return (
-      <div ref={ref} {...rest} className={styles.inputBuilder({ size, width })}>
-        <InputBase />
+      <div ref={ref} className={styles.inputBuilder({ size, width })}>
+        <InputBase {...rest} />
       </div>
     );
   },

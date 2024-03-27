@@ -18,6 +18,7 @@ const inputBuilder = cva({
     alignItems: "center",
     _focusWithin: {
       outline: {
+        // TODO: Globalのcssと統一する
         base: "2px solid black",
         _osDark: "2px solid white",
       },
