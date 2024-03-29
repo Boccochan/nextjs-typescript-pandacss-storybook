@@ -43,7 +43,8 @@ const meta: Meta<typeof InputBuilder> = {
   component: InputBuilder,
   tags: ["autodocs"],
   parameters: {
-    componentSubtitle: "Fix document",
+    componentSubtitle:
+      "The InputBuilder component can build complex input component.",
     layout: "centered",
     docs: {
       controls: { exclude: ["disabled", "onClick", "placeholder"] },
@@ -67,7 +68,7 @@ type Story = StoryObj<typeof InputBuilder>;
 export const Basic: Story = {
   args: {
     placeholder: "Input some text",
-    // disabled: false,
+    disabled: false,
     // readOnly: false,
     size: "md",
     width: "full",

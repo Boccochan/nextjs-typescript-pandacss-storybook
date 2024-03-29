@@ -7,6 +7,7 @@ const inputBuilder = cva({
     color: "body.text",
     // _disabled: {
     //   opacity: "0.6",
+    //   pointerEvents: "none",
     // },
     // _readOnly: {
     //   pointerEvents: "none",
@@ -75,12 +76,19 @@ const inputBuilder = cva({
     isFocused: {
       true: {},
     },
+    disabled: {
+      true: {
+        opacity: "0.6",
+        pointerEvents: "none",
+      },
+    },
   },
   defaultVariants: {
     size: "md",
     width: "md",
     invalid: false,
     isFocused: false,
+    disabled: true,
   },
 });
 

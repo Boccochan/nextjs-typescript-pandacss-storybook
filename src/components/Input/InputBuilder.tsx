@@ -20,10 +20,10 @@ type InputBuilderProps = Omit<BasicProps, "size"> & {
 };
 
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
-  ({ size, width, ...rest }, ref) => {
+  ({ size, width, disabled, ...rest }, ref) => {
     return (
-      <div ref={ref} className={styles.inputBuilder({ size, width })}>
-        <InputBase {...rest} size={size} />
+      <div ref={ref} className={styles.inputBuilder({ size, width, disabled })}>
+        <InputBase {...rest} disabled size={size} />
       </div>
     );
   },
