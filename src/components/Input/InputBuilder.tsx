@@ -20,10 +20,21 @@ type InputBuilderProps = Omit<BasicProps, "size"> & {
 };
 
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
-  ({ size, width, disabled = undefined, ...rest }, ref) => {
+  (
+    { size, width, disabled = undefined, readOnly = undefined, ...rest },
+    ref,
+  ) => {
     return (
-      <div ref={ref} className={styles.inputBuilder({ size, width, disabled })}>
-        <InputBase {...rest} disabled={disabled} size={size} />
+      <div
+        ref={ref}
+        className={styles.inputBuilder({ size, width, disabled, readOnly })}
+      >
+        <InputBase
+          {...rest}
+          disabled={disabled}
+          readOnly={readOnly}
+          size={size}
+        />
       </div>
     );
   },

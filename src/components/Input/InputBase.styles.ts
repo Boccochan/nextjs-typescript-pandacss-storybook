@@ -9,7 +9,7 @@ const inputBase = cva({
     outline: "none",
     _disabled: {
       opacity: "0.6",
-      bg: "input.disabled.bg",
+      bg: "body.readonly",
     },
     _readOnly: {
       pointerEvents: "none",

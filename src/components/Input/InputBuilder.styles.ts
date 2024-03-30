@@ -5,15 +5,6 @@ const inputBuilder = cva({
     border: "1px solid {colors.body.border}",
     bg: "body.bg",
     color: "body.text",
-    // _disabled: {
-    //   opacity: "0.6",
-    //   pointerEvents: "none",
-    // },
-    // _readOnly: {
-    //   pointerEvents: "none",
-    //   outline: "none",
-    //   bg: "body.readonly",
-    // },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -80,7 +71,13 @@ const inputBuilder = cva({
       true: {
         opacity: "0.6",
         pointerEvents: "none",
-        bg: "input.disabled.bg",
+        bg: "body.readonly",
+      },
+    },
+    readOnly: {
+      true: {
+        pointerEvents: "none",
+        bg: "body.readonly",
       },
     },
   },
@@ -90,6 +87,7 @@ const inputBuilder = cva({
     invalid: false,
     isFocused: false,
     disabled: false,
+    readOnly: false,
   },
 });
 

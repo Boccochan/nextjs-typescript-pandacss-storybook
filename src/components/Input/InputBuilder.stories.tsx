@@ -69,7 +69,7 @@ export const Basic: Story = {
   args: {
     placeholder: "Input some text",
     disabled: false,
-    // readOnly: false,
+    readOnly: false,
     size: "md",
     width: "full",
   },
