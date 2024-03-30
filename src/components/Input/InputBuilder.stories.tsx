@@ -76,20 +76,24 @@ export const Basic: Story = {
   render: DisplayBox,
 };
 
-// export const Disabled: Story = {
-//   args: {
-//     placeholder: "Input some text",
-//     disabled: true,
-//     readOnly: false,
-//   },
-//   render: DisplayBox,
-// };
+export const Disabled: Story = {
+  args: {
+    placeholder: "Input some text",
+    disabled: true,
+    readOnly: false,
+    size: "md",
+    width: "full",
+  },
+  render: DisplayBox,
+};
 
-// export const ReadOnly: Story = {
-//   args: {
-//     placeholder: "Input some text",
-//     disabled: false,
-//     readOnly: true,
-//   },
-//   render: DisplayBox,
-// };
+export const ReadOnly: Story = {
+  args: {
+    placeholder: "Input some text",
+    disabled: false,
+    readOnly: true,
+    size: "md",
+    width: "full",
+  },
+  render: DisplayBox,
+};
