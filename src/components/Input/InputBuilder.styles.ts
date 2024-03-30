@@ -80,6 +80,7 @@ const inputBuilder = cva({
       true: {
         opacity: "0.6",
         pointerEvents: "none",
+        bg: "input.disabled.bg",
       },
     },
   },
@@ -88,7 +89,7 @@ const inputBuilder = cva({
     width: "md",
     invalid: false,
     isFocused: false,
-    disabled: true,
+    disabled: false,
   },
 });
 
