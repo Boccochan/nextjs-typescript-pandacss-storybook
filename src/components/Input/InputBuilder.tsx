@@ -24,6 +24,11 @@ type InputBuilderProps = Omit<BasicProps, "size"> & {
    * The StartIcon decorates the ICON at the beginning.
    */
   StartIcon?: IconType;
+
+  /**
+   * The StartIcon decorates the ICON at the ending.
+   */
+  EndIcon?: IconType;
 };
 
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
@@ -32,6 +37,7 @@ export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
       size,
       width,
       StartIcon = undefined,
+      EndIcon = undefined,
       disabled = undefined,
       readOnly = undefined,
       ...rest
@@ -50,7 +56,7 @@ export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
           readOnly={readOnly}
           size={size}
         />
-        <InputIcon size={size}></InputIcon>
+        <InputIcon size={size}>{EndIcon && <EndIcon />}</InputIcon>
       </div>
     );
   },

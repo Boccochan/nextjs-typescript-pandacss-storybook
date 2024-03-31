@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
 import { MdAccountCircle } from "react-icons/md";
+import { RiEyeCloseLine } from "react-icons/ri";
 
 import { css } from "#/styled-system/css";
 
@@ -107,6 +108,18 @@ export const WithStartIcon: Story = {
     size: "md",
     width: "full",
     StartIcon: MdAccountCircle,
+  },
+  render: DisplayBox,
+};
+
+export const WithEndIcon: Story = {
+  args: {
+    placeholder: "Input some text",
+    disabled: false,
+    readOnly: false,
+    size: "md",
+    width: "full",
+    EndIcon: RiEyeCloseLine,
   },
   render: DisplayBox,
 };
