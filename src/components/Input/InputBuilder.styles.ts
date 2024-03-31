@@ -19,31 +19,26 @@ const inputBuilder = cva({
   variants: {
     size: {
       xs: {
-        paddingX: "2",
         rounded: "xs",
         minWidth: "10rem",
         height: "2rem",
       },
       sm: {
-        paddingX: "2",
         rounded: "xs",
         minWidth: "12rem",
         height: "2.2rem",
       },
       md: {
-        paddingX: "3",
         rounded: "xs",
         minWidth: "14rem",
         height: "2.4rem",
       },
       lg: {
-        paddingX: "3",
         rounded: "xs",
         minWidth: "16rem",
         height: "2.6rem",
       },
       xl: {
-        paddingX: "3",
         rounded: "xs",
         minWidth: "16rem",
         height: "2.8rem",

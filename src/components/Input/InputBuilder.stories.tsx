@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
+import { MdAccountCircle } from "react-icons/md";
 
 import { css } from "#/styled-system/css";
 
@@ -94,6 +95,18 @@ export const ReadOnly: Story = {
     readOnly: true,
     size: "md",
     width: "full",
+  },
+  render: DisplayBox,
+};
+
+export const WithStartIcon: Story = {
+  args: {
+    placeholder: "Input some text",
+    disabled: false,
+    readOnly: false,
+    size: "md",
+    width: "full",
+    StartIcon: MdAccountCircle,
   },
   render: DisplayBox,
 };

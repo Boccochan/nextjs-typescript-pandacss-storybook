@@ -54,6 +54,12 @@ export const colors = defineSemanticTokens.colors({
       },
     },
   },
+  inputIcon: {
+    value: {
+      base: "{colors.gray.500}",
+      _osDark: "{colors.gray.100}",
+    },
+  },
   icon: {
     DEFAULT: {
       value: {
