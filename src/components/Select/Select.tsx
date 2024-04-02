@@ -50,6 +50,8 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
    * When using the loading flag, specify a width other than auto.
    */
   loading?: boolean;
+
+  selectedValue?: string;
 };
 
 /**
@@ -58,11 +60,11 @@ type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
  * - If you need a richer menu, consider to implement another component.
  */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, disabled, size, width, loading, ...rest }, ref) => {
+  (
+    { options, disabled, size, width, loading, selectedValue, ...rest },
+    ref,
+  ) => {
     const isDisabled = disabled || options.length === 0 || loading;
-    const selectedOption = options
-      .filter((option) => option.isSelected)
-      .shift()?.value;
 
     return (
       <div
@@ -75,7 +77,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           {...rest}
           className={styles.select({ size, width })}
           disabled={isDisabled}
-          value={selectedOption}
+          value={selectedValue}
         >
           <Options loading={loading} options={options} />
         </select>

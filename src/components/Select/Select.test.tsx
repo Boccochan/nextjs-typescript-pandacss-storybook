@@ -79,8 +79,9 @@ describe("Snapshot Select", () => {
       <Select
         options={[
           { id: "apple", value: "Apple" },
-          { id: "microsoft", value: "Microsoft", isSelected: true },
+          { id: "microsoft", value: "Microsoft" },
         ]}
+        selectedValue="Microsoft"
       />,
     );
 
@@ -93,8 +94,9 @@ describe("Snapshot Select", () => {
         options={[
           { id: "select", value: "Select", hidden: true },
           { id: "apple", value: "Apple" },
-          { id: "microsoft", value: "Microsoft", isSelected: true },
+          { id: "microsoft", value: "Microsoft" },
         ]}
+        selectedValue="Apple"
       />,
     );
 

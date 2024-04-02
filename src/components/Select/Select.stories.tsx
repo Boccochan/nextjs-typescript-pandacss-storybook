@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ComponentProps } from "react";
+import { type ComponentProps, useState } from "react";
 
 import { css } from "#/styled-system/css";
 
@@ -9,6 +9,14 @@ import { styles } from "./Select.styles";
 type SelectProps = ComponentProps<typeof Select>;
 
 const DisplayBox = (props: SelectProps) => {
+  const [selected, setSelected] = useState<string | undefined>(
+    props.selectedValue,
+  );
+
+  const change = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelected(e.target.value);
+  };
+
   return (
     <div
       className={css({
@@ -33,7 +41,7 @@ const DisplayBox = (props: SelectProps) => {
         },
       })}
     >
-      <Select {...props} />
+      <Select {...props} selectedValue={selected} onChange={change} />
     </div>
   );
 };
@@ -107,10 +115,11 @@ export const Selected: Story = {
         id: "International Consolidated Airlines Group SA",
         value: "International Consolidated Airlines Group SA",
       },
-      { id: "Amazon", value: "Amazon", isSelected: true },
+      { id: "Amazon", value: "Amazon" },
       { id: "Meta", value: "Meta" },
       { id: "Google", value: "Google" },
     ],
+    selectedValue: "Amazon",
   },
   render: DisplayBox,
 };
