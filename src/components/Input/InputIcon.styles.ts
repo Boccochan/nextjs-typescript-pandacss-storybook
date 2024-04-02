@@ -13,23 +13,23 @@ const inputIcon = cva({
     size: {
       xs: {
         fontSize: "lg",
-        paddingX: "1",
+        paddingX: "2",
       },
       sm: {
         fontSize: "xl",
-        paddingX: "1",
+        paddingX: "2",
       },
       md: {
         fontSize: "2xl",
-        paddingX: "1",
+        paddingX: "2",
       },
       lg: {
         fontSize: "3xl",
-        paddingX: "1",
+        paddingX: "2",
       },
       xl: {
         fontSize: "4xl",
-        paddingX: "1",
+        paddingX: "2",
       },
     },
   },
