@@ -6,7 +6,7 @@ exports[`Snapshot InputBuilder With default 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -22,7 +22,7 @@ exports[`Snapshot InputBuilder With default 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -95,7 +95,7 @@ exports[`Snapshot InputBuilder With default with disabled 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem opacity_0.6 pointer-events_none"
+        class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem opacity_0.6 pointer-events_none"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -112,7 +112,7 @@ exports[`Snapshot InputBuilder With default with disabled 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem opacity_0.6 pointer-events_none"
+      class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem opacity_0.6 pointer-events_none"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -186,7 +186,7 @@ exports[`Snapshot InputBuilder With default with endIcon 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -220,7 +220,7 @@ exports[`Snapshot InputBuilder With default with endIcon 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -311,7 +311,7 @@ exports[`Snapshot InputBuilder With default with readOnly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem pointer-events_none"
+        class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem pointer-events_none"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -328,7 +328,7 @@ exports[`Snapshot InputBuilder With default with readOnly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem pointer-events_none"
+      class="border_1px_solid_{colors.body.border} bg_body.readonly text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem pointer-events_none"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -402,7 +402,7 @@ exports[`Snapshot InputBuilder With default with startIcon 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -436,7 +436,7 @@ exports[`Snapshot InputBuilder With default with startIcon 1`] = `
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -527,7 +527,7 @@ exports[`Snapshot InputBuilder With size=lg, width=lg, placeholder='Input some w
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_16rem h_2.6rem w_16rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_16rem h_2.6rem w_16rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_3xl"
@@ -544,7 +544,7 @@ exports[`Snapshot InputBuilder With size=lg, width=lg, placeholder='Input some w
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_16rem h_2.6rem w_16rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_16rem h_2.6rem w_16rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_3xl"
@@ -618,7 +618,7 @@ exports[`Snapshot InputBuilder With size=md, width=md, placeholder='Input some w
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -635,7 +635,7 @@ exports[`Snapshot InputBuilder With size=md, width=md, placeholder='Input some w
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_14rem h_2.4rem w_14rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
@@ -709,7 +709,7 @@ exports[`Snapshot InputBuilder With size=sm, width=sm, placeholder='Input some w
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_12rem h_2.2rem w_12rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_12rem h_2.2rem w_12rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_xl"
@@ -726,7 +726,7 @@ exports[`Snapshot InputBuilder With size=sm, width=sm, placeholder='Input some w
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_12rem h_2.2rem w_12rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_12rem h_2.2rem w_12rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_xl"
@@ -800,7 +800,7 @@ exports[`Snapshot InputBuilder With size=xl, width=xl, placeholder='Input some w
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_16rem h_2.8rem w_18rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_16rem h_2.8rem w_18rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_4xl"
@@ -817,7 +817,7 @@ exports[`Snapshot InputBuilder With size=xl, width=xl, placeholder='Input some w
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_16rem h_2.8rem w_18rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_16rem h_2.8rem w_18rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_4xl"
@@ -891,7 +891,7 @@ exports[`Snapshot InputBuilder With size=xs, width=xs, placeholder='Input some w
   "baseElement": <body>
     <div>
       <div
-        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_10rem h_2rem w_10rem"
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_10rem h_2rem w_10rem"
       >
         <div
           class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_lg"
@@ -908,7 +908,7 @@ exports[`Snapshot InputBuilder With size=xs, width=xs, placeholder='Input some w
   </body>,
   "container": <div>
     <div
-      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_10rem h_2rem w_10rem"
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_{colors.outline} rounded_xs min-w_10rem h_2rem w_10rem"
     >
       <div
         class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_lg"

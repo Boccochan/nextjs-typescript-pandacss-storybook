@@ -9,11 +9,7 @@ const inputBuilder = cva({
     justifyContent: "center",
     alignItems: "center",
     _focusWithin: {
-      outline: {
-        // TODO: Globalのcssと統一する
-        base: "2px solid black",
-        _osDark: "2px solid white",
-      },
+      outline: "{colors.outline}", // For some reasons, outline needs colors..
     },
   },
   variants: {
