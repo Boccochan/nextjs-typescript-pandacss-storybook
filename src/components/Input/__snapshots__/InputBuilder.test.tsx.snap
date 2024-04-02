@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot InputBuilder With default 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+      >
+        <div
+          class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
+        />
+        <input
+          class="border_none bg_body.bg text_body.text ring_none disabled:opacity_0.6 disabled:bg_body.readonly readOnly:pointer-events_none readOnly:bg_body.readonly d_block w_100% fs_md"
+        />
+        <div
+          class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="border_1px_solid_{colors.body.border} bg_body.bg text_body.text d_flex justify_center items_center focusWithin:ring_2px_solid_black focusWithin:osDark:ring_2px_solid_white rounded_xs min-w_14rem h_2.4rem w_14rem"
+    >
+      <div
+        class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
+      />
+      <input
+        class="border_none bg_body.bg text_body.text ring_none disabled:opacity_0.6 disabled:bg_body.readonly readOnly:pointer-events_none readOnly:bg_body.readonly d_block w_100% fs_md"
+      />
+      <div
+        class="h_100% px_2 d_flex justify_center items_center text_inputIcon fs_2xl"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
