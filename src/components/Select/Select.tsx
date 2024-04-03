@@ -77,6 +77,11 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
       ...rest
     } = props;
 
+    // TODO: defaultValueだけでよい? valueは?
+    // propsの展開型が汚く見えるから何とかしたい。→調査
+    // storybookの内容見直し
+    // snapshot取り直し
+
     const [selected, setSelected] = React.useState(defaultValue);
     const isDisabled = disabled || options.length === 0 || loading;
 
