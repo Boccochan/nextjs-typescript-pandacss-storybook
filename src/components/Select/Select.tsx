@@ -78,6 +78,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     } = props;
 
     // TODO: defaultValueだけでよい? valueは?
+    // TODO: 他のlibrary見て、どんな引数を受け取っているか参考にする
     // propsの展開型が汚く見えるから何とかしたい。→調査
     // storybookの内容見直し
     // snapshot取り直し
