@@ -81,7 +81,7 @@ describe("Snapshot Select", () => {
           { id: "apple", value: "Apple" },
           { id: "microsoft", value: "Microsoft" },
         ]}
-        selectedValue="Microsoft"
+        defaultValue="Microsoft"
       />,
     );
 
@@ -96,7 +96,7 @@ describe("Snapshot Select", () => {
           { id: "apple", value: "Apple" },
           { id: "microsoft", value: "Microsoft" },
         ]}
-        selectedValue="Apple"
+        defaultValue="Apple"
       />,
     );
 
