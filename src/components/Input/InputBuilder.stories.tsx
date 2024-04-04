@@ -46,7 +46,7 @@ const meta: Meta<typeof InputBuilder> = {
   tags: ["autodocs"],
   parameters: {
     componentSubtitle:
-      "The InputBuilder component can build complex input component.",
+      "InputBuilder is capable of constructing complex Input component.",
     layout: "centered",
     docs: {
       controls: { exclude: ["disabled", "onClick", "placeholder"] },
