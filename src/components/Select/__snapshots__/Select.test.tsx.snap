@@ -314,6 +314,7 @@ exports[`Snapshot Select With options=['Apple', 'Microsoft'] selected Microsoft 
             Apple
           </option>
           <option
+            selected=""
             value="Microsoft"
           >
             Microsoft
@@ -335,6 +336,7 @@ exports[`Snapshot Select With options=['Apple', 'Microsoft'] selected Microsoft 
           Apple
         </option>
         <option
+          selected=""
           value="Microsoft"
         >
           Microsoft
@@ -414,6 +416,7 @@ exports[`Snapshot Select With options=['Select', 'Apple', 'Microsoft'] select op
             Select
           </option>
           <option
+            selected=""
             value="Apple"
           >
             Apple
@@ -441,6 +444,7 @@ exports[`Snapshot Select With options=['Select', 'Apple', 'Microsoft'] select op
           Select
         </option>
         <option
+          selected=""
           value="Apple"
         >
           Apple

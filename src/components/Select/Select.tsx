@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 import { Spinner } from "../Spinner";
@@ -23,10 +22,7 @@ type OptionProps = {
   value: string;
 };
 
-type SelectProps = Omit<
-  React.JSX.IntrinsicElements["select"],
-  "size" | "onChange"
-> & {
+type SelectProps = Omit<React.JSX.IntrinsicElements["select"], "size"> & {
   /**
    * The size of the component.
    */
@@ -49,14 +45,6 @@ type SelectProps = Omit<
    * When using the loading flag, specify a width other than auto.
    */
   loading?: boolean;
-
-  /**
-   * The changeOption is called when an option is selected.
-   * Use this function instead of onChange.
-   *
-   * @param option
-   */
-  changeOption: (option: OptionProps) => void;
 };
 
 /**
@@ -66,37 +54,8 @@ type SelectProps = Omit<
  */
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   (props, ref) => {
-    const {
-      options,
-      disabled,
-      size,
-      width,
-      loading,
-      changeOption,
-      defaultValue,
-      ...rest
-    } = props;
-
-    // TODO: defaultValueだけでよい? valueは?
-    // TODO: 他のlibrary見て、どんな引数を受け取っているか参考にする
-    // propsの展開型が汚く見えるから何とかしたい。→調査
-    // storybookの内容見直し
-    // snapshot取り直し
-
-    const [selected, setSelected] = React.useState(defaultValue);
+    const { options, disabled, size, width, loading, ...rest } = props;
     const isDisabled = disabled || options.length === 0 || loading;
-
-    const change = (e: React.ChangeEvent<HTMLSelectElement>) => {
-      setSelected(e.target.value);
-
-      const result = options.filter(
-        (option) => option.value === e.target.value,
-      );
-
-      if (!result) throw Error(`BUG: Not found option ${e.target.value}`);
-
-      changeOption(result[0]);
-    };
 
     return (
       <div
@@ -109,8 +68,6 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
           {...rest}
           className={styles.select({ size, width })}
           disabled={isDisabled}
-          value={selected}
-          onChange={change}
         >
           <Options loading={loading} options={options} />
         </select>

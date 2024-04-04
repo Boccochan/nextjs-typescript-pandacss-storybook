@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { type ComponentProps } from "react";
+import type { ChangeEvent } from "react";
+import { type ComponentProps, useState } from "react";
 
 import { css } from "#/styled-system/css";
 
@@ -9,6 +10,12 @@ import { styles } from "./Select.styles";
 type SelectProps = ComponentProps<typeof Select>;
 
 const DisplayBox = (props: SelectProps) => {
+  const [selected, setSelected] = useState<string>();
+
+  const change = (e: ChangeEvent<HTMLSelectElement>) => {
+    setSelected(e.target.value);
+  };
+
   return (
     <div
       className={css({
@@ -33,7 +40,7 @@ const DisplayBox = (props: SelectProps) => {
         },
       })}
     >
-      <Select {...props} />
+      <Select {...props} value={selected} onChange={change} />
     </div>
   );
 };

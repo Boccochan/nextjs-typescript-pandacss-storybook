@@ -48,7 +48,7 @@ export const Form = () => {
           { id: "Japan", value: "Japan" },
           { id: "USA", value: "USA" },
         ]}
-        changeOption={console.log}
+        onChange={console.log}
       />
       {errors.country?.message}
       <Input {...register("name")} width="md" />
