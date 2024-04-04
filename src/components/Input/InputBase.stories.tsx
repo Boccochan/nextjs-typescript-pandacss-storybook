@@ -1,40 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
 
-import { css } from "#/styled-system/css";
+import { DisplayBox } from "@/storybooklib";
 
 import { InputBase } from "./InputBase";
 import { styles } from "./InputBase.styles";
 
 type Props = ComponentProps<typeof InputBase>;
 
-const DisplayBox = (props: Props) => {
+const Component = (props: Props) => {
   return (
-    <div
-      className={css({
-        width: "500px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100px",
-        borderColor: "body.border",
-        px: "4",
-        borderWidth: "1px",
-        borderRadius: "md",
-        position: "relative",
-        _before: {
-          position: "absolute",
-          content: '"Parent component"',
-          top: "-3.5",
-          left: "10px",
-          bg: "body.bg",
-          padding: "0 4px",
-          color: "body.text",
-        },
-      })}
-    >
+    <DisplayBox>
       <InputBase {...props} />
-    </div>
+    </DisplayBox>
   );
 };
 
@@ -67,7 +45,7 @@ export const Basic: Story = {
     disabled: false,
     readOnly: false,
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const Disabled: Story = {
@@ -76,7 +54,7 @@ export const Disabled: Story = {
     disabled: true,
     readOnly: false,
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const ReadOnly: Story = {
@@ -85,5 +63,5 @@ export const ReadOnly: Story = {
     disabled: false,
     readOnly: true,
   },
-  render: DisplayBox,
+  render: Component,
 };
