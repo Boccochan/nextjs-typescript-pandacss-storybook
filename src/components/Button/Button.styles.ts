@@ -59,6 +59,29 @@ const button = cva({
         height: "3.2rem",
       },
     },
+    width: {
+      xs: {
+        width: "4rem",
+      },
+      sm: {
+        width: "6rem",
+      },
+      md: {
+        width: "8rem",
+      },
+      lg: {
+        width: "10rem",
+      },
+      xl: {
+        width: "12rem",
+      },
+      full: {
+        width: "100%",
+      },
+      auto: {
+        width: "auto",
+      },
+    },
     color: {
       primary: colors("primary"),
       danger: colors("danger"),

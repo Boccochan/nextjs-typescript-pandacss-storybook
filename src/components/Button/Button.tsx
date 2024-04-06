@@ -18,6 +18,11 @@ type ButtonProps = React.JSX.IntrinsicElements["button"] & {
   size?: ButtonVariants["size"]; // For storybook
 
   /**
+   * The width of input. The width of the Input component can be fixed.
+   */
+  width?: ButtonVariants["width"]; // For storybook
+
+  /**
    * The label of the button.
    */
   label: string;
@@ -37,12 +42,12 @@ type ButtonProps = React.JSX.IntrinsicElements["button"] & {
  * - Support all button tag's props.
  */
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ color, size, label, disabled, loading, Icon, ...rest }, ref) => (
+  ({ color, size, label, disabled, loading, Icon, width, ...rest }, ref) => (
     <button
       ref={ref}
       disabled={loading || disabled}
       aria-disabled={loading || disabled}
-      className={styles.button({ color, size })}
+      className={styles.button({ color, size, width })}
       {...rest}
     >
       {loading && (
