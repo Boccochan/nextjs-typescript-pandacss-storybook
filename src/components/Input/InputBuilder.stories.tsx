@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useFormatter } from "next-intl";
 import type { ComponentProps } from "react";
 import React from "react";
 import { MdAccountCircle } from "react-icons/md";
@@ -127,4 +128,45 @@ export const InputIntegerNumber: Story = {
     width: "full",
   },
   render: InputNumberComponent,
+};
+
+const InputNumberWithCommaFormatComponent = (props: Props) => {
+  const [value, setValue] = React.useState<string>("");
+  const format = useFormatter();
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const result = extractIntegerFromString(e.target.value);
+    setValue(result);
+  };
+
+  const onBlur = () => {
+    setValue(format.number(Number(value)));
+  };
+
+  const onFocus = () => {
+    setValue(extractIntegerFromString(value));
+  };
+
+  return (
+    <DisplayBox>
+      <InputBuilder
+        {...props}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        onFocus={onFocus}
+      />
+    </DisplayBox>
+  );
+};
+
+export const InputIntegerNumberWithCommaFormat: Story = {
+  args: {
+    placeholder: "Input integer number",
+    disabled: false,
+    readOnly: false,
+    size: "md",
+    width: "full",
+  },
+  render: InputNumberWithCommaFormatComponent,
 };
