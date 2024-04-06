@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
+import React from "react";
 import { MdAccountCircle } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 
+import { extractIntegerFromString } from "@/lib";
 import { DisplayBox } from "@/storybooklib";
 
 import { InputBuilder } from "./InputBuilder";
@@ -100,4 +102,29 @@ export const WithEndIcon: Story = {
     EndIcon: RiEyeCloseLine,
   },
   render: Component,
+};
+
+const InputNumberComponent = (props: Props) => {
+  const [value, setValue] = React.useState<string>("");
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(extractIntegerFromString(e.target.value));
+  };
+
+  return (
+    <DisplayBox>
+      <InputBuilder {...props} value={value} onChange={onChange} />
+    </DisplayBox>
+  );
+};
+
+export const InputIntegerNumber: Story = {
+  args: {
+    placeholder: "Input integer number",
+    disabled: false,
+    readOnly: false,
+    size: "md",
+    width: "full",
+  },
+  render: InputNumberComponent,
 };

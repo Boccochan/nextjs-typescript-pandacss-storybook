@@ -32,18 +32,7 @@ type InputBuilderProps = Omit<BasicProps, "size"> & {
 };
 
 export const InputBuilder = React.forwardRef<HTMLDivElement, InputBuilderProps>(
-  (
-    {
-      size,
-      width,
-      StartIcon = undefined,
-      EndIcon = undefined,
-      disabled = undefined,
-      readOnly = undefined,
-      ...rest
-    },
-    ref,
-  ) => {
+  ({ size, width, StartIcon, EndIcon, disabled, readOnly, ...rest }, ref) => {
     return (
       <div
         ref={ref}
