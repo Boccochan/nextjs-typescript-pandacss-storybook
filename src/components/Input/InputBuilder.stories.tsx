@@ -3,40 +3,18 @@ import type { ComponentProps } from "react";
 import { MdAccountCircle } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 
-import { css } from "#/styled-system/css";
+import { DisplayBox } from "@/storybooklib";
 
 import { InputBuilder } from "./InputBuilder";
 import { styles } from "./InputBuilder.styles";
 
 type Props = ComponentProps<typeof InputBuilder>;
 
-const DisplayBox = (props: Props) => {
+const Component = (props: Props) => {
   return (
-    <div
-      className={css({
-        width: "500px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100px",
-        borderColor: "body.border",
-        px: "4",
-        borderWidth: "1px",
-        borderRadius: "md",
-        position: "relative",
-        _before: {
-          position: "absolute",
-          content: '"Parent component"',
-          top: "-3.5",
-          left: "10px",
-          bg: "body.bg",
-          padding: "0 4px",
-          color: "body.text",
-        },
-      })}
-    >
+    <DisplayBox>
       <InputBuilder {...props} />
-    </div>
+    </DisplayBox>
   );
 };
 
@@ -75,7 +53,7 @@ export const Basic: Story = {
     size: "md",
     width: "full",
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const Disabled: Story = {
@@ -86,7 +64,7 @@ export const Disabled: Story = {
     size: "md",
     width: "full",
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const ReadOnly: Story = {
@@ -97,7 +75,7 @@ export const ReadOnly: Story = {
     size: "md",
     width: "full",
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const WithStartIcon: Story = {
@@ -109,7 +87,7 @@ export const WithStartIcon: Story = {
     width: "full",
     StartIcon: MdAccountCircle,
   },
-  render: DisplayBox,
+  render: Component,
 };
 
 export const WithEndIcon: Story = {
@@ -121,5 +99,5 @@ export const WithEndIcon: Story = {
     width: "full",
     EndIcon: RiEyeCloseLine,
   },
-  render: DisplayBox,
+  render: Component,
 };
