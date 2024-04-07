@@ -8,30 +8,28 @@ export const DialogDraggable = () => {
     top: number;
     left: number;
   }>();
-  const isDragging = useRef<boolean>();
-  const offset = useRef<{
+  const dragging = useRef<{
     offsetX: number;
     offsetY: number;
   }>();
 
   useEffect(() => {
     const disableDragging = () => {
-      isDragging.current = false;
+      dragging.current = undefined;
     };
 
     const mousemove = (e: MouseEvent) => {
-      if (!isDragging.current || offset.current === undefined) return;
+      if (dragging.current === undefined) return;
 
       setPosition({
-        top: e.clientY - offset.current.offsetY,
-        left: e.clientX - offset.current.offsetX,
+        top: e.clientY - dragging.current.offsetY,
+        left: e.clientX - dragging.current.offsetX,
       });
     };
 
+    // To handle mouse events outside of the component, use addEventListener.
     document.addEventListener("mousemove", mousemove);
     document.addEventListener("mouseup", disableDragging);
-    // In some cases, user interactions might trigger a drag event
-    // rather than a mousemove event.
     document.addEventListener("dragend", disableDragging);
 
     return () => {
@@ -43,8 +41,7 @@ export const DialogDraggable = () => {
 
   const mouseDown = (e: MouseEventReact<HTMLDivElement>) => {
     const { offsetX, offsetY } = e.nativeEvent;
-    offset.current = { offsetX, offsetY };
-    isDragging.current = true;
+    dragging.current = { offsetX, offsetY };
   };
 
   return (
