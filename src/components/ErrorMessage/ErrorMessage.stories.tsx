@@ -53,7 +53,7 @@ export const WithInvalidInputAndLabel: Story = {
   render: InputAndLabel,
 };
 
-export const WithdInputAndLabel: Story = {
+export const WithInputAndLabel: Story = {
   args: {
     text: undefined,
     size: "md",
