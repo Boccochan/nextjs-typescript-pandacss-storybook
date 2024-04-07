@@ -50,11 +50,12 @@ export const DialogDraggable = () => {
       role="dialog"
       onMouseDown={mouseDown}
       className={css({
-        border: "1px solid {colors.body.border}",
+        rounded: "md",
         height: "10rem",
         width: "10rem",
         position: "fixed",
         zIndex: 10000,
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
       })}
       style={{
         top: position?.top,
