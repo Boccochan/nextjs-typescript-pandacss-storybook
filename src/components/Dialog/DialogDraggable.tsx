@@ -30,7 +30,6 @@ export const DialogDraggable = () => {
 
     document.addEventListener("mousemove", mousemove);
     document.addEventListener("mouseup", disableDragging);
-
     // In some cases, user interactions might trigger a drag event
     // rather than a mousemove event.
     document.addEventListener("dragend", disableDragging);
