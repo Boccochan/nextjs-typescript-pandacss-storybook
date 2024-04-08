@@ -1,14 +1,13 @@
-import { cva } from "#/styled-system/css";
+import { css } from "#/styled-system/css";
 
-const dialog = cva({
-  base: {
-    border: "1px solid {colors.body.border}",
-    height: "10rem",
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-  },
-  variants: {},
+const dialog = css({
+  rounded: "md",
+  height: "10rem",
+  width: "10rem",
+  position: "fixed",
+  zIndex: 10000,
+  bg: "dialog.bg",
+  boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
 });
 
-export const style = { dialog };
+export const styles = { dialog };

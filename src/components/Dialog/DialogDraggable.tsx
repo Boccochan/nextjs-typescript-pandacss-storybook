@@ -1,7 +1,7 @@
 import type { MouseEvent as MouseEventReact } from "react";
 import { useEffect, useRef, useState } from "react";
 
-import { css } from "#/styled-system/css";
+import { styles } from "./DialogDraggable.styles";
 
 export const DialogDraggable = () => {
   const [position, setPosition] = useState<{
@@ -49,15 +49,7 @@ export const DialogDraggable = () => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={css({
-        rounded: "md",
-        height: "10rem",
-        width: "10rem",
-        position: "fixed",
-        zIndex: 10000,
-        bg: "dialog.bg",
-        boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
-      })}
+      className={styles.dialog}
       style={{
         top: position?.top,
         left: position?.left,
