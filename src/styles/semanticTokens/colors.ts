@@ -54,6 +54,20 @@ export const colors = defineSemanticTokens.colors({
       },
     },
   },
+  dialog: {
+    bg: {
+      value: {
+        base: "white",
+        _osDark: "{colors.gray.900}",
+      },
+    },
+    shadow: {
+      value: {
+        base: "rgba(0, 0, 0, 0.35) 0px 6px 15px",
+        _osDark: "rgba(148, 219, 250, 0.35) 0px 6px 15px",
+      },
+    },
+  },
   outline: {
     value: {
       base: "2px solid black",

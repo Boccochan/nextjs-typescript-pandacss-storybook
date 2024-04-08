@@ -55,7 +55,8 @@ export const DialogDraggable = () => {
         width: "10rem",
         position: "fixed",
         zIndex: 10000,
-        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        bg: "dialog.bg",
+        boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
       })}
       style={{
         top: position?.top,
