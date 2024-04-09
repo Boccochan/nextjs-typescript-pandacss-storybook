@@ -1,11 +1,11 @@
 // import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { DialogDraggable } from "./DialogDraggable";
 // import { useTranslations } from "next-intl";
 // import type { ComponentProps } from "react";
 // import { MdContentCopy, MdDelete, MdEmail } from "react-icons/md";
-// import { styles } from "./Button.styles";
-import { DialogDraggable } from "./DialogDraggable";
+import { styles } from "./DialogDraggable.styles";
 // type ButtonProps = ComponentProps<typeof Button>;
 
 const meta: Meta<typeof DialogDraggable> = {
@@ -25,10 +25,10 @@ const meta: Meta<typeof DialogDraggable> = {
     //   control: "select",
     //   options: styles.button.variantMap.color,
     // },
-    // size: {
-    //   control: "select",
-    //   options: styles.button.variantMap.size,
-    // },
+    size: {
+      control: "select",
+      options: styles.dialog.variantMap.size,
+    },
     // width: {
     //   control: "select",
     //   options: styles.button.variantMap.width,
@@ -40,5 +40,8 @@ export default meta;
 type Story = StoryObj<typeof DialogDraggable>;
 
 export const Basic: Story = {
-  args: {},
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+  },
 };

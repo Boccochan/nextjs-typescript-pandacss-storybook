@@ -1,9 +1,18 @@
 import type { MouseEvent as MouseEventReact } from "react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-import { styles } from "./DialogDraggable.styles";
+import { type DialogDraggableVariants, styles } from "./DialogDraggable.styles";
 
-export const DialogDraggable = () => {
+type DialogDraggableProps = {
+  /**
+   * The size of the component.
+   */
+  size?: DialogDraggableVariants["size"];
+
+  children: React.ReactNode;
+};
+
+export const DialogDraggable = (props: DialogDraggableProps) => {
   const [position, setPosition] = useState<{
     top: number;
     left: number;
@@ -49,13 +58,13 @@ export const DialogDraggable = () => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog}
+      className={styles.dialog({ size: props.size })}
       style={{
         top: position?.top,
         left: position?.left,
       }}
     >
-      {/* Draggable modal */}
+      {props.children}
     </div>
   );
 };
