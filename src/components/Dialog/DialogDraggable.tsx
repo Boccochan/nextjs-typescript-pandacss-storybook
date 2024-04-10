@@ -1,7 +1,30 @@
-import type { MouseEvent as MouseEventReact } from "react";
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+// import type { MouseEvent as MouseEventReact } from "react";
+import React from "react";
+import { MdClose } from "react-icons/md";
 
 import { type DialogDraggableVariants, styles } from "./DialogDraggable.styles";
+import { useDialogDraggable } from "./hooks";
+
+type CloseButtonProps = {
+  onClose?: () => void;
+};
+
+const CloseButton = (props: CloseButtonProps) => {
+  if (!props.onClose) return <></>;
+
+  return (
+    <button
+      className={styles.closeButton()}
+      onClick={props.onClose}
+      onMouseDown={(e) => {
+        e.stopPropagation();
+      }}
+    >
+      <MdClose />
+    </button>
+  );
+};
 
 type DialogDraggableProps = {
   /**
@@ -9,62 +32,41 @@ type DialogDraggableProps = {
    */
   size?: DialogDraggableVariants["size"];
 
+  // TODO: コメントを追加
+
   children: React.ReactNode;
+
+  isOpen?: boolean;
+
+  onClose?: () => void;
 };
 
+// TODO: 表示位置を指定できるようにする
 export const DialogDraggable = (props: DialogDraggableProps) => {
-  const [position, setPosition] = useState<{
-    top: number;
-    left: number;
-  }>();
-  const dragging = useRef<{
-    offsetX: number;
-    offsetY: number;
-  }>();
+  const { mouseDown, position, refDialog } = useDialogDraggable();
 
-  useEffect(() => {
-    const disableDragging = () => {
-      dragging.current = undefined;
-    };
+  if (!props.isOpen) {
+    return <></>;
+  }
 
-    const mousemove = (e: MouseEvent) => {
-      if (dragging.current === undefined) return;
-
-      setPosition({
-        top: e.clientY - dragging.current.offsetY,
-        left: e.clientX - dragging.current.offsetX,
-      });
-    };
-
-    // To handle mouse events outside of the component, use addEventListener.
-    document.addEventListener("mousemove", mousemove);
-    document.addEventListener("mouseup", disableDragging);
-    document.addEventListener("dragend", disableDragging);
-
-    return () => {
-      document.removeEventListener("mouseup", disableDragging);
-      document.removeEventListener("dragend", disableDragging);
-      document.removeEventListener("mousemove", mousemove);
-    };
-  }, []);
-
-  const mouseDown = (e: MouseEventReact<HTMLDivElement>) => {
-    const { offsetX, offsetY } = e.nativeEvent;
-    dragging.current = { offsetX, offsetY };
-  };
+  // TODO: 表示するときにアニメーションが欲しい
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog({ size: props.size })}
+      className={styles.dialog}
       style={{
         top: position?.top,
         left: position?.left,
       }}
+      ref={refDialog}
     >
-      {props.children}
+      <div className={styles.wrapper({ size: props.size })}>
+        <CloseButton onClose={props.onClose} />
+        {props.children}
+      </div>
     </div>
   );
 };

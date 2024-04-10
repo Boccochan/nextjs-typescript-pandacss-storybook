@@ -27,7 +27,7 @@ const meta: Meta<typeof DialogDraggable> = {
     // },
     size: {
       control: "select",
-      options: styles.dialog.variantMap.size,
+      options: styles.wrapper.variantMap.size,
     },
     // width: {
     //   control: "select",
@@ -43,5 +43,6 @@ export const Basic: Story = {
   args: {
     children: <div>Hello</div>,
     size: "md",
+    isOpen: true,
   },
 };

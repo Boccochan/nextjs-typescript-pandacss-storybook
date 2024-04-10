@@ -1,15 +1,16 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
-import { cva } from "#/styled-system/css";
+import { css, cva } from "#/styled-system/css";
 
-const dialog = cva({
+const dialog = css({
+  position: "fixed",
+  zIndex: 10000, // TODO: レイヤーはtokenにする
+  bg: "dialog.bg",
+  boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
+});
+
+const wrapper = cva({
   base: {
-    rounded: "md",
-    height: "10rem",
-    width: "10rem",
-    position: "fixed",
-    zIndex: 10000,
-    bg: "dialog.bg",
-    boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
+    position: "relative",
   },
   variants: {
     size: {
@@ -55,8 +56,18 @@ const dialog = cva({
   },
 });
 
-export const styles = { dialog };
+const closeButton = cva({
+  base: {
+    position: "absolute",
+    top: "1.5",
+    right: "1.5",
+    color: "body.text",
+    cursor: "pointer",
+  },
+});
+
+export const styles = { dialog, wrapper, closeButton };
 
 export type DialogDraggableVariants = NonNullable<
-  RecipeVariantProps<typeof dialog>
+  RecipeVariantProps<typeof wrapper>
 >;
