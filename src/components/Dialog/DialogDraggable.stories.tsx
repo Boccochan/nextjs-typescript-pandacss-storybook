@@ -45,19 +45,15 @@ const meta: Meta<typeof DialogDraggable> = {
 export default meta;
 type Story = StoryObj<typeof DialogDraggable>;
 
-export const Basic: Story = {
-  args: {
-    children: <div>Hello</div>,
-    size: "md",
-    isOpen: true,
-  },
-};
-
 const WithButton = (props: Props) => {
   const { isOpen, onOpen, onClose } = useDialog();
   return (
     <DisplayBox>
-      <Button label="Open Draggable Dialog" onClick={onOpen} />
+      <Button
+        label="Open Draggable Dialog"
+        onClick={onOpen}
+        disabled={isOpen}
+      />
       <DialogDraggable isOpen={isOpen} onClose={onClose} size={props.size}>
         {props.children}
       </DialogDraggable>
@@ -65,10 +61,19 @@ const WithButton = (props: Props) => {
   );
 };
 
-export const WithOpenButton: Story = {
+export const Basic: Story = {
   args: {
     children: <div>Hello</div>,
     size: "md",
   },
   render: WithButton,
+};
+
+export const WithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+  },
 };
