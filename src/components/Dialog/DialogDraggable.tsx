@@ -31,12 +31,19 @@ type DialogDraggableProps = {
    */
   size?: DialogDraggableVariants["size"];
 
-  // TODO: コメントを追加
-
+  /**
+   * Children elements or components passed to this component for rendering.
+   */
   children: React.ReactNode;
 
+  /**
+   * The dialog opens when this flag is true.
+   */
   isOpen?: boolean;
 
+  /**
+   * Called when the close button is clicked.
+   */
   onClose?: () => void;
 };
 
