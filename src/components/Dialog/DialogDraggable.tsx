@@ -1,5 +1,4 @@
 "use client";
-// import type { MouseEvent as MouseEventReact } from "react";
 import React from "react";
 import { MdClose } from "react-icons/md";
 
