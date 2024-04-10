@@ -1,12 +1,18 @@
 // import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { DialogDraggable } from "./DialogDraggable";
 // import { useTranslations } from "next-intl";
-// import type { ComponentProps } from "react";
+import type { ComponentProps } from "react";
+
+import { DisplayBox } from "@/storybooklib";
+
+import { Button } from "../Button";
+import { DialogDraggable } from "./DialogDraggable";
 // import { MdContentCopy, MdDelete, MdEmail } from "react-icons/md";
 import { styles } from "./DialogDraggable.styles";
+import { useDialog } from "./hooks";
 // type ButtonProps = ComponentProps<typeof Button>;
+
+type Props = ComponentProps<typeof DialogDraggable>;
 
 const meta: Meta<typeof DialogDraggable> = {
   title: "components/DialogDraggable",
@@ -45,4 +51,24 @@ export const Basic: Story = {
     size: "md",
     isOpen: true,
   },
+};
+
+const WithButton = (props: Props) => {
+  const { isOpen, onOpen, onClose } = useDialog();
+  return (
+    <DisplayBox>
+      <Button label="Open Draggable Dialog" onClick={onOpen} />
+      <DialogDraggable isOpen={isOpen} onClose={onClose} size={props.size}>
+        {props.children}
+      </DialogDraggable>
+    </DisplayBox>
+  );
+};
+
+export const WithOpenButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+  },
+  render: WithButton,
 };
