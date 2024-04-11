@@ -118,7 +118,6 @@ type DialogDraggableProps = {
   onClose?: () => void;
 };
 
-// TODO: 表示位置を指定できるようにする
 export const DialogDraggable = (props: DialogDraggableProps) => {
   const { mouseDown, position, refDialog, reset } = useDialogDraggable();
 
@@ -134,6 +133,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
   // TODO: 表示するときにアニメーションが欲しい
   // TODO: 初回表示された位置が画面内に納まるように
   // TODO: 画面外をクリックしたら閉じる
+  // TODO: 表示位置を指定できるようにする
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
