@@ -16,7 +16,6 @@ const globalCss = defineGlobalStyles({
   "*": {
     _focusVisible: {
       outline: "outline",
-      // _osDark: "2px solid white",
     },
   },
 });
@@ -28,6 +27,26 @@ const keyframes = defineKeyframes({
   spinner: {
     "0%": { transform: "rotate(0deg)" },
     "100%": { transform: "rotate(360deg)" },
+  },
+  dialogOpen: {
+    "0%": {
+      transform: "scale(0.9)",
+      opacity: 0,
+    },
+    "100%": {
+      transform: "scale(1)",
+      opacity: 1,
+    },
+  },
+  dialogClose: {
+    "0%": {
+      transform: "scale(1)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(0.9)",
+      opacity: 0,
+    },
   },
 });
 

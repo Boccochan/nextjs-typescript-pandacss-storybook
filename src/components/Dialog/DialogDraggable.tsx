@@ -120,13 +120,18 @@ type DialogDraggableProps = {
 
 export const DialogDraggable = (props: DialogDraggableProps) => {
   const { mouseDown, position, refDialog, reset } = useDialogDraggable();
+  const [open, setOpen] = useState(true);
 
   if (!props.isOpen) {
     return <></>;
   }
 
   const close = () => {
-    props.onClose && props.onClose();
+    setOpen(false);
+    setTimeout(() => {
+      props.onClose && props.onClose();
+      setOpen(true);
+    }, 200);
     reset();
   };
 
@@ -140,7 +145,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog}
+      className={styles.dialog({ isOpen: open })}
       style={{
         top: position?.top,
         left: position?.left,

@@ -1,11 +1,26 @@
 import type { RecipeVariantProps } from "#/styled-system/css";
-import { css, cva } from "#/styled-system/css";
+import { cva } from "#/styled-system/css";
 
-const dialog = css({
-  position: "fixed",
-  zIndex: 10000, // TODO: レイヤーはtokenにする
-  bg: "dialog.bg",
-  boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
+const dialog = cva({
+  base: {
+    position: "fixed",
+    zIndex: 10000, // TODO: レイヤーはtokenにする
+    bg: "dialog.bg",
+    boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
+  },
+  variants: {
+    isOpen: {
+      true: {
+        animation: "dialogOpen 0.2s forwards",
+      },
+      false: {
+        animation: "dialogClose 0.2s forwards",
+      },
+    },
+  },
+  defaultVariants: {
+    isOpen: true,
+  },
 });
 
 const wrapper = cva({
