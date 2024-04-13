@@ -120,7 +120,7 @@ type DialogDraggableProps = {
 
 export const DialogDraggable = (props: DialogDraggableProps) => {
   const { mouseDown, position, refDialog, reset } = useDialogDraggable();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(true); // For animation
 
   if (!props.isOpen) {
     return <></>;
@@ -128,11 +128,13 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
 
   const close = () => {
     setOpen(false);
+
+    // Wait for closing animation
     setTimeout(() => {
       props.onClose && props.onClose();
       setOpen(true);
+      reset();
     }, 200);
-    reset();
   };
 
   // TODO: 表示するときにアニメーションが欲しい
@@ -145,7 +147,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog({ isOpen: open })}
+      className={styles.dialog({ open })}
       style={{
         top: position?.top,
         left: position?.left,

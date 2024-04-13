@@ -9,7 +9,7 @@ const dialog = cva({
     boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
   },
   variants: {
-    isOpen: {
+    open: {
       true: {
         animation: "dialogOpen 0.2s forwards",
       },
@@ -19,7 +19,7 @@ const dialog = cva({
     },
   },
   defaultVariants: {
-    isOpen: true,
+    open: true,
   },
 });
 
