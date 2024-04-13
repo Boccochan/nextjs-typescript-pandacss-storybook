@@ -4,7 +4,7 @@ import { cva } from "#/styled-system/css";
 const dialog = cva({
   base: {
     position: "fixed",
-    zIndex: 10000, // TODO: レイヤーはtokenにする
+    zIndex: 10000, // For some reasons, zIndex can not set to panda.config.ts
     bg: "dialog.bg",
     color: "body.text",
     boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
