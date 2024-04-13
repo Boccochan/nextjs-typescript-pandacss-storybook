@@ -146,7 +146,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog({ open })}
+      className={styles.dialog({ open, size: props.size })}
       style={{
         top: position?.top,
         left: position?.left,
