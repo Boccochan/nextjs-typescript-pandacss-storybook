@@ -137,7 +137,6 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     }, 200);
   };
 
-  // TODO: 表示するときにアニメーションが欲しい
   // TODO: 初回表示された位置が画面内に納まるように
   // TODO: 画面外をクリックしたら閉じる
   // TODO: 表示位置を指定できるようにする
