@@ -1,6 +1,6 @@
 "use client";
 import type { MouseEvent as MouseEventReact } from "react";
-import React from "react";
+import React, { useCallback } from "react";
 import { useEffect, useRef, useState } from "react";
 import { MdClose } from "react-icons/md";
 
@@ -24,7 +24,11 @@ const CloseButton = (props: CloseButtonProps) => {
   );
 };
 
-const useDialogDraggable = () => {
+type UseDialogDraggableProps = {
+  onClose?: () => void;
+};
+
+const useDialogDraggable = (props: UseDialogDraggableProps) => {
   const [position, setPosition] = useState<{
     top: number;
     left: number;
@@ -35,6 +39,19 @@ const useDialogDraggable = () => {
   }>();
   const clickedMouse = useRef<ReturnType<typeof setTimeout>>();
   const refDialog = useRef<HTMLDivElement>(null);
+  const [dialogAnimation, setDialogAnimation] = useState(true);
+
+  const close = useCallback(() => {
+    if (!props.onClose) return;
+    setDialogAnimation(false);
+
+    // Wait for closing animation
+    setTimeout(() => {
+      props.onClose && props.onClose();
+      setDialogAnimation(true);
+      reset();
+    }, 200);
+  }, [props]);
 
   useEffect(() => {
     const disableDragging = () => {
@@ -45,27 +62,50 @@ const useDialogDraggable = () => {
 
     const mousemove = (e: MouseEvent) => {
       if (dragging.current === undefined) return;
+      // Dragging dialog
       setPosition({
         top: e.clientY - dragging.current.offsetY,
         left: e.clientX - dragging.current.offsetX,
       });
     };
 
+    const clickOutsideOfDialog = (e: MouseEvent) => {
+      if (!refDialog || !refDialog.current) {
+        return;
+      }
+
+      const { left, top, bottom, right } =
+        refDialog.current.getBoundingClientRect();
+
+      if (
+        left <= e.clientX &&
+        e.clientX <= right &&
+        top <= e.clientY &&
+        e.clientY <= bottom
+      ) {
+        return;
+      }
+
+      close();
+    };
+
     // To handle mouse events outside of the component, use addEventListener.
     document.addEventListener("mousemove", mousemove);
     document.addEventListener("mouseup", disableDragging);
     document.addEventListener("dragend", disableDragging);
+    document.addEventListener("mousedown", clickOutsideOfDialog);
 
     return () => {
       document.removeEventListener("mouseup", disableDragging);
       document.removeEventListener("dragend", disableDragging);
       document.removeEventListener("mousemove", mousemove);
+      document.removeEventListener("mousedown", clickOutsideOfDialog);
     };
-  }, []);
+  }, [close]);
 
   const mouseDown = (e: MouseEventReact<HTMLDivElement>) => {
     if (!refDialog || !refDialog.current) {
-      throw Error("BUG: set ref to dialog.");
+      return;
     }
 
     if (clickedMouse.current) {
@@ -77,6 +117,12 @@ const useDialogDraggable = () => {
     const { top, left } = refDialog.current.getBoundingClientRect();
 
     clickedMouse.current = setTimeout(() => {
+      // Record the distance of the mouse from the dialog top
+      // and left after 100msec after clicking.
+      // offsetX and offsetY of e are offsets from the parent
+      // component. To calculate the distance the dialog moves
+      // using the offset from the current mouse location to the
+      // top/left of the dialog
       dragging.current = {
         offsetX: clientX - left,
         offsetY: clientY - top,
@@ -93,7 +139,7 @@ const useDialogDraggable = () => {
     }
   };
 
-  return { mouseDown, refDialog, position, reset } as const;
+  return { mouseDown, refDialog, position, close, dialogAnimation } as const;
 };
 
 type DialogDraggableProps = {
@@ -119,26 +165,14 @@ type DialogDraggableProps = {
 };
 
 export const DialogDraggable = (props: DialogDraggableProps) => {
-  const { mouseDown, position, refDialog, reset } = useDialogDraggable();
-  const [open, setOpen] = useState(true); // For animation
+  const { mouseDown, dialogAnimation, position, refDialog, close } =
+    useDialogDraggable({ onClose: props.onClose });
 
   if (!props.isOpen) {
     return <></>;
   }
 
-  const close = () => {
-    setOpen(false);
-
-    // Wait for closing animation
-    setTimeout(() => {
-      props.onClose && props.onClose();
-      setOpen(true);
-      reset();
-    }, 200);
-  };
-
   // TODO: 初回表示された位置が画面内に納まるように
-  // TODO: 画面外をクリックしたら閉じる
   // TODO: 表示位置を指定できるようにする
 
   return (
@@ -146,7 +180,10 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={styles.dialog({ open, size: props.size })}
+      className={styles.dialog({
+        dialogAnimation,
+        size: props.size,
+      })}
       style={{
         top: position?.top,
         left: position?.left,
