@@ -4,6 +4,10 @@ import "../src/app/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import messageEn from "../messages/en.json";
 import messageJa from "../messages/ja.json";
+import {
+  INITIAL_VIEWPORTS,
+  MINIMAL_VIEWPORTS,
+} from "@storybook/addon-viewport";
 
 import { Noto_Sans_JP } from "next/font/google";
 const notoSansJp = Noto_Sans_JP({ subsets: ["latin"] });
@@ -86,6 +90,12 @@ const preview = {
         // See styles/semanticTokens
         { name: "dark", value: "#111827" },
       ],
+    },
+    viewport: {
+      viewports: {
+        ...INITIAL_VIEWPORTS,
+        ...MINIMAL_VIEWPORTS,
+      },
     },
   },
   decorators: [GoogleFontsDecorator, Intl, Background],

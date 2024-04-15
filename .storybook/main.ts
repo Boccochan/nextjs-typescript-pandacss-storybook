@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@storybook/addon-actions",
+    "@storybook/addon-viewport",
   ],
   framework: {
     name: "@storybook/nextjs",
