@@ -172,9 +172,6 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
     return <></>;
   }
 
-  // TODO: 初回表示された位置が画面内に納まるように
-  // TODO: 表示位置を指定できるようにする
-
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
