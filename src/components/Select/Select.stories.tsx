@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from "@storybook/react";
 import type { ChangeEvent } from "react";
 import { type ComponentProps, useState } from "react";
 
-import { css } from "#/styled-system/css";
+import { DisplayBox } from "@/storybooklib";
 
 import { Select } from "./Select";
 import { styles } from "./Select.styles";
 
 type SelectProps = ComponentProps<typeof Select>;
 
-const DisplayBox = (props: SelectProps) => {
+const WithParent = (props: SelectProps) => {
   const [selected, setSelected] = useState<string>();
 
   const change = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -17,31 +17,9 @@ const DisplayBox = (props: SelectProps) => {
   };
 
   return (
-    <div
-      className={css({
-        width: "500px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100px",
-        borderColor: "body.border",
-        px: "4",
-        borderWidth: "1px",
-        borderRadius: "md",
-        position: "relative",
-        _before: {
-          position: "absolute",
-          content: '"Parent component"',
-          top: "-3.5",
-          left: "10px",
-          bg: "body.bg",
-          padding: "0 4px",
-          color: "body.text",
-        },
-      })}
-    >
+    <DisplayBox>
       <Select {...props} value={selected} onChange={change} />
-    </div>
+    </DisplayBox>
   );
 };
 
@@ -89,7 +67,7 @@ export const Basic: Story = {
       { id: "Google", value: "Google" },
     ],
   },
-  render: DisplayBox,
+  render: WithParent,
 };
 
 export const Empty: Story = {
@@ -99,7 +77,7 @@ export const Empty: Story = {
     disabled: false,
     options: [],
   },
-  render: DisplayBox,
+  render: WithParent,
 };
 
 export const Selected: Story = {
@@ -120,7 +98,7 @@ export const Selected: Story = {
     ],
     defaultValue: "Amazon",
   },
-  render: DisplayBox,
+  render: WithParent,
 };
 
 export const Loading: Story = {
@@ -131,5 +109,5 @@ export const Loading: Story = {
     loading: true,
     options: [],
   },
-  render: DisplayBox,
+  render: WithParent,
 };

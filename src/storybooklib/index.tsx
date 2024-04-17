@@ -10,7 +10,10 @@ export const DisplayBox = (props: DisplayBoxProps) => {
   return (
     <div
       className={css({
-        width: "500px",
+        width: "100%",
+        lg: {
+          width: "500px",
+        },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
