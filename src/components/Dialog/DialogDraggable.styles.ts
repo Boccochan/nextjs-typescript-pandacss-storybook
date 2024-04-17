@@ -8,6 +8,7 @@ const dialog = cva({
     bg: "dialog.bg",
     color: "body.text",
     boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
+    minWidth: "96%",
   },
   variants: {
     dialogAnimation: {
@@ -20,31 +21,42 @@ const dialog = cva({
     },
     size: {
       xs: {
-        minWidth: "8.09rem",
+        lg: {
+          minWidth: "8.09rem",
+        },
+        marginX: "2rem",
         height: "5rem",
         fontSize: "xs",
         rounded: "xs",
       },
       sm: {
-        minWidth: "12.135rem",
+        lg: {
+          minWidth: "12.135rem",
+        },
         height: "7.5rem",
         fontSize: "sm",
         rounded: "sm",
       },
       md: {
-        minWidth: "16.18rem",
+        lg: {
+          minWidth: "16.18rem",
+        },
         height: "10rem",
         fontSize: "md",
         rounded: "md",
       },
       lg: {
-        minWidth: "20.225rem",
+        lg: {
+          minWidth: "20.225rem",
+        },
         height: "12.5rem",
         fontSize: "lg",
         rounded: "lg",
       },
       xl: {
-        minWidth: "24.27rem",
+        lg: {
+          minWidth: "24.27rem",
+        },
         height: "15rem",
         fontSize: "xl",
         rounded: "xl",
