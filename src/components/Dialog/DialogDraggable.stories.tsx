@@ -1,16 +1,12 @@
-// import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
-// import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
 import { DisplayBox } from "@/storybooklib";
 
 import { Button } from "../Button";
 import { DialogDraggable } from "./DialogDraggable";
-// import { MdContentCopy, MdDelete, MdEmail } from "react-icons/md";
 import { styles } from "./DialogDraggable.styles";
 import { useDialog } from "./hooks";
-// type ButtonProps = ComponentProps<typeof Button>;
 
 type Props = ComponentProps<typeof DialogDraggable>;
 
@@ -27,18 +23,10 @@ const meta: Meta<typeof DialogDraggable> = {
     },
   },
   argTypes: {
-    // color: {
-    //   control: "select",
-    //   options: styles.button.variantMap.color,
-    // },
     size: {
       control: "select",
       options: styles.wrapper.variantMap.size,
     },
-    // width: {
-    //   control: "select",
-    //   options: styles.button.variantMap.width,
-    // },
   },
 };
 
