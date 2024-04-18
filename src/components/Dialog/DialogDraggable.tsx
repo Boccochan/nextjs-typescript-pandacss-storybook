@@ -69,37 +69,15 @@ const useDialogDraggable = (props: UseDialogDraggableProps) => {
       });
     };
 
-    const clickOutsideOfDialog = (e: MouseEvent) => {
-      if (!refDialog || !refDialog.current) {
-        return;
-      }
-
-      const { left, top, bottom, right } =
-        refDialog.current.getBoundingClientRect();
-
-      if (
-        left <= e.clientX &&
-        e.clientX <= right &&
-        top <= e.clientY &&
-        e.clientY <= bottom
-      ) {
-        return;
-      }
-
-      close();
-    };
-
     // To handle mouse events outside of the component, use addEventListener.
     document.addEventListener("mousemove", mousemove);
     document.addEventListener("mouseup", disableDragging);
     document.addEventListener("dragend", disableDragging);
-    document.addEventListener("mousedown", clickOutsideOfDialog);
 
     return () => {
       document.removeEventListener("mouseup", disableDragging);
       document.removeEventListener("dragend", disableDragging);
       document.removeEventListener("mousemove", mousemove);
-      document.removeEventListener("mousedown", clickOutsideOfDialog);
     };
   }, [close]);
 
@@ -163,7 +141,10 @@ type DialogDraggableProps = {
    */
   onClose?: () => void;
 };
-
+/**
+ * - A draggable dialog
+ * - Clicking outside the dialog does not close the dialog
+ */
 export const DialogDraggable = (props: DialogDraggableProps) => {
   const { mouseDown, dialogAnimation, position, refDialog, close } =
     useDialogDraggable({ onClose: props.onClose });
