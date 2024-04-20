@@ -73,13 +73,24 @@ const useDraggable = () => {
   return { mouseDown, refDialog, position } as const;
 };
 
-type DraggableProps = React.JSX.IntrinsicElements["div"] & {
+type DraggableProps = Omit<React.JSX.IntrinsicElements["div"], "style"> & {
   children: React.ReactNode;
+  startPosition?: {
+    top: string;
+    left: string;
+  };
 };
 
 export const Draggable = (props: DraggableProps) => {
   const { mouseDown, position, refDialog } = useDraggable();
-  const { className, style, children, ...rest } = props;
+  const { className, children, startPosition, ...rest } = props;
+
+  const getPosition = (topOrLeft: "top" | "left") =>
+    position
+      ? position[topOrLeft]
+      : startPosition
+        ? startPosition[topOrLeft]
+        : "50%";
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
@@ -91,9 +102,8 @@ export const Draggable = (props: DraggableProps) => {
         className,
       ].join(" ")}
       style={{
-        top: position ? position?.top : "50%",
-        left: position ? position?.left : "50%",
-        ...style,
+        top: getPosition("top"),
+        left: getPosition("left"),
       }}
       ref={refDialog}
       {...rest}
