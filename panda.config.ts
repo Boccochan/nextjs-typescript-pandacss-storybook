@@ -30,21 +30,21 @@ const keyframes = defineKeyframes({
   },
   dialogOpen: {
     "0%": {
-      transform: "scale(0.9)",
+      transform: "transalte(-50% -50%), scale(0.9)",
       opacity: 0,
     },
     "100%": {
-      transform: "scale(1)",
+      transform: "transalte(-50% -50%), scale(1)",
       opacity: 1,
     },
   },
   dialogClose: {
     "0%": {
-      transform: "scale(1)",
+      transform: "transalte(-50% -50%), scale(1)",
       opacity: 1,
     },
     "100%": {
-      transform: "scale(0.9)",
+      transform: "transalte(-50% -50%), scale(0.9)",
       opacity: 0,
     },
   },

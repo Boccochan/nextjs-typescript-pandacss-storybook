@@ -14,14 +14,12 @@ const useDraggable = () => {
   }>();
   const clickedMouse = useRef<ReturnType<typeof setTimeout>>();
   const refDialog = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const disableDragging = () => {
       dragging.current = undefined;
       clearTimeout(clickedMouse.current);
       clickedMouse.current = undefined;
-      setIsDragging(false);
     };
 
     const mousemove = (e: MouseEvent) => {
@@ -69,11 +67,10 @@ const useDraggable = () => {
         offsetX: clientX - left,
         offsetY: clientY - top,
       };
-      setIsDragging(true);
     }, 100);
   };
 
-  return { mouseDown, refDialog, position, isDragging } as const;
+  return { mouseDown, refDialog, position } as const;
 };
 
 type DraggableProps = React.JSX.IntrinsicElements["div"] & {
@@ -81,7 +78,7 @@ type DraggableProps = React.JSX.IntrinsicElements["div"] & {
 };
 
 export const Draggable = (props: DraggableProps) => {
-  const { mouseDown, position, refDialog, isDragging } = useDraggable();
+  const { mouseDown, position, refDialog } = useDraggable();
   const { className, style, children, ...rest } = props;
 
   return (
@@ -89,12 +86,13 @@ export const Draggable = (props: DraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={[styles.draggable, className].join(" ")}
+      className={[
+        styles.draggable({ isDragging: position ? true : false }),
+        className,
+      ].join(" ")}
       style={{
-        top: position?.top,
-        left: position?.left,
-        userSelect: isDragging ? "none" : "auto",
-        cursor: isDragging ? "default" : "auto",
+        top: position ? position?.top : "50%",
+        left: position ? position?.left : "50%",
         ...style,
       }}
       ref={refDialog}

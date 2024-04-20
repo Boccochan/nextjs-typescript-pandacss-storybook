@@ -45,12 +45,13 @@ type DialogDraggableProps = {
    */
   onClose?: () => void;
 };
+
 /**
  * - A draggable dialog
  * - Clicking outside the dialog does not close the dialog
  */
 export const DialogDraggable = (props: DialogDraggableProps) => {
-  const [dialogAnimation, setDialogAnimation] = useState(true);
+  const [dialogAnimation, setDialogAnimation] = useState(props.onClose && true);
 
   const close = useCallback(() => {
     if (!props.onClose) return;
