@@ -74,6 +74,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
         dialogAnimation,
         size: props.size,
       })}
+      style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
     >
       <div className={styles.wrapper({ size: props.size })}>
         {props.onClose && <CloseButton onClose={close} />}

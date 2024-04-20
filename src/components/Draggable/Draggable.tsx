@@ -14,12 +14,14 @@ const useDraggable = () => {
   }>();
   const clickedMouse = useRef<ReturnType<typeof setTimeout>>();
   const refDialog = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const disableDragging = () => {
       dragging.current = undefined;
       clearTimeout(clickedMouse.current);
       clickedMouse.current = undefined;
+      setIsDragging(false);
     };
 
     const mousemove = (e: MouseEvent) => {
@@ -67,44 +69,41 @@ const useDraggable = () => {
         offsetX: clientX - left,
         offsetY: clientY - top,
       };
+      setIsDragging(true);
     }, 100);
   };
 
-  return { mouseDown, refDialog, position } as const;
+  return { mouseDown, refDialog, position, isDragging } as const;
 };
 
-type DraggableProps = Omit<React.JSX.IntrinsicElements["div"], "style"> & {
+type DraggableProps = React.JSX.IntrinsicElements["div"] & {
   children: React.ReactNode;
-  startPosition?: {
-    top: string;
-    left: string;
-  };
 };
 
 export const Draggable = (props: DraggableProps) => {
-  const { mouseDown, position, refDialog } = useDraggable();
-  const { className, children, startPosition, ...rest } = props;
+  const { mouseDown, position, refDialog, isDragging } = useDraggable();
+  const { className, children, style, ...rest } = props;
 
-  const getPosition = (topOrLeft: "top" | "left") =>
-    position
-      ? position[topOrLeft]
-      : startPosition
-        ? startPosition[topOrLeft]
-        : "50%";
+  const createStyle = () => {
+    const { top, left, right, bottom, transform, ...styleRest } = style ?? {};
+
+    return {
+      top: position?.top ?? top,
+      left: position?.left ?? left,
+      right: position ? undefined : right,
+      bottom: position ? undefined : bottom,
+      transform: position ? "none" : transform,
+      ...styleRest,
+    };
+  };
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={[
-        styles.draggable({ isDragging: position ? true : false }),
-        className,
-      ].join(" ")}
-      style={{
-        top: getPosition("top"),
-        left: getPosition("left"),
-      }}
+      className={[styles.draggable({ isDragging }), className].join(" ")}
+      style={createStyle()}
       ref={refDialog}
       {...rest}
     >

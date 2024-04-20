@@ -8,12 +8,10 @@ const draggable = cva({
   variants: {
     isDragging: {
       true: {
-        transform: "none",
         userSelect: "none",
         cursor: "default",
       },
       false: {
-        transform: "translate(-50%, -50%)",
         userSelect: "auto",
         cursor: "auto",
       },

@@ -24,5 +24,6 @@ export const Basic: Story = {
   args: {
     children: <div>Hello</div>,
     className: css({ bg: "blue.300", padding: 8 }),
+    style: { top: "50%", left: "50%", transform: "translate(-50%, -50%)" },
   },
 };
