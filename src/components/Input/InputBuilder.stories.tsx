@@ -140,7 +140,7 @@ const InputNumberWithCommaFormatComponent = (props: Props) => {
   };
 
   const onBlur = () => {
-    setValue(format.number(Number(value)));
+    setValue(value && format.number(Number(value)));
   };
 
   const onFocus = () => {
