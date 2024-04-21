@@ -24,6 +24,52 @@ const CloseButton = (props: CloseButtonProps) => {
   );
 };
 
+type Position = {
+  x: "left" | "center" | "right";
+  y: "top" | "bottom" | "middle";
+};
+
+type PostionTransform = { x?: string; y?: string };
+
+type PositionStyle = {
+  top?: string | number;
+  left?: string | number;
+  right?: string | number;
+  bottom?: string | number;
+  transform?: string;
+};
+
+const calcPosition = (position?: Position): PositionStyle => {
+  const pos = position ? position : { x: "center", y: "middle" };
+  const positionStyle: PositionStyle = {};
+  const transform: PostionTransform = { x: "0", y: "0" };
+  const mergin = 4;
+
+  if (pos.y === "top" || pos.y === "bottom") {
+    positionStyle[pos.y] = mergin;
+  }
+
+  if (pos.y === "middle") {
+    positionStyle.top = "50%";
+    transform.y = "-50%";
+  }
+
+  if (pos.x === "left" || pos.x === "right") {
+    positionStyle[pos.x] = mergin;
+  }
+
+  if (pos.x === "center") {
+    positionStyle.left = "50%";
+    transform.x = "-50%";
+  }
+
+  positionStyle.transform = `translate(${transform.x}, ${transform.y})`;
+
+  console.log(positionStyle);
+
+  return positionStyle;
+};
+
 type DialogDraggableProps = {
   /**
    * The size of the component.
@@ -44,6 +90,11 @@ type DialogDraggableProps = {
    * Called when the close button is clicked.
    */
   onClose?: () => void;
+
+  /**
+   * Specify the initial display position. If not specified, it will be placed in the center.
+   */
+  position?: Position;
 };
 
 /**
@@ -74,7 +125,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
         dialogAnimation,
         size: props.size,
       })}
-      style={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+      style={calcPosition(props.position)}
     >
       <div className={styles.wrapper({ size: props.size })}>
         {props.onClose && <CloseButton onClose={close} />}

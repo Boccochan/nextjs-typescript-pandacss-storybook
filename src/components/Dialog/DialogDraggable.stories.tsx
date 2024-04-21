@@ -42,17 +42,94 @@ const WithButton = (props: Props) => {
         onClick={onOpen}
         disabled={isOpen}
       />
-      <DialogDraggable isOpen={isOpen} onClose={onClose} size={props.size}>
+      <DialogDraggable
+        isOpen={isOpen}
+        onClose={onClose}
+        size={props.size}
+        position={props.position}
+      >
         {props.children}
       </DialogDraggable>
     </DisplayBox>
   );
 };
 
-export const Basic: Story = {
+export const WithCloseButton: Story = {
   args: {
     children: <div>Hello</div>,
     size: "md",
+  },
+  render: WithButton,
+};
+
+export const CenterTopWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "center", y: "top" },
+  },
+  render: WithButton,
+};
+
+export const CenterBottomWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "center", y: "bottom" },
+  },
+  render: WithButton,
+};
+
+export const LeftMiddleWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "left", y: "middle" },
+  },
+  render: WithButton,
+};
+
+export const LeftTopWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "left", y: "top" },
+  },
+  render: WithButton,
+};
+
+export const LeftBottomWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "left", y: "bottom" },
+  },
+  render: WithButton,
+};
+
+export const RightMiddleWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "right", y: "middle" },
+  },
+  render: WithButton,
+};
+
+export const RightTopWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "right", y: "top" },
+  },
+  render: WithButton,
+};
+
+export const RightBottomWithCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    position: { x: "right", y: "bottom" },
   },
   render: WithButton,
 };
@@ -63,5 +140,85 @@ export const WithoutCloseButton: Story = {
     size: "md",
     isOpen: true,
     onClose: undefined,
+  },
+};
+
+export const CenterTopWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "center", y: "top" },
+  },
+};
+
+export const LeftTopWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "left", y: "top" },
+  },
+};
+
+export const RightTopWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "right", y: "top" },
+  },
+};
+
+export const LeftMiddleWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "left", y: "middle" },
+  },
+};
+
+export const RightMiddleWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "right", y: "middle" },
+  },
+};
+
+export const CenterBottomWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "center", y: "bottom" },
+  },
+};
+
+export const LeftBottomWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "left", y: "bottom" },
+  },
+};
+
+export const RightBottomWithoutCloseButton: Story = {
+  args: {
+    children: <div>Hello</div>,
+    size: "md",
+    isOpen: true,
+    onClose: undefined,
+    position: { x: "right", y: "bottom" },
   },
 };
