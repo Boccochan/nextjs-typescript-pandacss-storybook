@@ -24,11 +24,8 @@ const CloseButton = (props: CloseButtonProps) => {
   );
 };
 
-type Position = {
-  x: "left" | "center" | "right";
-  y: "top" | "bottom" | "middle";
-};
-
+type PositionX = "left" | "center" | "right";
+type PositionY = "top" | "bottom" | "middle";
 type PostionTransform = { x?: string; y?: string };
 
 type PositionStyle = {
@@ -39,8 +36,8 @@ type PositionStyle = {
   transform?: string;
 };
 
-const calcPosition = (position?: Position): PositionStyle => {
-  const pos = position ? position : { x: "center", y: "middle" };
+const calcPosition = (x?: PositionX, y?: PositionY): PositionStyle => {
+  const pos = { x: x ?? "center", y: y ?? "middle" };
   const positionStyle: PositionStyle = {};
   const transform: PostionTransform = { x: "0", y: "0" };
   const mergin = 4;
@@ -64,8 +61,6 @@ const calcPosition = (position?: Position): PositionStyle => {
   }
 
   positionStyle.transform = `translate(${transform.x}, ${transform.y})`;
-
-  console.log(positionStyle);
 
   return positionStyle;
 };
@@ -92,9 +87,14 @@ type DialogDraggableProps = {
   onClose?: () => void;
 
   /**
-   * Specify the initial display position. If not specified, it will be placed in the center.
+   * Specify the initial display the horizontal position. If not specified, it will be placed in the center.
    */
-  position?: Position;
+  positionX?: PositionX;
+
+  /**
+   * Specify the initial display the vertical position. If not specified, it will be placed in the middle.
+   */
+  positionY?: PositionY;
 };
 
 /**
@@ -125,7 +125,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
         dialogAnimation,
         size: props.size,
       })}
-      style={calcPosition(props.position)}
+      style={calcPosition(props.positionX, props.positionY)}
     >
       <div className={styles.wrapper({ size: props.size })}>
         {props.onClose && <CloseButton onClose={close} />}
