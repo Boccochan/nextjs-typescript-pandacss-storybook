@@ -1,28 +1,10 @@
 "use client";
 import React, { useCallback } from "react";
 import { useState } from "react";
-import { MdClose } from "react-icons/md";
 
 import { Draggable } from "../Draggable";
 import { type DialogDraggableVariants, styles } from "./DialogDraggable.styles";
-
-type CloseButtonProps = {
-  onClose?: () => void;
-};
-
-const CloseButton = (props: CloseButtonProps) => {
-  return (
-    <button
-      className={styles.closeButton()}
-      onClick={props.onClose}
-      onMouseDown={(e) => {
-        e.stopPropagation();
-      }}
-    >
-      <MdClose />
-    </button>
-  );
-};
+import { DialogHeader } from "./DialogHeader";
 
 type PositionX = "left" | "center" | "right";
 type PositionY = "top" | "bottom" | "middle";
@@ -128,7 +110,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
       style={calcPosition(props.positionX, props.positionY)}
     >
       <div className={styles.wrapper({ size: props.size })}>
-        {props.onClose && <CloseButton onClose={close} />}
+        <DialogHeader title="" onClose={props.onClose && close} />
         {props.children}
       </div>
     </Draggable>

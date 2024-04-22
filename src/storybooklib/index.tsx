@@ -6,6 +6,9 @@ type DisplayBoxProps = {
   children: React.ReactNode;
 };
 
+/**
+ * - To notice whether the target component has a minWidth set or not, do not set minWidth.
+ */
 export const DisplayBox = (props: DisplayBoxProps) => {
   return (
     <div
