@@ -54,6 +54,7 @@ const WithButton = (props: Props) => {
         isOpen={isOpen}
         onClose={onClose}
         size={props.size}
+        title={props.title}
         positionX={props.positionX}
         positionY={props.positionY}
       >
@@ -69,6 +70,7 @@ export const WithCloseButton: Story = {
     size: "md",
     positionX: "center",
     positionY: "middle",
+    title: "Sample",
   },
   render: WithButton,
 };
@@ -79,6 +81,7 @@ export const WithoutCloseButton: Story = {
     size: "md",
     isOpen: true,
     onClose: undefined,
+    title: "Sample",
     positionX: "center",
     positionY: "middle",
   },

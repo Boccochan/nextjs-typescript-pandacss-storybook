@@ -1,6 +1,7 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 
+import type { DialogHeaderVariants } from "./DialogHeader.styles";
 import { styles } from "./DialogHeader.styles";
 
 type CloseButtonProps = {
@@ -25,6 +26,8 @@ type HeaderProps = {
   title?: string;
 
   onClose?: () => void;
+
+  size: DialogHeaderVariants["size"];
 };
 
 /**
@@ -33,7 +36,7 @@ type HeaderProps = {
  */
 export const DialogHeader = (props: HeaderProps) => {
   return (
-    <div className={styles.header}>
+    <div className={styles.header({ size: props.size })}>
       <h2 className={styles.title}>{props.title}</h2>
       {props.onClose && <CloseButton onClose={props.onClose} />}
     </div>

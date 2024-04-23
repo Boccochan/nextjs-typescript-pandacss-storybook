@@ -74,19 +74,20 @@ const wrapper = cva({
   variants: {
     size: {
       xs: {
-        padding: "2",
+        paddingX: "2",
+        // TODO: Add bottom
       },
       sm: {
-        padding: "3",
+        paddingX: "3",
       },
       md: {
-        padding: "4",
+        paddingX: "4",
       },
       lg: {
-        padding: "5",
+        paddingX: "5",
       },
       xl: {
-        padding: "6",
+        paddingX: "6",
       },
     },
   },

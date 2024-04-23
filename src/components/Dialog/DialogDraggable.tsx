@@ -77,6 +77,8 @@ type DialogDraggableProps = {
    * Specify the initial display the vertical position. If not specified, it will be placed in the middle.
    */
   positionY?: PositionY;
+
+  title?: string;
 };
 
 /**
@@ -109,8 +111,12 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
       })}
       style={calcPosition(props.positionX, props.positionY)}
     >
+      <DialogHeader
+        title={props.title}
+        onClose={props.onClose && close}
+        size={props.size}
+      />
       <div className={styles.wrapper({ size: props.size })}>
-        <DialogHeader title="" onClose={props.onClose && close} />
         {props.children}
       </div>
     </Draggable>
