@@ -12,23 +12,23 @@ const header = cva({
     size: {
       xs: {
         paddingX: "2",
-        paddingY: "1",
+        paddingY: "0.5",
       },
       sm: {
         paddingX: "3",
-        paddingY: "1.5",
+        paddingY: "1",
       },
       md: {
         paddingX: "4",
-        paddingY: "2",
+        paddingY: "1.5",
       },
       lg: {
         paddingX: "5",
-        paddingY: "2.5",
+        paddingY: "2",
       },
       xl: {
         paddingX: "6",
-        paddingY: "3",
+        paddingY: "2.5",
       },
     },
   },

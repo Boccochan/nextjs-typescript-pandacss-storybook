@@ -64,9 +64,25 @@ const WithButton = (props: Props) => {
   );
 };
 
+const SampleContent = () => {
+  return (
+    <div>
+      <h3>Hello World!!</h3>
+      <p>
+        Say you weigh 70 kilograms and you go for a brisk walk for 1 hour. To
+        calculate the calories burned during this activity, you can use the
+        formula: Calories burned = Weight (kg) × Time (hours) × MET value
+        Assuming the MET value for walking is 3.5, the calculation would be:
+        Calories burned = 70 kg × 1 hour × 3.5 MET = 245 calories. So, during
+        this 1-hour walk, you would burn approximately 245 calories
+      </p>
+    </div>
+  );
+};
+
 export const WithCloseButton: Story = {
   args: {
-    children: <div>Hello</div>,
+    children: SampleContent(),
     size: "md",
     positionX: "center",
     positionY: "middle",

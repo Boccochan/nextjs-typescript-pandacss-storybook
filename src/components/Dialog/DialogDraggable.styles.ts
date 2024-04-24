@@ -6,7 +6,7 @@ const dialog = cva({
     bg: "dialog.bg",
     color: "body.text",
     boxShadow: "{colors.dialog.shadow}", // For some reasons, dialog.shadow does not work
-    minWidth: "96%",
+    width: "96%",
   },
   variants: {
     dialogAnimation: {
@@ -20,41 +20,41 @@ const dialog = cva({
     size: {
       xs: {
         lg: {
-          minWidth: "8.09rem",
+          width: "20rem",
         },
-        height: "5rem",
+        minHeight: "5rem",
         fontSize: "xs",
         rounded: "xs",
       },
       sm: {
         lg: {
-          minWidth: "12.135rem",
+          width: "25rem",
         },
-        height: "7.5rem",
+        minHeight: "7.5rem",
         fontSize: "sm",
         rounded: "sm",
       },
       md: {
         lg: {
-          minWidth: "16.18rem",
+          width: "30rem",
         },
-        height: "10rem",
+        minHeight: "10rem",
         fontSize: "md",
         rounded: "md",
       },
       lg: {
         lg: {
-          minWidth: "20.225rem",
+          width: "35rem",
         },
-        height: "12.5rem",
+        minHeight: "12.5rem",
         fontSize: "lg",
         rounded: "lg",
       },
       xl: {
         lg: {
-          minWidth: "24.27rem",
+          width: "40rem",
         },
-        height: "15rem",
+        minHeight: "15rem",
         fontSize: "xl",
         rounded: "xl",
       },
@@ -74,19 +74,23 @@ const wrapper = cva({
     size: {
       xs: {
         paddingX: "2",
-        // TODO: Add bottom
+        paddingBottom: "2",
       },
       sm: {
         paddingX: "3",
+        paddingBottom: "3",
       },
       md: {
         paddingX: "4",
+        paddingBottom: "4",
       },
       lg: {
         paddingX: "5",
+        paddingBottom: "5",
       },
       xl: {
         paddingX: "6",
+        paddingBottom: "6",
       },
     },
   },
