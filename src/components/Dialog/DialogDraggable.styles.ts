@@ -22,7 +22,6 @@ const dialog = cva({
         lg: {
           minWidth: "8.09rem",
         },
-        marginX: "2rem",
         height: "5rem",
         fontSize: "xs",
         rounded: "xs",
