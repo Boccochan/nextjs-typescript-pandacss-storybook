@@ -73,24 +73,24 @@ const wrapper = cva({
   variants: {
     size: {
       xs: {
-        paddingX: "2",
-        paddingBottom: "2",
-      },
-      sm: {
-        paddingX: "3",
-        paddingBottom: "3",
-      },
-      md: {
         paddingX: "4",
         paddingBottom: "4",
       },
-      lg: {
+      sm: {
         paddingX: "5",
         paddingBottom: "5",
       },
-      xl: {
+      md: {
         paddingX: "6",
         paddingBottom: "6",
+      },
+      lg: {
+        paddingX: "7",
+        paddingBottom: "7",
+      },
+      xl: {
+        paddingX: "8",
+        paddingBottom: "8",
       },
     },
   },
