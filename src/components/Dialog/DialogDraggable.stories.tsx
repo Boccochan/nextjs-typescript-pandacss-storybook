@@ -4,8 +4,10 @@ import type { ComponentProps } from "react";
 import { DisplayBox } from "@/storybooklib";
 
 import { Button } from "../Button";
+import { DialogContent } from "./DialogContent";
+import { styles } from "./DialogContent.styles";
 import { DialogDraggable } from "./DialogDraggable";
-import { styles } from "./DialogDraggable.styles";
+// import { styles } from "./DialogDraggable.styles";
 import { useDialog } from "./hooks";
 
 type Props = ComponentProps<typeof DialogDraggable>;
@@ -25,7 +27,7 @@ const meta: Meta<typeof DialogDraggable> = {
   argTypes: {
     size: {
       control: "select",
-      options: styles.wrapper.variantMap.size,
+      options: styles.content.variantMap.size,
     },
     positionX: {
       control: "select",
@@ -58,31 +60,25 @@ const WithButton = (props: Props) => {
         positionX={props.positionX}
         positionY={props.positionY}
       >
-        {props.children}
+        <DialogContent size={props.size}>
+          <h3>Hello World!!</h3>
+          <p>
+            Say you weigh 70 kilograms and you go for a brisk walk for 1 hour.
+            To calculate the calories burned during this activity, you can use
+            the formula: Calories burned = Weight (kg) × Time (hours) × MET
+            value Assuming the MET value for walking is 3.5, the calculation
+            would be: Calories burned = 70 kg × 1 hour × 3.5 MET = 245 calories.
+            So, during this 1-hour walk, you would burn approximately 245
+            calories
+          </p>
+        </DialogContent>
       </DialogDraggable>
     </DisplayBox>
   );
 };
 
-const SampleContent = () => {
-  return (
-    <div>
-      <h3>Hello World!!</h3>
-      <p>
-        Say you weigh 70 kilograms and you go for a brisk walk for 1 hour. To
-        calculate the calories burned during this activity, you can use the
-        formula: Calories burned = Weight (kg) × Time (hours) × MET value
-        Assuming the MET value for walking is 3.5, the calculation would be:
-        Calories burned = 70 kg × 1 hour × 3.5 MET = 245 calories. So, during
-        this 1-hour walk, you would burn approximately 245 calories
-      </p>
-    </div>
-  );
-};
-
 export const WithCloseButton: Story = {
   args: {
-    children: SampleContent(),
     size: "md",
     positionX: "center",
     positionY: "middle",
@@ -91,9 +87,33 @@ export const WithCloseButton: Story = {
   render: WithButton,
 };
 
+const WithoutClose = (props: Props) => {
+  return (
+    <DialogDraggable
+      isOpen={props.isOpen}
+      onClose={props.onClose}
+      size={props.size}
+      title={props.title}
+      positionX={props.positionX}
+      positionY={props.positionY}
+    >
+      <DialogContent size={props.size}>
+        <h3>Hello World!!</h3>
+        <p>
+          Say you weigh 70 kilograms and you go for a brisk walk for 1 hour. To
+          calculate the calories burned during this activity, you can use the
+          formula: Calories burned = Weight (kg) × Time (hours) × MET value
+          Assuming the MET value for walking is 3.5, the calculation would be:
+          Calories burned = 70 kg × 1 hour × 3.5 MET = 245 calories. So, during
+          this 1-hour walk, you would burn approximately 245 calories
+        </p>
+      </DialogContent>
+    </DialogDraggable>
+  );
+};
+
 export const WithoutCloseButton: Story = {
   args: {
-    children: <div>Hello</div>,
     size: "md",
     isOpen: true,
     onClose: undefined,
@@ -101,4 +121,5 @@ export const WithoutCloseButton: Story = {
     positionX: "center",
     positionY: "middle",
   },
+  render: WithoutClose,
 };

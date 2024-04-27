@@ -116,9 +116,7 @@ export const DialogDraggable = (props: DialogDraggableProps) => {
         onClose={props.onClose && close}
         size={props.size}
       />
-      <div className={styles.wrapper({ size: props.size })}>
-        {props.children}
-      </div>
+      {props.children}
     </Draggable>
   );
 };
