@@ -7,7 +7,7 @@ import { Button } from "../Button";
 import { DialogContent } from "./DialogContent";
 import { styles } from "./DialogContent.styles";
 import { DialogDraggable } from "./DialogDraggable";
-// import { styles } from "./DialogDraggable.styles";
+import { DialogFooter } from "./DialogFooter";
 import { useDialog } from "./hooks";
 
 type Props = ComponentProps<typeof DialogDraggable>;
@@ -72,6 +72,10 @@ const WithButton = (props: Props) => {
             calories
           </p>
         </DialogContent>
+        <DialogFooter size={props.size}>
+          <Button label="Cancel" width="sm" onClick={onClose} />
+          <Button label="Send" width="sm" />
+        </DialogFooter>
       </DialogDraggable>
     </DisplayBox>
   );
