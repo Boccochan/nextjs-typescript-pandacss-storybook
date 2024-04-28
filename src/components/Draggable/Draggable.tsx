@@ -1,6 +1,8 @@
 import type { MouseEvent as MouseEventReact } from "react";
 import React, { useEffect, useRef, useState } from "react";
 
+import { cx } from "#/styled-system/css";
+
 import { styles } from "./Draggable.styles";
 
 const useDraggable = () => {
@@ -102,7 +104,7 @@ export const Draggable = (props: DraggableProps) => {
     <div
       role="dialog"
       onMouseDown={mouseDown}
-      className={[styles.draggable({ isDragging }), className].join(" ")}
+      className={cx(styles.draggable({ isDragging }), className)}
       style={createStyle()}
       ref={refDialog}
       {...rest}
