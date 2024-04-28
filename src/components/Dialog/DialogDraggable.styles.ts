@@ -22,6 +22,7 @@ const dialog = cva({
         lg: {
           width: "20rem",
         },
+        minWidth: "10rem",
         minHeight: "5rem",
         fontSize: "xs",
         rounded: "xs",
@@ -30,6 +31,7 @@ const dialog = cva({
         lg: {
           width: "25rem",
         },
+        minWidth: "12.5rem",
         minHeight: "7.5rem",
         fontSize: "sm",
         rounded: "sm",
@@ -38,6 +40,7 @@ const dialog = cva({
         lg: {
           width: "30rem",
         },
+        minWidth: "15rem",
         minHeight: "10rem",
         fontSize: "md",
         rounded: "md",
@@ -46,6 +49,7 @@ const dialog = cva({
         lg: {
           width: "35rem",
         },
+        minWidth: "17.5rem",
         minHeight: "12.5rem",
         fontSize: "lg",
         rounded: "lg",
@@ -54,6 +58,7 @@ const dialog = cva({
         lg: {
           width: "40rem",
         },
+        minWidth: "20rem",
         minHeight: "15rem",
         fontSize: "xl",
         rounded: "xl",
