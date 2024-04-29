@@ -12,27 +12,27 @@ const header = cva({
     size: {
       xs: {
         paddingX: "3",
-        paddingY: "3",
+        paddingY: "2",
         fontSize: "md",
       },
       sm: {
         paddingX: "4",
-        paddingY: "4",
+        paddingY: "3",
         fontSize: "lg",
       },
       md: {
         paddingX: "5",
-        paddingY: "5",
+        paddingY: "4",
         fontSize: "xl",
       },
       lg: {
         paddingX: "6",
-        paddingY: "6",
+        paddingY: "5",
         fontSize: "2xl",
       },
       xl: {
         paddingX: "7",
-        paddingY: "7",
+        paddingY: "6",
         fontSize: "3xl",
       },
     },

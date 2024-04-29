@@ -16,22 +16,22 @@ const footer = cva({
       },
       sm: {
         paddingX: "5",
-        paddingY: "2.5",
+        paddingY: "3",
         gap: "2",
       },
       md: {
         paddingX: "6",
-        paddingY: "3",
+        paddingY: "4",
         gap: "3",
       },
       lg: {
         paddingX: "7",
-        paddingY: "3.5",
+        paddingY: "5",
         gap: "4",
       },
       xl: {
         paddingX: "8",
-        paddingY: "4",
+        paddingY: "6",
         gap: "5",
       },
     },
