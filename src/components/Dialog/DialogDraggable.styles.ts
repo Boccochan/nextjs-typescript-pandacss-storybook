@@ -71,17 +71,7 @@ const dialog = cva({
   },
 });
 
-const closeButton = cva({
-  base: {
-    position: "absolute",
-    top: "1.5",
-    right: "1.5",
-    color: "body.text",
-    cursor: "pointer",
-  },
-});
-
-export const styles = { dialog, closeButton };
+export const styles = { dialog };
 
 export type DialogDraggableVariants = NonNullable<
   RecipeVariantProps<typeof dialog>
