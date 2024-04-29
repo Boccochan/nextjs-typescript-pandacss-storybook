@@ -88,7 +88,7 @@ export const colors = defineSemanticTokens.colors({
   icon: {
     DEFAULT: {
       value: {
-        base: `{colors.gray.700}`,
+        base: `{colors.gray.600}`,
         _osDark: `white`,
       },
     },
