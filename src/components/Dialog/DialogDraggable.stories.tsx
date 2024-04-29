@@ -62,24 +62,26 @@ const WithButton = (props: Props) => {
       >
         <DialogContent size={props.size}>
           <p>
-            Say you weigh 70 kilograms and you go for a brisk walk for 1 hour.
-            To calculate the calories burned during this activity, you can use
-            the formula: Calories burned = Weight (kg) × Time (hours) × MET
-            value Assuming the MET value for walking is 3.5, the calculation
-            would be: Calories burned = 70 kg × 1 hour × 3.5 MET = 245 calories.
-            So, during this 1-hour walk, you would burn approximately 245
-            calories
+            Below is a sample message for the dialog component in Storybook.
+            This message informs users about recent updates to our platform,
+            including new features, bug fixes, and improvements.
+          </p>
+          <p>
+            It also provides instructions for providing feedback and reporting
+            any issues encountered. We highly value user feedback and are
+            dedicated to improving our services based on your suggestions. Thank
+            you for being part of our community!
           </p>
         </DialogContent>
         <DialogFooter size={props.size}>
           <Button
             label="Cancel"
             size={props.size}
-            width="sm"
+            width={props.size}
             onClick={onClose}
             variants="outline"
           />
-          <Button label="Send" width="sm" size={props.size} />
+          <Button label="Send" width={props.size} size={props.size} />
         </DialogFooter>
       </DialogDraggable>
     </DisplayBox>

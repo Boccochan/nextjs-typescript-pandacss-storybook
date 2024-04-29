@@ -8,24 +8,24 @@ const content = cva({
   variants: {
     size: {
       xs: {
+        paddingX: "3",
+        paddingBottom: "3",
+      },
+      sm: {
         paddingX: "4",
         paddingBottom: "4",
       },
-      sm: {
+      md: {
         paddingX: "5",
         paddingBottom: "5",
       },
-      md: {
+      lg: {
         paddingX: "6",
         paddingBottom: "6",
       },
-      lg: {
+      xl: {
         paddingX: "7",
         paddingBottom: "7",
-      },
-      xl: {
-        paddingX: "8",
-        paddingBottom: "8",
       },
     },
   },
