@@ -1,29 +1,9 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 
+import { IconButton } from "../Button";
 import type { DialogHeaderVariants } from "./DialogHeader.styles";
 import { styles } from "./DialogHeader.styles";
-
-type CloseButtonProps = {
-  /**
-   * Called when the close button is clicked.
-   */
-  onClose?: () => void;
-};
-
-const CloseButton = (props: CloseButtonProps) => {
-  return (
-    <button
-      className={styles.icon}
-      onClick={props.onClose}
-      onMouseDown={(e) => {
-        e.stopPropagation();
-      }}
-    >
-      <MdClose />
-    </button>
-  );
-};
 
 type HeaderProps = {
   /**
@@ -50,7 +30,18 @@ export const DialogHeader = (props: HeaderProps) => {
   return (
     <div className={styles.header({ size: props.size })}>
       <h2 className={styles.title}>{props.title}</h2>
-      {props.onClose && <CloseButton onClose={props.onClose} />}
+      {props.onClose && (
+        <IconButton
+          className={styles.icon}
+          onClick={props.onClose}
+          size={props.size}
+          onMouseDown={(e) => {
+            e.stopPropagation();
+          }}
+          Icon={MdClose}
+          aria-label="close"
+        />
+      )}
     </div>
   );
 };
