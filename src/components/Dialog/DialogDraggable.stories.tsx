@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ComponentProps } from "react";
 
-import { DisplayBox } from "@/storybooklib";
-
 import { Button } from "../Button";
 import { DialogContent } from "./DialogContent";
 import { styles } from "./DialogContent.styles";
@@ -46,7 +44,7 @@ type Story = StoryObj<typeof DialogDraggable>;
 const WithButton = (props: Props) => {
   const { isOpen, onOpen, onClose } = useDialog();
   return (
-    <DisplayBox>
+    <div>
       <Button
         label="Open Draggable Dialog"
         onClick={onOpen}
@@ -77,7 +75,7 @@ const WithButton = (props: Props) => {
           <Button label="I agree" size={props.size} variants="outline" />
         </DialogFooter>
       </DialogDraggable>
-    </DisplayBox>
+    </div>
   );
 };
 
