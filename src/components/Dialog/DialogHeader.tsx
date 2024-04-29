@@ -5,6 +5,9 @@ import type { DialogHeaderVariants } from "./DialogHeader.styles";
 import { styles } from "./DialogHeader.styles";
 
 type CloseButtonProps = {
+  /**
+   * Called when the close button is clicked.
+   */
   onClose?: () => void;
 };
 
@@ -23,10 +26,19 @@ const CloseButton = (props: CloseButtonProps) => {
 };
 
 type HeaderProps = {
+  /**
+   * Title of this dialog.
+   */
   title?: string;
 
+  /**
+   * Called when the close button is clicked.
+   */
   onClose?: () => void;
 
+  /**
+   * The size of the component.
+   */
   size: DialogHeaderVariants["size"];
 };
 

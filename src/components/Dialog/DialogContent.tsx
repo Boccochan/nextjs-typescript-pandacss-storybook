@@ -4,9 +4,15 @@ import type { DialogFooterVariants } from "./DialogContent.styles";
 import { styles } from "./DialogContent.styles";
 
 type DialogContentProps = {
-  children: React.ReactNode;
-
+  /**
+   * The size of the component.
+   */
   size: DialogFooterVariants["size"];
+
+  /**
+   * Children elements or components passed to this component for rendering.
+   */
+  children: React.ReactNode;
 };
 
 export const DialogContent = (props: DialogContentProps) => {
