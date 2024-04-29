@@ -61,7 +61,6 @@ const WithButton = (props: Props) => {
         positionY={props.positionY}
       >
         <DialogContent size={props.size}>
-          <h3>Hello World!!</h3>
           <p>
             Say you weigh 70 kilograms and you go for a brisk walk for 1 hour.
             To calculate the calories burned during this activity, you can use
@@ -75,11 +74,12 @@ const WithButton = (props: Props) => {
         <DialogFooter size={props.size}>
           <Button
             label="Cancel"
+            size={props.size}
             width="sm"
             onClick={onClose}
             variants="outline"
           />
-          <Button label="Send" width="sm" />
+          <Button label="Send" width="sm" size={props.size} />
         </DialogFooter>
       </DialogDraggable>
     </DisplayBox>
@@ -91,7 +91,7 @@ export const WithCloseButton: Story = {
     size: "md",
     positionX: "center",
     positionY: "middle",
-    title: "Sample",
+    title: "Sample dialog",
   },
   render: WithButton,
 };

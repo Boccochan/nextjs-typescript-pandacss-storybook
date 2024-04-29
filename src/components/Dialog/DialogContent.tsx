@@ -10,5 +10,7 @@ type DialogContentProps = {
 };
 
 export const DialogContent = (props: DialogContentProps) => {
-  return <div className={styles.content({})}>{props.children}</div>;
+  return (
+    <div className={styles.content({ size: props.size })}>{props.children}</div>
+  );
 };
