@@ -6,7 +6,7 @@ exports[`Snapshot Button Danger 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_danger hover:bg_danger.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_danger hover:bg_danger.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -20,7 +20,7 @@ exports[`Snapshot Button Danger 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_danger hover:bg_danger.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_danger hover:bg_danger.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -92,7 +92,7 @@ exports[`Snapshot Button Disabled 1`] = `
     <div>
       <button
         aria-disabled="true"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
         disabled=""
       >
         <div
@@ -108,7 +108,7 @@ exports[`Snapshot Button Disabled 1`] = `
   "container": <div>
     <button
       aria-disabled="true"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       disabled=""
     >
       <div
@@ -181,7 +181,7 @@ exports[`Snapshot Button Loading 1`] = `
     <div>
       <button
         aria-disabled="true"
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
         disabled=""
       >
         <div
@@ -206,7 +206,7 @@ exports[`Snapshot Button Loading 1`] = `
   "container": <div>
     <button
       aria-disabled="true"
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       disabled=""
     >
       <div
@@ -287,7 +287,7 @@ exports[`Snapshot Button Primary 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -301,7 +301,7 @@ exports[`Snapshot Button Primary 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -372,7 +372,7 @@ exports[`Snapshot Button Size=lg 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_5rem h_2.8rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_5rem h_2.8rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -386,7 +386,7 @@ exports[`Snapshot Button Size=lg 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_5rem h_2.8rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_5 rounded_lg fs_lg min-w_5rem h_2.8rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -457,7 +457,7 @@ exports[`Snapshot Button Size=md 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -471,7 +471,7 @@ exports[`Snapshot Button Size=md 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -542,7 +542,7 @@ exports[`Snapshot Button Size=sm 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_3rem h_2rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_3rem h_2rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -556,7 +556,7 @@ exports[`Snapshot Button Size=sm 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_3rem h_2rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_3 rounded_sm fs_sm min-w_3rem h_2rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -627,7 +627,7 @@ exports[`Snapshot Button Size=xl 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_6rem h_3.2rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_6rem h_3.2rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -641,7 +641,7 @@ exports[`Snapshot Button Size=xl 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_6rem h_3.2rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_6 rounded_xl fs_xl min-w_6rem h_3.2rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -712,7 +712,7 @@ exports[`Snapshot Button Size=xs 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -726,7 +726,7 @@ exports[`Snapshot Button Size=xs 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_2 rounded_xs fs_xs min-w_2rem h_1.6rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"
@@ -797,7 +797,7 @@ exports[`Snapshot Button With Md icon 1`] = `
   "baseElement": <body>
     <div>
       <button
-        class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+        class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
       >
         <div
           class="d_flex justify_center items_center gap_2"
@@ -830,7 +830,7 @@ exports[`Snapshot Button With Md icon 1`] = `
   </body>,
   "container": <div>
     <button
-      class="cursor_pointer white-space_nowrap disabled:opacity_0.7 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
+      class="cursor_pointer white-space_nowrap font_medium disabled:opacity_0.4 disabled:pointer-events_none active:opacity_0.9 pos_relative bg_primary hover:bg_primary.hover text_light px_4 rounded_md fs_md min-w_4rem h_2.4rem"
     >
       <div
         class="d_flex justify_center items_center gap_2"

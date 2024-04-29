@@ -30,6 +30,10 @@ const meta: Meta<typeof Button> = {
       control: "select",
       options: styles.button.variantMap.color,
     },
+    variants: {
+      control: "select",
+      options: styles.button.variantMap.variants,
+    },
     size: {
       control: "select",
       options: styles.button.variantMap.size,
@@ -47,6 +51,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     color: "primary",
+    variants: "contained",
     size: "md",
     label: "hello",
     disabled: false,
@@ -60,6 +65,7 @@ export const Primary: Story = {
 export const Danger: Story = {
   args: {
     color: "danger",
+    variants: "contained",
     size: "md",
     label: "hello",
     disabled: false,
@@ -73,6 +79,7 @@ export const Danger: Story = {
 export const PrimaryWithMdMailIcon: Story = {
   args: {
     color: "primary",
+    variants: "contained",
     size: "md",
     label: "Send",
     disabled: false,
@@ -87,6 +94,7 @@ export const PrimaryWithMdMailIcon: Story = {
 export const PrimaryWithMdContentCopyIcon: Story = {
   args: {
     color: "primary",
+    variants: "contained",
     size: "md",
     label: "Copy",
     disabled: false,
@@ -101,6 +109,7 @@ export const PrimaryWithMdContentCopyIcon: Story = {
 export const PrimaryWithMdDeleteIcon: Story = {
   args: {
     color: "primary",
+    variants: "contained",
     size: "md",
     label: "Delete",
     disabled: false,

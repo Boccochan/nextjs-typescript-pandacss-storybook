@@ -8,12 +8,71 @@ const colors = (color: string) => ({
   color: "light",
 });
 
+type Color = "primary" | "danger";
+type Variants = "outline" | "contained" | "text";
+
+const compound = (color: Color, variants: Variants) => {
+  if (variants === "outline") {
+    return {
+      color,
+      variants,
+      css: {
+        bg: `${color}/0`,
+        color,
+        borderColor: `${color}/40`,
+        borderStyle: "solid",
+        borderWidth: "1px",
+        _hover: {
+          borderColor: `${color}/60`,
+          bg: `${color}/3`,
+        },
+        _active: {
+          borderColor: `${color}/50`,
+          bg: `${color}/0`,
+          color: `${color}/90`,
+        },
+      },
+    };
+  } else if (variants === "text") {
+    return {
+      color,
+      variants,
+      css: {
+        bg: `${color}/0`,
+        color,
+        _hover: {
+          bg: `${color}/3`,
+        },
+        _active: {
+          bg: `${color}/6`,
+          color: `${color}/90`,
+        },
+      },
+    };
+  } else {
+    throw Error("Not support");
+  }
+};
+
+const createCompoundVariants = () => {
+  const result: ReturnType<typeof compound>[] = [];
+
+  ["primary", "danger"].forEach((color) => {
+    ["text", "outline"].forEach((variants) => {
+      result.push(compound(color as Color, variants as Variants));
+    });
+  });
+
+  return result;
+};
+
 const button = cva({
   base: {
     cursor: "pointer",
     whiteSpace: "nowrap",
+    fontWeight: "medium",
     _disabled: {
-      opacity: 0.7,
+      opacity: 0.4,
       pointerEvents: "none",
     },
     _active: {
@@ -86,11 +145,19 @@ const button = cva({
       primary: colors("primary"),
       danger: colors("danger"),
     },
+    variants: {
+      contained: {},
+      outline: {},
+      text: {},
+    },
   },
   defaultVariants: {
     color: "primary",
     size: "md",
+    variants: "contained",
   },
+
+  compoundVariants: createCompoundVariants(),
 });
 
 const labelWrapper = cva({
