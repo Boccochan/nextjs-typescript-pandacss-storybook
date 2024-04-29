@@ -31,6 +31,18 @@ export const spinner = cva({
         borderBottom: "0.3em solid {colors.light}",
         borderLeft: "0.3em solid rgba(255, 255, 255, 0)",
       },
+      primary: {
+        borderTop: "0.3em solid {colors.primary}",
+        borderRight: "0.3em solid {colors.primary}",
+        borderBottom: "0.3em solid {colors.primary}",
+        borderLeft: "0.3em solid rgba(255, 255, 255, 0)",
+      },
+      danger: {
+        borderTop: "0.3em solid {colors.danger}",
+        borderRight: "0.3em solid {colors.danger}",
+        borderBottom: "0.3em solid {colors.danger}",
+        borderLeft: "0.3em solid rgba(255, 255, 255, 0)",
+      },
     },
   },
   defaultVariants: {

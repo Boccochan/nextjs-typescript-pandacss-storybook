@@ -46,6 +46,9 @@ const text = (color: Color, variants: Variants) => ({
       bg: `${color}/10`,
       color: `${color}/90`,
     },
+    _disabled: {
+      bg: `${color}/6`,
+    },
   },
 });
 

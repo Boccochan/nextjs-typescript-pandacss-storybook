@@ -73,7 +73,12 @@ const WithButton = (props: Props) => {
           </p>
         </DialogContent>
         <DialogFooter size={props.size}>
-          <Button label="Cancel" width="sm" onClick={onClose} />
+          <Button
+            label="Cancel"
+            width="sm"
+            onClick={onClose}
+            variants="outline"
+          />
           <Button label="Send" width="sm" />
         </DialogFooter>
       </DialogDraggable>
