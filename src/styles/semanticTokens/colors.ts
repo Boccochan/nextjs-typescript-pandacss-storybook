@@ -11,6 +11,11 @@ const createColor = (colorName: string) => ({
       base: `{colors.${colorName}.700}`,
     },
   },
+  active: {
+    value: {
+      base: `{colors.${colorName}.800}`,
+    },
+  },
 });
 
 /**

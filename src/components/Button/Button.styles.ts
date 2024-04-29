@@ -1,56 +1,61 @@
 import { css, cva, type RecipeVariantProps } from "#/styled-system/css";
 
-const colors = (color: string) => ({
-  bg: {
-    base: color,
-    _hover: `${color}.hover`,
-  },
-  color: "light",
-});
-
 type Color = "primary" | "danger";
 type Variants = "outline" | "contained" | "text";
 
+const colors = (color: Color) => ({
+  color: `light`,
+  bg: {
+    base: color,
+    _hover: `${color}.hover`,
+    _active: `${color}.active`,
+  },
+});
+
+const outline = (color: Color, variants: Variants) => ({
+  color,
+  variants,
+  css: {
+    bg: `${color}/0`,
+    color,
+    borderColor: `${color}/40`,
+    borderStyle: "solid",
+    borderWidth: "1px",
+    _hover: {
+      borderColor: `${color}/60`,
+      bg: `${color}/3`,
+    },
+    _active: {
+      borderColor: `${color}/70`,
+      bg: `${color}/10`,
+      color: `${color}/90`,
+    },
+  },
+});
+
+const text = (color: Color, variants: Variants) => ({
+  color,
+  variants,
+  css: {
+    bg: `${color}/0`,
+    color,
+    _hover: {
+      bg: `${color}/6`,
+    },
+    _active: {
+      bg: `${color}/10`,
+      color: `${color}/90`,
+    },
+  },
+});
+
 const compound = (color: Color, variants: Variants) => {
   if (variants === "outline") {
-    return {
-      color,
-      variants,
-      css: {
-        bg: `${color}/0`,
-        color,
-        borderColor: `${color}/40`,
-        borderStyle: "solid",
-        borderWidth: "1px",
-        _hover: {
-          borderColor: `${color}/60`,
-          bg: `${color}/3`,
-        },
-        _active: {
-          borderColor: `${color}/50`,
-          bg: `${color}/0`,
-          color: `${color}/90`,
-        },
-      },
-    };
+    return outline(color, variants);
   } else if (variants === "text") {
-    return {
-      color,
-      variants,
-      css: {
-        bg: `${color}/0`,
-        color,
-        _hover: {
-          bg: `${color}/3`,
-        },
-        _active: {
-          bg: `${color}/6`,
-          color: `${color}/90`,
-        },
-      },
-    };
+    return text(color, variants);
   } else {
-    throw Error("Not support");
+    throw Error("BUG: Unkown variants");
   }
 };
 
@@ -74,9 +79,6 @@ const button = cva({
     _disabled: {
       opacity: 0.4,
       pointerEvents: "none",
-    },
-    _active: {
-      opacity: 0.9,
     },
     position: "relative",
   },
@@ -156,7 +158,6 @@ const button = cva({
     size: "md",
     variants: "contained",
   },
-
   compoundVariants: createCompoundVariants(),
 });
 
