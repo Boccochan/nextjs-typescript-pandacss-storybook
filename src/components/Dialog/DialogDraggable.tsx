@@ -78,6 +78,9 @@ type DialogDraggableProps = {
    */
   positionY?: PositionY;
 
+  /**
+   * Title of this dialog.
+   */
   title?: string;
 };
 
